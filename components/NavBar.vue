@@ -2,7 +2,7 @@
     <nav class="text-white">
         <div class="mx-auto flex justify-center font-bold">
             <div class="max-w-[1500px] w-full flex justify-between items-center px-8 py-4">
-                <a href="#" class="text-4xl font-bold">Helpy</a>
+                <a href="#" class="text-4xl font-bold ">Helpy</a>
                 <ul class="flex space-x-4">
                     <li v-for="link in mainLinks" :key="link.text">
                         <a :href="link.href" class="">{{ link.text }}</a>
