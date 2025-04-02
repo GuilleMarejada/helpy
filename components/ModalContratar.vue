@@ -16,18 +16,20 @@
         </div>
         
         <!-- Body -->
-        <div class="p-4 flex items-center justify-center">
-          <Calendario />
+        <div class="p-4 flex justify-around">
+          <Calendario class="max-w-fit"/>
           <img :src="`/images/${title}.png`" alt="Descripción" />
         </div>
         
         <!-- Footer -->
-        <div class="flex justify-end border-t px-4 py-2">
-          <button 
+        <div class="flex justify-end border-t px-4 py-2"
+        v-if="dateSelected"
+        >
+          <button
             @click="closeModal" 
             class="bg-gray-500 text-white px-4 py-2 rounded hover:bg-gray-600 transition-colors"
           >
-            Cerrar
+            Continuar
           </button>
         </div>
       </div>

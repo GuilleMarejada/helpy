@@ -1,16 +1,12 @@
 <template>
-  <div class="text-center font-sans m-5 text-black">
-    <h2 class="mb-2 text-lg font-semibold">Selecciona una fecha y hora</h2>
-    <input 
-      type="datetime-local" 
-      v-model="selectedDateTime" 
-      class="border rounded p-2" 
-    />
-  </div>
+  <VueDatePicker class="" v-model="date" inline auto-apply />
 </template>
 
 <script setup>
 import { ref } from 'vue';
+import VueDatePicker from '@vuepic/vue-datepicker';
+import '@vuepic/vue-datepicker/dist/main.css';
 
-const selectedDateTime = ref(null);
+const date = ref(new Date());
+console.log(date.value);
 </script>
