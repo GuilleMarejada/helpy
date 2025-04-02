@@ -3,11 +3,11 @@
         <div class="mx-auto flex justify-center font-bold">
             <div class="max-w-[1500px] w-full flex justify-between items-center px-8 py-4">
                 <a href="/" class="text-4xl font-bold">Helpy</a>
-                <ul class="flex space-x-4" >
-                    <li v-for="link in mainLinks" :key="link.text">
-                        <button>{{ link.text }}</button>
-                    </li>
-                </ul>
+                <span class="flex space-x-4" >
+                    <a v-for="link in mainLinks" :key="link.text" :href="link.href">
+                        {{ link.text }}
+                    </a>
+                </span>
             </div>
         </div>
         <!-- Escucha el evento emitido por ModalContratar -->
@@ -16,7 +16,7 @@
             <ul class="flex space-x-4">
                 <li v-for="service in services" :key="service.text">
                     <button
-                        class="border border-gris rounded-md p-2 hover:bg-azul transition duration-300 ease-in-out"
+                        class="border cursor-pointer border-gris rounded-md p-2 hover:bg-azul transition duration-300 ease-in-out"
                         @click="() => { selectService(service.text); toggleModal(); }">
                         {{ service.text }}
                     </button>
@@ -34,7 +34,7 @@
     const mainStore = useMainStore()
 
     const mainLinks = ref([
-        { text: "Cuenta", href: "#" },
+        { text: "Cuenta", href: "/" },
         { text: "Trabaja con nosotros", href: "/helper" },
     ]);
     const isVisible = ref(false);
