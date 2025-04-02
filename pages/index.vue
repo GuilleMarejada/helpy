@@ -1,6 +1,5 @@
 <template>
-  <div class="container ">
-    <h1>Home Page</h1>
-    <p>INFORMACION PARA CLIENTES</p>
+  <div class="container flex flex-col justify-center items-center mx-auto mt-10">
+    <ComoFunciona />
   </div>
 </template>

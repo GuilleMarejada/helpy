@@ -2,21 +2,24 @@
     <nav class="text-white">
         <div class="mx-auto flex justify-center font-bold">
             <div class="max-w-[1500px] w-full flex justify-between items-center px-8 py-4">
-                <a href="/" class="text-4xl font-bold ">Helpy</a>
-                <ul class="flex space-x-4">
+                <a href="/" class="text-4xl font-bold">Helpy</a>
+                <ul class="flex space-x-4" >
                     <li v-for="link in mainLinks" :key="link.text">
-                        <a :href="link.href" class="">{{ link.text }}</a>
+                        <button>{{ link.text }}</button>
                     </li>
                 </ul>
             </div>
         </div>
+        <!-- Escucha el evento emitido por ModalContratar -->
+        <ModalContratar v-if="isVisible" @close="toggleModal" />
         <div class="container font-semibold mx-auto flex justify-center mt-5">
             <ul class="flex space-x-4">
                 <li v-for="service in services" :key="service.text">
-                    <a :href="service.href"
-                        class="border border-gris rounded-md p-2 hover:bg-azul transition duration-300 ease-in-out">
+                    <button
+                        class="border border-gris rounded-md p-2 hover:bg-azul transition duration-300 ease-in-out"
+                        @click="() => { selectService(service.text); toggleModal(); }">
                         {{ service.text }}
-                    </a>
+                    </button>
                 </li>
             </ul>
         </div>
@@ -25,6 +28,8 @@
 
 <script setup>
     import { useMainStore } from '@/stores/main'
+    import { ref } from 'vue'
+    import ModalContratar from '@/components/ModalContratar.vue'
 
     const mainStore = useMainStore()
 
@@ -32,7 +37,16 @@
         { text: "Cuenta", href: "#" },
         { text: "Trabaja con nosotros", href: "/helper" },
     ]);
-
+    const isVisible = ref(false);
+    
     const services = ref(mainStore.services);
 
+    const selectService = (serviceText) => {
+        mainStore.selectedService = serviceText;
+    };
+    
+    const toggleModal = () => {
+        console.log("Modal triggered");
+        isVisible.value = !isVisible.value;
+    };
 </script>

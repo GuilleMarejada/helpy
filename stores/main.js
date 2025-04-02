@@ -1,29 +1,22 @@
-// stores/counter.js
+// stores/main.js
 import { defineStore } from 'pinia'
 
-export const useMainStore = defineStore('counter', {
+export const useMainStore = defineStore('main', {
     state: () => {
         return {
-            count: 0,
             services: [
-                { text: "Fontaneria", href: "#" },
-                { text: "Electricidad", href: "#" },
-                { text: "Carpinteria", href: "#" },
-                { text: "Jardineria", href: "#" },
-                { text: "Pintura", href: "#" },
-                { text: "Cerrajeria", href: "#" },
-                { text: "Albañileria", href: "#" },
-            ]
+                { text: "Fontaneria" },
+                { text: "Electricidad" },
+                { text: "Carpinteria" },
+                { text: "Jardineria" },
+                { text: "Pintura" },
+                { text: "Cerrajeria" },
+                { text: "Albañileria" },
+            ],
+            selectedService: null,
         }
     },
-    // could also be defined as
-    // state: () => ({ count: 0 })
     actions: {
-        increment() {
-            this.count++
-        },
-        decrement() {
-            this.count--
-        },
-    },
+        // Add your action methods here
+    }
 })
