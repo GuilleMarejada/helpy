@@ -1,5 +1,5 @@
 <template>
-    <nav class="text-white">
+    <nav class="">
         <div class="mx-auto flex justify-center font-bold">
             <div class="max-w-[1500px] w-full flex justify-between items-center px-8 py-4">
                 <a href="/" class="text-4xl font-bold">Helpy</a>
@@ -16,7 +16,7 @@
             <ul class="flex space-x-4">
                 <li v-for="service in services" :key="service.text">
                     <button
-                        class="border cursor-pointer border-gris rounded-md p-2 hover:bg-azul transition duration-300 ease-in-out"
+                        class="border border-black cursor-pointer rounded-md p-2 hover:bg-azul transition duration-300 ease-in-out"
                         @click="() => { selectService(service.text); toggleModal(); }">
                         {{ service.text }}
                     </button>
