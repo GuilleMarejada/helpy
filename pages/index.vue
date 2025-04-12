@@ -4,7 +4,7 @@
     <div class="bg-white p-5">
       <div class="flex justify-between items-center"> <img class="w-28" src="/images/LogoNormal.jpg" alt="Hero Image">
         <button
-          class="h-fit inline-flex items-center justify-center px-4 py-2 border border-transparent rounded-md shadow-sm text-sm font-medium text-white bg-indigo-600 hover:bg-indigo-700 focus:outline-none focus:ring-2 focus:ring-offset-2 focus:ring-indigo-500 transition-colors">
+          class="h-fit inline-flex items-center justify-center px-4 py-2 border border-transparent rounded-md shadow-sm text-sm font-medium text-white bg-[#6C63FF] hover:bg-indigo-700 focus:outline-none focus:ring-2 focus:ring-offset-2 focus:ring-indigo-500 transition-colors">
           Iniciar sesión
         </button>
       </div>
@@ -13,7 +13,7 @@
         <div class="flex flex-col lg:flex-row items-center justify-between gap-12">
           <div class="lg:w-1/2">
             <h1 class="text-5xl md:text-6xl font-extrabold leading-tight mb-6 text-gray-900">
-              Encuentra, reserva y <span class="text-indigo-600">soluciona</span> cualquier tarea en tu hogar.
+              Encuentra, reserva y <span class="text-[#6C63FF]">soluciona</span> cualquier tarea en tu hogar.
             </h1>
             <p class="text-xl text-gray-600 mb-8 leading-relaxed">
               Limpieza, reparaciones, cuidados y más.
@@ -21,7 +21,7 @@
             </p>
             <div class="flex flex-col sm:flex-row gap-4">
               <a href="/client"
-                class="px-8 py-4 bg-indigo-600 text-white font-medium rounded-lg hover:bg-indigo-700 transition-colors shadow-md text-center">
+                class="px-8 py-4 bg-[#6C63FF] text-white font-medium rounded-lg hover:bg-indigo-700 transition-colors shadow-md text-center">
                 Reserva un servicio
               </a>
               <a href="#como-funciona"
@@ -64,7 +64,7 @@
               <h3 class="text-2xl font-bold mb-3 text-gray-800">Limpieza del hogar</h3>
               <p class="text-gray-600 mb-5">Mantén tu casa impecable con nuestros expertos en limpieza profesional.</p>
               <button
-                class="w-full py-3 bg-indigo-600 text-white rounded-lg hover:bg-indigo-700 transition-colors font-medium flex items-center justify-center gap-2">
+                class="w-full py-3 bg-[#6C63FF] text-white rounded-lg hover:bg-indigo-700 transition-colors font-medium flex items-center justify-center gap-2">
                 Ver detalles
                 <svg xmlns="http://www.w3.org/2000/svg" class="h-5 w-5" viewBox="0 0 20 20" fill="currentColor">
                   <path fill-rule="evenodd"
@@ -86,7 +86,7 @@
               <p class="text-gray-600 mb-5">Reparaciones y mantenimiento de fontanería con profesionales experimentados.
               </p>
               <button
-                class="w-full py-3 bg-indigo-600 text-white rounded-lg hover:bg-indigo-700 transition-colors font-medium flex items-center justify-center gap-2">
+                class="w-full py-3 bg-[#6C63FF] text-white rounded-lg hover:bg-indigo-700 transition-colors font-medium flex items-center justify-center gap-2">
                 Ver detalles
                 <svg xmlns="http://www.w3.org/2000/svg" class="h-5 w-5" viewBox="0 0 20 20" fill="currentColor">
                   <path fill-rule="evenodd"
@@ -108,7 +108,7 @@
               <p class="text-gray-600 mb-5">Soluciona tus problemas eléctricos con expertos certificados y garantía de
                 calidad.</p>
               <button
-                class="w-full py-3 bg-indigo-600 text-white rounded-lg hover:bg-indigo-700 transition-colors font-medium flex items-center justify-center gap-2">
+                class="w-full py-3 bg-[#6C63FF] text-white rounded-lg hover:bg-indigo-700 transition-colors font-medium flex items-center justify-center gap-2">
                 Ver detalles
                 <svg xmlns="http://www.w3.org/2000/svg" class="h-5 w-5" viewBox="0 0 20 20" fill="currentColor">
                   <path fill-rule="evenodd"
@@ -138,7 +138,7 @@
           <div class="bg-gray-50 p-6 rounded-xl shadow-md">
             <div class="flex items-center mb-4">
               <div
-                class="h-12 w-12 bg-indigo-200 rounded-full flex items-center justify-center text-indigo-600 font-bold text-xl">
+                class="h-12 w-12 bg-indigo-200 rounded-full flex items-center justify-center text-[#6C63FF] font-bold text-xl">
                 M
               </div>
               <div class="ml-4">
@@ -179,7 +179,7 @@
           <div class="bg-gray-50 p-6 rounded-xl shadow-md">
             <div class="flex items-center mb-4">
               <div
-                class="h-12 w-12 bg-indigo-200 rounded-full flex items-center justify-center text-indigo-600 font-bold text-xl">
+                class="h-12 w-12 bg-indigo-200 rounded-full flex items-center justify-center text-[#6C63FF] font-bold text-xl">
                 J
               </div>
               <div class="ml-4">
@@ -220,7 +220,7 @@
           <div class="bg-gray-50 p-6 rounded-xl shadow-md">
             <div class="flex items-center mb-4">
               <div
-                class="h-12 w-12 bg-indigo-200 rounded-full flex items-center justify-center text-indigo-600 font-bold text-xl">
+                class="h-12 w-12 bg-indigo-200 rounded-full flex items-center justify-center text-[#6C63FF] font-bold text-xl">
                 L
               </div>
               <div class="ml-4">

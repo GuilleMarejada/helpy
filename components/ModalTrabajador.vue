@@ -7,7 +7,7 @@
         <div class="bg-white rounded-xl shadow-2xl w-full max-w-3xl overflow-hidden transform transition duration-300 ease-out"
             :class="{ 'opacity-0 translate-y-8': !animationComplete, 'opacity-100 translate-y-0': animationComplete }">
             <!-- Header con diseño mejorado y botón de cierre -->
-            <div class="bg-gradient-to-r from-blue-500 to-indigo-600 text-white px-6 py-4 flex items-center">
+            <div class="bg-[#6C63FF] text-white px-6 py-4 flex items-center">
                 <h2 class="text-2xl font-bold flex-1 text-center">Selecciona un helper de {{ title }}</h2>
                 <button @click="closeModal" class="text-white hover:text-gray-200 transition-colors focus:outline-none"
                     aria-label="Close">
@@ -23,6 +23,7 @@
             <div class="p-6 max-h-[60vh] overflow-y-auto">
                 <div v-if="category && category.professionals && category.professionals.length > 0">
                     <div class="grid gap-4">
+                        <h2 class="text-xl font-semibold">Precio medio en tu zona: {{ precioMedio }}€</h2>
                         <div v-for="(professional, index) in category.professionals" :key="index"
                             @click="selectProfessional(professional)"
                             class="border rounded-lg p-4 cursor-pointer transition-all duration-200"
@@ -31,7 +32,7 @@
                                 <div class="flex items-center space-x-4">
                                     <div class="h-12 w-12 bg-blue-100 rounded-full flex items-center justify-center">
                                         <span class="text-blue-600 font-bold text-xl">{{ professional.name.charAt(0)
-                                        }}</span>
+                                            }}</span>
                                     </div>
                                     <div>
                                         <h3 class="font-medium text-lg">{{ professional.name }}</h3>
@@ -71,7 +72,7 @@
                     Cancelar
                 </button>
                 <button @click="continuar"
-                    class="px-6 py-2 bg-indigo-600 text-white font-medium rounded-lg hover:bg-indigo-700 transition-colors shadow-md"
+                    class="px-6 py-2 bg-[#6C63FF] text-white font-medium rounded-lg hover:bg-indigo-700 transition-colors shadow-md"
                     :disabled="!selectedProf"
                     :class="{ 'opacity-50 cursor-not-allowed': !selectedProf, 'hover:bg-indigo-700': selectedProf }">
                     Continuar
@@ -87,14 +88,11 @@
 
     const mainStore = useMainStore();
     const title = computed(() => mainStore.selectedProfessional);
-    // Estado para controlar la animación y profesional seleccionado
     const animationComplete = ref(false);
     const selectedProf = ref(null);
 
-    // Utilizamos el estado del store para controlar la visibilidad
     const modalVisible = computed(() => mainStore.modals.modalTrabajador);
 
-    // Escuchar cambios en la visibilidad del modal desde el store
     watch(modalVisible, updateAnimationState, { immediate: true });
 
     async function updateAnimationState(newVal) {
@@ -153,7 +151,17 @@
             }
         }
     };
-
+    const precioMedio = computed(() => {
+        if (!category.value || !category.value.professionals || category.value.professionals.length === 0) {
+            return '0';
+        }
+        // Calculamos la suma de todos los precios
+        const suma = category.value.professionals.reduce((total, prof) => total + prof.price, 0);
+        // Dividimos por el número de profesionales para obtener el promedio
+        const promedio = suma / category.value.professionals.length;
+        // Devolvemos el valor formateado con dos decimales
+        return promedio.toFixed(2);
+    });
     onMounted(() => {
         document.addEventListener('keydown', handleEscKey);
         window.addEventListener('popstate', handlePopState);

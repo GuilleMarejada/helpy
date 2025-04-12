@@ -8,7 +8,7 @@
       class="bg-white rounded-xl shadow-2xl w-full max-w-6xl overflow-hidden transform transition duration-300 ease-out"
       :class="{ 'opacity-0 translate-y-8': !animationComplete, 'opacity-100 translate-y-0': animationComplete }">
       <!-- Header moderno -->
-      <div class="bg-gradient-to-r from-blue-500 to-indigo-600 text-white px-6 py-4 flex items-center">
+      <div class="bg-[#6C63FF] text-white px-6 py-4 flex items-center">
         <h2 class="text-2xl font-bold flex-1 text-center">Selecciona la fecha y hora - {{ professionalType }}</h2>
         <button @click="closeModal" class="text-white hover:text-gray-200 transition-colors focus:outline-none"
           aria-label="Close">
@@ -39,7 +39,7 @@
           Cancelar
         </button>
         <button @click="handleContinue"
-          class="px-6 py-2 bg-indigo-600 text-white font-medium rounded-lg hover:bg-indigo-700 transition-colors shadow-md">
+          class="px-6 py-2 bg-[#6C63FF] text-white font-medium rounded-lg hover:bg-indigo-700 transition-colors shadow-md">
           Continuar
         </button>
       </div>

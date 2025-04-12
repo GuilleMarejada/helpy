@@ -1,6 +1,8 @@
 <template>
   <div :class="containerClass">
-    <VueDatePicker v-model="date" @update:model-value="handleDate" inline auto-apply />
+    <div class="w-fit mx-auto">
+      <VueDatePicker class="" v-model="date" @update:model-value="handleDate" inline auto-apply />
+    </div>
     <div class="text-center mt-4">
       <p class="text-lg font-semibold text-gray-700">Fecha seleccionada: {{ date }}</p>
     </div>

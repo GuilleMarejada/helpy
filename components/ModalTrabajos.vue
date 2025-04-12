@@ -9,7 +9,7 @@
             <div class="bg-white rounded-xl shadow-2xl w-full max-w-3xl overflow-hidden transform transition duration-300 ease-out"
                 :class="{ 'opacity-0 translate-y-8': !animationComplete, 'opacity-100 translate-y-0': animationComplete }">
                 <!-- Header con diseño mejorado y botón de cierre -->
-                <div class="bg-gradient-to-r from-blue-500 to-indigo-600 text-white px-6 py-4 flex items-center">
+                <div class="bg-[#6C63FF] text-white px-6 py-4 flex items-center">
                     <h2 class="text-2xl font-bold flex-1 text-center">
                         <span class="inline-flex items-center">
                             <svg xmlns="http://www.w3.org/2000/svg" class="h-7 w-7 mr-2" fill="none" viewBox="0 0 24 24"
@@ -48,7 +48,7 @@
 
                     <div class="flex items-start">
                         <div class="bg-indigo-100 p-2 rounded-full mr-4">
-                            <svg xmlns="http://www.w3.org/2000/svg" class="h-6 w-6 text-indigo-600" fill="none"
+                            <svg xmlns="http://www.w3.org/2000/svg" class="h-6 w-6 text-[#6C63FF]" fill="none"
                                 viewBox="0 0 24 24" stroke="currentColor">
                                 <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2"
                                     d="M16 7a4 4 0 11-8 0 4 4 0 018 0zM12 14a7 7 0 00-7 7h14a7 7 0 00-7-7z" />
@@ -103,7 +103,7 @@
                         Cancelar
                     </button>
                     <button @click="continuar"
-                        class="px-6 py-2 bg-indigo-600 text-white font-medium rounded-lg hover:bg-indigo-700 transition-colors shadow-md"
+                        class="px-6 py-2 bg-[#6C63FF] text-white font-medium rounded-lg hover:bg-indigo-700 transition-colors shadow-md"
                         :disabled="!isFormValid" :class="{ 'opacity-50 cursor-not-allowed': !isFormValid }">
                         <span class="flex items-center">
                             Confirmar
