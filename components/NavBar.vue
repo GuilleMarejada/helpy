@@ -6,26 +6,27 @@
                 <div class="flex justify-between items-center h-16">
                     <!-- Logo -->
                     <div class="flex-shrink-0 flex items-center">
-                        <a href="/" class="text-3xl font-extrabold text-indigo-600">
-                            Helpy<span class="text-blue-400">.</span>
-                        </a>
+                        <img class="w-28 px-2" src="/images/LogoNormal.jpg" alt="Hero Image">
                     </div>
 
                     <!-- Enlaces de navegación -->
-                    <div class="hidden md:flex items-center space-x-8">
-                        <a v-for="link in mainLinks" :key="link.text" :href="link.href"
-                            class="text-gray-700 hover:text-indigo-600 px-3 py-2 rounded-md text-sm font-medium transition-colors">
-                            {{ link.text }}
-                        </a>
+                    <div class="flex">
+                        <div class="hidden md:flex items-center space-x-8">
+                            <a v-for="link in mainLinks" :key="link.text" :href="link.href"
+                                class="text-gray-700 hover:text-indigo-600 px-3 py-2 rounded-md text-sm font-medium transition-colors">
+                                {{ link.text }}
+                            </a>
+                        </div>
+
+                        <!-- Botón de iniciar sesión -->
+                        <div class="flex items-center">
+                            <button
+                                class="ml-8 inline-flex items-center justify-center px-4 py-2 border border-transparent rounded-md shadow-sm text-sm font-medium text-white bg-indigo-600 hover:bg-indigo-700 focus:outline-none focus:ring-2 focus:ring-offset-2 focus:ring-indigo-500 transition-colors">
+                                Iniciar sesión
+                            </button>
+                        </div>
                     </div>
 
-                    <!-- Botón de iniciar sesión -->
-                    <div class="flex items-center">
-                        <button
-                            class="ml-8 inline-flex items-center justify-center px-4 py-2 border border-transparent rounded-md shadow-sm text-sm font-medium text-white bg-indigo-600 hover:bg-indigo-700 focus:outline-none focus:ring-2 focus:ring-offset-2 focus:ring-indigo-500 transition-colors">
-                            Iniciar sesión
-                        </button>
-                    </div>
                 </div>
             </div>
         </div>
@@ -74,7 +75,6 @@
     const mainStore = useMainStore()
 
     const mainLinks = ref([
-        { text: "Cuenta", href: "/" },
         { text: "Trabaja con nosotros", href: "/helper" },
     ]);
     const services = ref(mainStore.services);
