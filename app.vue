@@ -1,5 +1,5 @@
 <template>
-  <div class="bg-gradient-to-b from-azul to-[#FFFFFF] h-auto min-h-screen">
+  <div class="h-auto min-h-screen">
     <!-- <NavBar /> -->
     <NuxtPage />
   </div>

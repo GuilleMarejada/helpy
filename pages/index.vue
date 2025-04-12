@@ -1,7 +1,7 @@
 <template>
   <div class="min-h-screen font-sans">
     <!-- Hero Section con degradado y mejor estructura -->
-    <div class="bg-gradient-to-b from-indigo-50 to-white">
+    <div class="bg-white">
       <div class="container mx-auto px-4 py-16 md:py-24">
         <div class="flex flex-col lg:flex-row items-center justify-between gap-12">
           <div class="lg:w-1/2">
@@ -26,99 +26,130 @@
 
           <div class="lg:w-1/2">
             <div class="relative">
-              <div class="absolute -top-4 -left-4 w-24 h-24 bg-indigo-100 rounded-full z-0"></div>
-              <div class="absolute -bottom-4 -right-4 w-32 h-32 bg-blue-100 rounded-full z-0"></div>
-              <img src="/images/limpiadora.webp" alt="Profesional de limpieza"
-                class="w-full relative z-10 rounded-xl shadow-xl" />
+              <img src="/images/FrontPage.JPG" alt="Imagen Portada" class="w-full relative z-10 rounded-xl shadow-xl" />
             </div>
           </div>
         </div>
       </div>
+    </div>
+    <!-- Cómo Funciona section -->
+    <div id="como-funciona" class="py-16 bg-gray-50">
+      <img src="/images/why.JPG" alt="">
     </div>
 
     <!-- Sección de servicios destacados -->
-    <div class="py-16 bg-white">
+    <div class="py-20 bg-gradient-to-b from-white to-gray-50">
       <div class="container mx-auto px-4">
-        <h2 class="text-3xl font-bold text-center mb-10 text-gray-900">Servicios más solicitados</h2>
+        <div class="text-center mb-12">
+          <h2 class="text-4xl font-bold text-gray-900 mb-3">Servicios más solicitados</h2>
+          <p class="text-gray-600 text-xl max-w-3xl mx-auto">Profesionales cualificados listos para ayudarte con
+            cualquier necesidad en tu hogar</p>
+        </div>
 
-        <div class="grid grid-cols-1 md:grid-cols-3 gap-8">
-          <div class="bg-white rounded-xl shadow-lg p-6 transform transition-all hover:scale-105">
-            <img src="/images/limpiadora.webp" alt="Limpieza" class="w-full h-48 object-cover rounded-lg mb-4" />
-            <h3 class="text-xl font-bold mb-2">Limpieza del hogar</h3>
-            <p class="text-gray-600 mb-4">Mantén tu casa impecable con nuestros expertos en limpieza.</p>
-            <button class="w-full py-2 bg-indigo-600 text-white rounded-lg hover:bg-indigo-700 transition-colors">
-              Ver detalles
-            </button>
+        <div class="grid grid-cols-1 md:grid-cols-3 gap-10 h-fit">
+          <div
+            class="bg-white rounded-xl shadow-lg overflow-hidden transform transition-all duration-300 hover:scale-105 hover:shadow-xl">
+            <div class="h-80 overflow-hidden">
+              <img src="/images/limpiadora.jpg" alt="Limpieza"
+                class="w-full h-full object-cover transition-transform duration-500 hover:scale-110 object-top" />
+            </div>
+            <div class="p-6">
+              <h3 class="text-2xl font-bold mb-3 text-gray-800">Limpieza del hogar</h3>
+              <p class="text-gray-600 mb-5">Mantén tu casa impecable con nuestros expertos en limpieza profesional.</p>
+              <button
+                class="w-full py-3 bg-indigo-600 text-white rounded-lg hover:bg-indigo-700 transition-colors font-medium flex items-center justify-center gap-2">
+                Ver detalles
+                <svg xmlns="http://www.w3.org/2000/svg" class="h-5 w-5" viewBox="0 0 20 20" fill="currentColor">
+                  <path fill-rule="evenodd"
+                    d="M10.293 5.293a1 1 0 011.414 0l4 4a1 1 0 010 1.414l-4 4a1 1 0 01-1.414-1.414L12.586 11H5a1 1 0 110-2h7.586l-2.293-2.293a1 1 0 010-1.414z"
+                    clip-rule="evenodd" />
+                </svg>
+              </button>
+            </div>
           </div>
 
-          <div class="bg-white rounded-xl shadow-lg p-6 transform transition-all hover:scale-105">
-            <img src="~/public/images/Fontanero.jpg" alt="Fontanería"
-              class="w-full h-48 object-cover rounded-lg mb-4" />
-            <h3 class="text-xl font-bold mb-2">Fontanería</h3>
-            <p class="text-gray-600 mb-4">Reparaciones de fontanería con profesionales experimentados.</p>
-            <button class="w-full py-2 bg-indigo-600 text-white rounded-lg hover:bg-indigo-700 transition-colors">
-              Ver detalles
-            </button>
+          <div
+            class="bg-white rounded-xl shadow-lg overflow-hidden transform transition-all duration-300 hover:scale-105 hover:shadow-xl">
+            <div class="h-80 overflow-hidden">
+              <img src="/images/Fontanero.jpg" alt="Fontanería"
+                class="w-full h-full object-cover transition-transform duration-500 hover:scale-110 object-top" />
+            </div>
+            <div class="p-6">
+              <h3 class="text-2xl font-bold mb-3 text-gray-800">Fontanería</h3>
+              <p class="text-gray-600 mb-5">Reparaciones y mantenimiento de fontanería con profesionales experimentados.
+              </p>
+              <button
+                class="w-full py-3 bg-indigo-600 text-white rounded-lg hover:bg-indigo-700 transition-colors font-medium flex items-center justify-center gap-2">
+                Ver detalles
+                <svg xmlns="http://www.w3.org/2000/svg" class="h-5 w-5" viewBox="0 0 20 20" fill="currentColor">
+                  <path fill-rule="evenodd"
+                    d="M10.293 5.293a1 1 0 011.414 0l4 4a1 1 0 010 1.414l-4 4a1 1 0 01-1.414-1.414L12.586 11H5a1 1 0 110-2h7.586l-2.293-2.293a1 1 0 010-1.414z"
+                    clip-rule="evenodd" />
+                </svg>
+              </button>
+            </div>
           </div>
 
-          <div class="bg-white rounded-xl shadow-lg p-6 transform transition-all hover:scale-105">
-            <img src="~/public/images/Electricista.jpg" alt="Electricidad"
-              class="w-full h-48 object-cover rounded-lg mb-4" />
-            <h3 class="text-xl font-bold mb-2">Electricidad</h3>
-            <p class="text-gray-600 mb-4">Soluciona tus problemas eléctricos con expertos certificados.</p>
-            <button class="w-full py-2 bg-indigo-600 text-white rounded-lg hover:bg-indigo-700 transition-colors">
-              Ver detalles
-            </button>
+          <div
+            class="bg-white rounded-xl shadow-lg overflow-hidden transform transition-all duration-300 hover:scale-105 hover:shadow-xl">
+            <div class="h-80 overflow-hidden">
+              <img src="/images/Electricista.jpg" alt="Electricidad"
+                class="w-full h-full object-cover transition-transform duration-500 hover:scale-110 object-top" />
+            </div>
+            <div class="p-6">
+              <h3 class="text-2xl font-bold mb-3 text-gray-800">Electricidad</h3>
+              <p class="text-gray-600 mb-5">Soluciona tus problemas eléctricos con expertos certificados y garantía de
+                calidad.</p>
+              <button
+                class="w-full py-3 bg-indigo-600 text-white rounded-lg hover:bg-indigo-700 transition-colors font-medium flex items-center justify-center gap-2">
+                Ver detalles
+                <svg xmlns="http://www.w3.org/2000/svg" class="h-5 w-5" viewBox="0 0 20 20" fill="currentColor">
+                  <path fill-rule="evenodd"
+                    d="M10.293 5.293a1 1 0 011.414 0l4 4a1 1 0 010 1.414l-4 4a1 1 0 01-1.414-1.414L12.586 11H5a1 1 0 110-2h7.586l-2.293-2.293a1 1 0 010-1.414z"
+                    clip-rule="evenodd" />
+                </svg>
+              </button>
+            </div>
           </div>
         </div>
       </div>
     </div>
 
-    <!-- Cómo Funciona section -->
-    <div id="como-funciona" class="py-16 bg-gray-50">
+    <!-- Sección APP -->
+    <div class="py-20 bg-white">
       <div class="container mx-auto px-4">
-        <h2 class="text-3xl font-bold text-center mb-12 text-gray-900">Cómo funciona</h2>
-
-        <div class="grid grid-cols-1 md:grid-cols-3 gap-10">
-          <div class="flex flex-col items-center bg-white p-8 rounded-xl shadow-md">
-            <div class="bg-indigo-100 rounded-full p-4 mb-6">
-              <svg xmlns="http://www.w3.org/2000/svg" class="h-10 w-10 text-indigo-600" viewBox="0 0 20 20"
-                fill="currentColor">
-                <path fill-rule="evenodd"
-                  d="M8 4a4 4 0 100 8 4 4 0 000-8zM2 8a6 6 0 1110.89 3.476l4.817 4.817a1 1 0 01-1.414 1.414l-4.816-4.816A6 6 0 012 8z"
-                  clip-rule="evenodd" />
-              </svg>
+        <div class="flex flex-col lg:flex-row items-center justify-between gap-12">
+          <div class="lg:w-1/2">
+            <h2 class="text-3xl md:text-4xl font-bold mb-6 text-gray-900">Descarga nuestra aplicación</h2>
+            <p class="text-xl text-gray-600 mb-8 leading-relaxed">
+              Gestiona tus reservas, contacta con profesionales y recibe notificaciones en tiempo real desde tu
+              dispositivo móvil.
+            </p>
+            <div class="flex flex-row gap-4">
+              <button
+                class="px-6 py-3 bg-indigo-600 text-white font-medium rounded-lg hover:bg-indigo-700 transition-colors shadow-md flex items-center gap-2">
+                <svg xmlns="http://www.w3.org/2000/svg" class="h-6 w-6" fill="none" viewBox="0 0 24 24"
+                  stroke="currentColor">
+                  <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2"
+                    d="M12 18h.01M8 21h8a2 2 0 002-2V5a2 2 0 00-2-2H8a2 2 0 00-2 2v14a2 2 0 002 2z" />
+                </svg>
+                App Store
+              </button>
+              <button
+                class="px-6 py-3 bg-indigo-600 text-white font-medium rounded-lg hover:bg-indigo-700 transition-colors shadow-md flex items-center gap-2">
+                <svg xmlns="http://www.w3.org/2000/svg" class="h-6 w-6" fill="none" viewBox="0 0 24 24"
+                  stroke="currentColor">
+                  <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2"
+                    d="M9 3v2m6-2v2M9 19v2m6-2v2M5 9H3m2 6H3m18-6h-2m2 6h-2M7 19h10a2 2 0 002-2V7a2 2 0 00-2-2H7a2 2 0 00-2 2v10a2 2 0 002 2zM9 9h6v6H9V9z" />
+                </svg>
+                Google Play
+              </button>
             </div>
-            <h3 class="text-xl font-bold mb-3">Explora servicios</h3>
-            <p class="text-gray-600 text-center">Encuentra el servicio que necesitas entre nuestra amplia selección de
-              profesionales verificados.</p>
           </div>
-
-          <div class="flex flex-col items-center bg-white p-8 rounded-xl shadow-md">
-            <div class="bg-indigo-100 rounded-full p-4 mb-6">
-              <svg xmlns="http://www.w3.org/2000/svg" class="h-10 w-10 text-indigo-600" viewBox="0 0 20 20"
-                fill="currentColor">
-                <path fill-rule="evenodd"
-                  d="M6 2a1 1 0 00-1 1v1H4a2 2 0 00-2 2v10a2 2 0 002 2h12a2 2 0 002-2V6a2 2 0 00-2-2h-1V3a1 1 0 10-2 0v1H7V3a1 1 0 00-1-1zm0 5a1 1 0 000 2h8a1 1 0 100-2H6z"
-                  clip-rule="evenodd" />
-              </svg>
+          <div class="lg:w-1/2 mt-8 lg:mt-0">
+            <div class="overflow-hidden rounded-2xl shadow-2xl transform hover:scale-105 transition-all duration-300">
+              <img class="w-full h-full object-cover" src="/images/APP.jpg" alt="Aplicación">
             </div>
-            <h3 class="text-xl font-bold mb-3">Haz una reserva</h3>
-            <p class="text-gray-600 text-center">Selecciona fecha, hora y el profesional que prefieras. Paga de forma
-              segura.</p>
-          </div>
-
-          <div class="flex flex-col items-center bg-white p-8 rounded-xl shadow-md">
-            <div class="bg-indigo-100 rounded-full p-4 mb-6">
-              <svg xmlns="http://www.w3.org/2000/svg" class="h-10 w-10 text-indigo-600" viewBox="0 0 20 20"
-                fill="currentColor">
-                <path
-                  d="M2 10.5a1.5 1.5 0 113 0v6a1.5 1.5 0 01-3 0v-6zM6 10.333v5.43a2 2 0 001.106 1.79l.05.025A4 4 0 008.943 18h5.416a2 2 0 001.962-1.608l1.2-6A2 2 0 0015.56 8H12V4a2 2 0 00-2-2 1 1 0 00-1 1v.667a4 4 0 01-.8 2.4L6.8 7.933a4 4 0 00-.8 2.4z" />
-              </svg>
-            </div>
-            <h3 class="text-xl font-bold mb-3">Soluciona tu tarea</h3>
-            <p class="text-gray-600 text-center">Recibe al profesional en tu hogar y disfruta de un servicio de calidad.
-              Valora tu experiencia.</p>
           </div>
         </div>
       </div>
@@ -127,7 +158,7 @@
     <!-- Testimonios -->
     <div class="py-16 bg-white">
       <div class="container mx-auto px-4">
-        <h2 class="text-3xl font-bold text-center mb-12 text-gray-900">Lo que dicen nuestros clientes</h2>
+        <h2 class="text-3xl font-bold mb-12 text-gray-900">Lo que dicen nuestros clientes</h2>
 
         <div class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8">
           <div class="bg-gray-50 p-6 rounded-xl shadow-md">
