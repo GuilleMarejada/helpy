@@ -41,7 +41,7 @@
     </div>
     <!-- Cómo Funciona section -->
     <div id="como-funciona" class="py-16 bg-gray-50">
-      <img src="/images/why.webp" alt="">
+      <img src="/images/Why.webp" alt="">
     </div>
 
     <!-- Sección de servicios destacados -->
