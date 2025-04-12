@@ -3,13 +3,13 @@
     <Teleport to="body">
         <div class="fixed inset-0 z-50 flex items-center justify-center p-4" v-if="modalVisible"
             @click.self="closeModal">
-            <div class="absolute inset-0 bg-black/50 backdrop-blur-md transition-opacity duration-300"
+            <div class="absolute inset-0 bg-black/40 backdrop-blur-sm transition-opacity duration-300"
                 :class="{ 'opacity-0': !animationComplete, 'opacity-100': animationComplete }" @click.self="closeModal">
             </div>
-            <div class="bg-white dark:bg-gray-800 rounded-2xl shadow-2xl w-full max-w-3xl overflow-hidden transform transition-all duration-300 ease-out"
+            <div class="bg-white rounded-xl shadow-2xl w-full max-w-3xl overflow-hidden transform transition duration-300 ease-out"
                 :class="{ 'opacity-0 translate-y-8': !animationComplete, 'opacity-100 translate-y-0': animationComplete }">
                 <!-- Header con diseño mejorado y botón de cierre -->
-                <div class="bg-gradient-to-r from-blue-600 to-indigo-700 text-white px-6 py-5 flex items-center">
+                <div class="bg-gradient-to-r from-blue-500 to-indigo-600 text-white px-6 py-4 flex items-center">
                     <h2 class="text-2xl font-bold flex-1 text-center">
                         <span class="inline-flex items-center">
                             <svg xmlns="http://www.w3.org/2000/svg" class="h-7 w-7 mr-2" fill="none" viewBox="0 0 24 24"
@@ -21,8 +21,7 @@
                         </span>
                     </h2>
                     <button @click="closeModal"
-                        class="text-white hover:text-gray-200 transition-colors focus:outline-none focus:ring-2 focus:ring-white/30 p-1 rounded-full"
-                        aria-label="Close">
+                        class="text-white hover:text-gray-200 transition-colors focus:outline-none" aria-label="Close">
                         <svg xmlns="http://www.w3.org/2000/svg" class="h-7 w-7" fill="none" viewBox="0 0 24 24"
                             stroke="currentColor">
                             <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2"
@@ -32,81 +31,79 @@
                 </div>
 
                 <!-- Información del servicio -->
-                <div class="px-8 py-6 text-gray-700 dark:text-gray-200 space-y-4">
+                <div class="px-8 py-6 space-y-4">
                     <div class="flex items-start">
-                        <div class="bg-blue-100 dark:bg-blue-900/30 p-2 rounded-full mr-4">
-                            <svg xmlns="http://www.w3.org/2000/svg" class="h-6 w-6 text-blue-600 dark:text-blue-400"
-                                fill="none" viewBox="0 0 24 24" stroke="currentColor">
+                        <div class="bg-blue-100 p-2 rounded-full mr-4">
+                            <svg xmlns="http://www.w3.org/2000/svg" class="h-6 w-6 text-blue-600" fill="none"
+                                viewBox="0 0 24 24" stroke="currentColor">
                                 <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2"
                                     d="M21 13.255A23.931 23.931 0 0112 15c-3.183 0-6.22-.62-9-1.745M16 6V4a2 2 0 00-2-2h-4a2 2 0 00-2 2v2m4 6h.01M5 20h14a2 2 0 002-2V8a2 2 0 00-2-2H5a2 2 0 00-2 2v10a2 2 0 002 2z" />
                             </svg>
                         </div>
                         <div>
-                            <h3 class="text-xl font-semibold text-gray-800 dark:text-white">{{ serviceCategory }}</h3>
-                            <p class="text-gray-500 dark:text-gray-400">Tipo de servicio</p>
+                            <h3 class="text-xl font-semibold text-gray-800">{{ serviceCategory }}</h3>
+                            <p class="text-gray-500">Tipo de servicio</p>
                         </div>
                     </div>
 
                     <div class="flex items-start">
-                        <div class="bg-indigo-100 dark:bg-indigo-900/30 p-2 rounded-full mr-4">
-                            <svg xmlns="http://www.w3.org/2000/svg" class="h-6 w-6 text-indigo-600 dark:text-indigo-400"
-                                fill="none" viewBox="0 0 24 24" stroke="currentColor">
+                        <div class="bg-indigo-100 p-2 rounded-full mr-4">
+                            <svg xmlns="http://www.w3.org/2000/svg" class="h-6 w-6 text-indigo-600" fill="none"
+                                viewBox="0 0 24 24" stroke="currentColor">
                                 <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2"
                                     d="M16 7a4 4 0 11-8 0 4 4 0 018 0zM12 14a7 7 0 00-7 7h14a7 7 0 00-7-7z" />
                             </svg>
                         </div>
                         <div>
-                            <p class="text-lg font-medium text-gray-800 dark:text-white">{{ selectedProfessional.name }}
+                            <p class="text-lg font-medium text-gray-800">{{ selectedProfessional.name }}
                                 ({{ selectedProfessional.rating }})</p>
-                            <p class="text-gray-500 dark:text-gray-400">Profesional seleccionado</p>
+                            <p class="text-gray-500">Profesional seleccionado</p>
                         </div>
                     </div>
 
                     <div class="flex items-start">
-                        <div class="bg-green-100 dark:bg-green-900/30 p-2 rounded-full mr-4">
-                            <svg xmlns="http://www.w3.org/2000/svg" class="h-6 w-6 text-green-600 dark:text-green-400"
-                                fill="none" viewBox="0 0 24 24" stroke="currentColor">
+                        <div class="bg-green-100 p-2 rounded-full mr-4">
+                            <svg xmlns="http://www.w3.org/2000/svg" class="h-6 w-6 text-green-600" fill="none"
+                                viewBox="0 0 24 24" stroke="currentColor">
                                 <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2"
                                     d="M8 7V3m8 4V3m-9 8h10M5 21h14a2 2 0 002-2V7a2 2 0 00-2-2H5a2 2 0 00-2 2v12a2 2 0 002 2z" />
                             </svg>
                         </div>
                         <div>
-                            <p class="text-lg font-medium text-gray-800 dark:text-white">{{ date }}</p>
-                            <p class="text-gray-500 dark:text-gray-400">Fecha seleccionada</p>
+                            <p class="text-lg font-medium text-gray-800">{{ date }}</p>
+                            <p class="text-gray-500">Fecha seleccionada</p>
                         </div>
                     </div>
 
                     <div class="flex items-start" v-if="mainStore.profecionalType">
-                        <div class="bg-purple-100 dark:bg-purple-900/30 p-2 rounded-full mr-4">
-                            <svg xmlns="http://www.w3.org/2000/svg" class="h-6 w-6 text-purple-600 dark:text-purple-400"
-                                fill="none" viewBox="0 0 24 24" stroke="currentColor">
+                        <div class="bg-purple-100 p-2 rounded-full mr-4">
+                            <svg xmlns="http://www.w3.org/2000/svg" class="h-6 w-6 text-purple-600" fill="none"
+                                viewBox="0 0 24 24" stroke="currentColor">
                                 <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2"
                                     d="M9 12l2 2 4-4m5.618-4.016A11.955 11.955 0 0112 2.944a11.955 11.955 0 01-8.618 3.04A12.02 12.02 0 003 9c0 5.591 3.824 10.29 9 11.622 5.176-1.332 9-6.03 9-11.622 0-1.042-.133-2.052-.382-3.016z" />
                             </svg>
                         </div>
                         <div>
-                            <p class="text-lg font-medium text-gray-800 dark:text-white">{{ mainStore.profecionalType }}
+                            <p class="text-lg font-medium text-gray-800">{{ mainStore.profecionalType }}
                             </p>
-                            <p class="text-gray-500 dark:text-gray-400">Tipo de profesional</p>
+                            <p class="text-gray-500">Tipo de profesional</p>
                         </div>
                     </div>
                     <div>
-                        <p class="text-lg font-medium text-gray-800 dark:text-white">Precio: {{
+                        <p class="text-lg font-medium text-gray-800">Precio: {{
                             selectedProfessional.price }}€/hora</p>
-                        <p class="text-gray-500 dark:text-gray-400">Precio estimado</p>
+                        <p class="text-gray-500">Precio estimado</p>
                     </div>
                 </div>
 
                 <!-- Footer -->
-                <div
-                    class="bg-gray-50 dark:bg-gray-900 px-8 py-5 flex justify-end space-x-4 border-t border-gray-200 dark:border-gray-700">
+                <div class="bg-gray-50 px-6 py-4 flex justify-end space-x-3 border-t border-gray-200">
                     <button @click="closeModal"
-                        class="px-5 py-2.5 border border-gray-300 dark:border-gray-600 rounded-lg text-gray-700 dark:text-gray-300 
-                        hover:bg-gray-100 dark:hover:bg-gray-800 transition-colors focus:outline-none focus:ring-2 focus:ring-indigo-200 dark:focus:ring-indigo-800">
+                        class="px-4 py-2 border border-gray-300 rounded-lg text-gray-700 hover:bg-gray-100 transition-colors">
                         Cancelar
                     </button>
-                    <button @click="continuar" class="px-6 py-2.5 bg-indigo-600 text-white font-medium rounded-lg transition-colors shadow-md
-                        hover:bg-indigo-700 focus:outline-none focus:ring-2 focus:ring-offset-2 focus:ring-indigo-500"
+                    <button @click="continuar"
+                        class="px-6 py-2 bg-indigo-600 text-white font-medium rounded-lg hover:bg-indigo-700 transition-colors shadow-md"
                         :disabled="!isFormValid" :class="{ 'opacity-50 cursor-not-allowed': !isFormValid }">
                         <span class="flex items-center">
                             Confirmar

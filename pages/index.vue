@@ -1,8 +1,15 @@
 <template>
   <div class="min-h-screen font-sans">
     <!-- Hero Section con degradado y mejor estructura -->
-    <div class="bg-white">
-      <div class="container mx-auto px-4 py-16 md:py-24">
+    <div class="bg-white p-5">
+      <div class="flex justify-between items-center"> <img class="w-28" src="/images/LogoNormal.jpg" alt="Hero Image">
+        <button
+          class="h-fit inline-flex items-center justify-center px-4 py-2 border border-transparent rounded-md shadow-sm text-sm font-medium text-white bg-indigo-600 hover:bg-indigo-700 focus:outline-none focus:ring-2 focus:ring-offset-2 focus:ring-indigo-500 transition-colors">
+          Iniciar sesión
+        </button>
+      </div>
+
+      <div class="container mx-auto px-4 py-4">
         <div class="flex flex-col lg:flex-row items-center justify-between gap-12">
           <div class="lg:w-1/2">
             <h1 class="text-5xl md:text-6xl font-extrabold leading-tight mb-6 text-gray-900">
@@ -116,42 +123,9 @@
     </div>
 
     <!-- Sección APP -->
-    <div class="py-20 bg-white">
+    <div class="w-2/3 mx-auto py-20">
       <div class="container mx-auto px-4">
-        <div class="flex flex-col lg:flex-row items-center justify-between gap-12">
-          <div class="lg:w-1/2">
-            <h2 class="text-3xl md:text-4xl font-bold mb-6 text-gray-900">Descarga nuestra aplicación</h2>
-            <p class="text-xl text-gray-600 mb-8 leading-relaxed">
-              Gestiona tus reservas, contacta con profesionales y recibe notificaciones en tiempo real desde tu
-              dispositivo móvil.
-            </p>
-            <div class="flex flex-row gap-4">
-              <button
-                class="px-6 py-3 bg-indigo-600 text-white font-medium rounded-lg hover:bg-indigo-700 transition-colors shadow-md flex items-center gap-2">
-                <svg xmlns="http://www.w3.org/2000/svg" class="h-6 w-6" fill="none" viewBox="0 0 24 24"
-                  stroke="currentColor">
-                  <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2"
-                    d="M12 18h.01M8 21h8a2 2 0 002-2V5a2 2 0 00-2-2H8a2 2 0 00-2 2v14a2 2 0 002 2z" />
-                </svg>
-                App Store
-              </button>
-              <button
-                class="px-6 py-3 bg-indigo-600 text-white font-medium rounded-lg hover:bg-indigo-700 transition-colors shadow-md flex items-center gap-2">
-                <svg xmlns="http://www.w3.org/2000/svg" class="h-6 w-6" fill="none" viewBox="0 0 24 24"
-                  stroke="currentColor">
-                  <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2"
-                    d="M9 3v2m6-2v2M9 19v2m6-2v2M5 9H3m2 6H3m18-6h-2m2 6h-2M7 19h10a2 2 0 002-2V7a2 2 0 00-2-2H7a2 2 0 00-2 2v10a2 2 0 002 2zM9 9h6v6H9V9z" />
-                </svg>
-                Google Play
-              </button>
-            </div>
-          </div>
-          <div class="lg:w-1/2 mt-8 lg:mt-0">
-            <div class="overflow-hidden rounded-2xl shadow-2xl transform hover:scale-105 transition-all duration-300">
-              <img class="w-full h-full object-cover" src="/images/APP.jpg" alt="Aplicación">
-            </div>
-          </div>
-        </div>
+        <img class="w-full h-full object-cover" src="/images/APP.jpg" alt="Aplicación">
       </div>
     </div>
 
@@ -303,8 +277,8 @@
 
           <div>
             <h4 class="text-lg font-semibold mb-4">Contacto</h4>
-            <p class="text-gray-400 mb-2">info@helpy.com</p>
-            <p class="text-gray-400">+34 912 345 678</p>
+            <p class="text-gray-400 mb-2">XXX@XXX.com</p>
+            <p class="text-gray-400">+34 XXX XXX XXX</p>
           </div>
         </div>
 
