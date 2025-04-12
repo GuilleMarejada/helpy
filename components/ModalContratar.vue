@@ -76,6 +76,7 @@
   const getImagePath = () => {
     try {
       // Intentamos utilizar una ruta de imagen basada en el tipo de profesional
+      if (professionalType.value === "Profesor de musica") return '/images/profesorMusica.jpg';
       return `/images/${professionalType.value}.jpg`;
     } catch (error) {
       // Si la imagen no existe, usamos una imagen de respaldo
