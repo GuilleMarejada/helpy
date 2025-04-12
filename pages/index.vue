@@ -2,7 +2,11 @@
   <div class="min-h-screen font-sans">
     <!-- Hero Section con degradado y mejor estructura -->
     <div class="bg-white p-5">
-      <div class="flex justify-between items-center"> <img class="w-28" src="/images/LogoNormal.jpg" alt="Hero Image">
+      <div class="flex justify-between items-center">
+        <div class="flex-shrink-0 flex items-center">
+          <a href="/"> <img class="w-28 px-2" src="/images/LogoNormal.jpg" alt="Hero Image">
+          </a>
+        </div>
         <button
           class="h-fit inline-flex items-center justify-center px-4 py-2 border border-transparent rounded-md shadow-sm text-sm font-medium text-white bg-[#6C63FF] hover:bg-indigo-700 focus:outline-none focus:ring-2 focus:ring-offset-2 focus:ring-indigo-500 transition-colors">
           Iniciar sesión

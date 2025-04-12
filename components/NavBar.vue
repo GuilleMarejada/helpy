@@ -6,7 +6,8 @@
                 <div class="flex justify-between items-center h-16">
                     <!-- Logo -->
                     <div class="flex-shrink-0 flex items-center">
-                        <img class="w-28 px-2" src="/images/LogoNormal.jpg" alt="Hero Image">
+                        <a href="/"> <img class="w-28 px-2" src="/images/LogoNormal.jpg" alt="Hero Image">
+                        </a>
                     </div>
 
                     <!-- Enlaces de navegación -->
