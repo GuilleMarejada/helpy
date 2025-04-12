@@ -28,7 +28,7 @@
             <div class="relative">
               <div class="absolute -top-4 -left-4 w-24 h-24 bg-indigo-100 rounded-full z-0"></div>
               <div class="absolute -bottom-4 -right-4 w-32 h-32 bg-blue-100 rounded-full z-0"></div>
-              <img src="/images/limpiadora.PNG" alt="Profesional de limpieza"
+              <img src="~/public/images/limpiadora.PNG" alt="Profesional de limpieza"
                 class="w-full relative z-10 rounded-xl shadow-xl" />
             </div>
           </div>
@@ -43,7 +43,7 @@
 
         <div class="grid grid-cols-1 md:grid-cols-3 gap-8">
           <div class="bg-white rounded-xl shadow-lg p-6 transform transition-all hover:scale-105">
-            <img src="/images/Limpiadora.PNG" alt="Limpieza" class="w-full h-48 object-cover rounded-lg mb-4" />
+            <img src="~/public/images/Limpiadora.PNG" alt="Limpieza" class="w-full h-48 object-cover rounded-lg mb-4" />
             <h3 class="text-xl font-bold mb-2">Limpieza del hogar</h3>
             <p class="text-gray-600 mb-4">Mantén tu casa impecable con nuestros expertos en limpieza.</p>
             <button class="w-full py-2 bg-indigo-600 text-white rounded-lg hover:bg-indigo-700 transition-colors">
@@ -52,7 +52,8 @@
           </div>
 
           <div class="bg-white rounded-xl shadow-lg p-6 transform transition-all hover:scale-105">
-            <img src="/images/Fontaneria.png" alt="Fontanería" class="w-full h-48 object-cover rounded-lg mb-4" />
+            <img src="~/public/images/Fontaneria.png" alt="Fontanería"
+              class="w-full h-48 object-cover rounded-lg mb-4" />
             <h3 class="text-xl font-bold mb-2">Fontanería</h3>
             <p class="text-gray-600 mb-4">Reparaciones de fontanería con profesionales experimentados.</p>
             <button class="w-full py-2 bg-indigo-600 text-white rounded-lg hover:bg-indigo-700 transition-colors">
@@ -61,7 +62,8 @@
           </div>
 
           <div class="bg-white rounded-xl shadow-lg p-6 transform transition-all hover:scale-105">
-            <img src="/images/Electricidad.png" alt="Electricidad" class="w-full h-48 object-cover rounded-lg mb-4" />
+            <img src="~/public/images/Electricidad.png" alt="Electricidad"
+              class="w-full h-48 object-cover rounded-lg mb-4" />
             <h3 class="text-xl font-bold mb-2">Electricidad</h3>
             <p class="text-gray-600 mb-4">Soluciona tus problemas eléctricos con expertos certificados.</p>
             <button class="w-full py-2 bg-indigo-600 text-white rounded-lg hover:bg-indigo-700 transition-colors">
