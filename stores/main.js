@@ -17,6 +17,7 @@ export const useMainStore = defineStore('main', {
             selectedService: null,
             selectedProfessional: null,
             selectedDate: null,
+            profecionalType: null,
             professionals: {
                 "Hogar y reparaciones": [
                     {
@@ -36,7 +37,7 @@ export const useMainStore = defineStore('main', {
                     {
                         type: "Fontanero",
                         professionals: [
-                            { name: "Luis Fernández", rating: 4.9, price: 90 },
+                            { name: "Luis Fernández", rating: 4.9, price: 75 },
                             { name: "Sofía García", rating: 4.4, price: 100 }
                         ]
                     },
@@ -66,8 +67,8 @@ export const useMainStore = defineStore('main', {
                     {
                         type: "Masajista",
                         professionals: [
-                            { name: "Pedro González", rating: 4.6, price: 70 },
-                            { name: "Sofía García", rating: 4.8, price: 80 }
+                            { name: "Victor Ochando Calvo", rating: 4.6, price: 70 },
+                            { name: "Lander Torres Lombraña", rating: 4.8, price: 80 }
                         ]
                     },
                     {

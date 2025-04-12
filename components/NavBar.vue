@@ -83,12 +83,13 @@
     // Función para iniciar el flujo de modales
     const startModalFlow = () => {
         // Comenzamos siempre con el modal del trabajador
-        mainStore.openModal('modalTrabajador');
+        mainStore.openModal('modalContratar');
     };
 
     const selectProfessionalType = (serviceText, typeText) => {
         mainStore.selectedService = serviceText;
         mainStore.selectedProfessional = typeText;
+        mainStore.profecionalType = typeText; // Reiniciar la fecha al seleccionar un nuevo profesional
         activeDropdown.value = null; // Cerrar el dropdown después de seleccionar
     };
 

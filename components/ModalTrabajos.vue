@@ -1,85 +1,126 @@
 <template>
     <!-- Overlay con fondo semitransparente y animación -->
-    <div class="fixed inset-0 z-50 flex items-center justify-center p-4" @click.self="closeModal" v-if="modalVisible">
-        <div class="absolute inset-0 bg-black/40 backdrop-blur-sm"
-            :class="{ 'opacity-0': !animationComplete, 'opacity-100': animationComplete }" @click.self="closeModal"
-            v-show="modalVisible" transition="fade"></div>
-        <div class="bg-white rounded-xl shadow-2xl w-full max-w-3xl overflow-hidden transform transition duration-300 ease-out"
-            :class="{ 'opacity-0 translate-y-8': !animationComplete, 'opacity-100 translate-y-0': animationComplete }">
-            <!-- Header con diseño mejorado y botón de cierre -->
-            <div class="bg-gradient-to-r from-blue-500 to-indigo-600 text-white px-6 py-4 flex items-center">
-                <h2 class="text-2xl font-bold flex-1 text-center">Selecciona un helper de {{ title }}</h2>
-                <button @click="closeModal" class="text-white hover:text-gray-200 transition-colors focus:outline-none"
-                    aria-label="Close">
-                    <svg xmlns="http://www.w3.org/2000/svg" class="h-7 w-7" fill="none" viewBox="0 0 24 24"
-                        stroke="currentColor">
-                        <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2"
-                            d="M6 18L18 6M6 6l12 12" />
-                    </svg>
-                </button>
+    <Teleport to="body">
+        <div class="fixed inset-0 z-50 flex items-center justify-center p-4" v-if="modalVisible"
+            @click.self="closeModal">
+            <div class="absolute inset-0 bg-black/50 backdrop-blur-md transition-opacity duration-300"
+                :class="{ 'opacity-0': !animationComplete, 'opacity-100': animationComplete }" @click.self="closeModal">
             </div>
+            <div class="bg-white dark:bg-gray-800 rounded-2xl shadow-2xl w-full max-w-3xl overflow-hidden transform transition-all duration-300 ease-out"
+                :class="{ 'opacity-0 translate-y-8': !animationComplete, 'opacity-100 translate-y-0': animationComplete }">
+                <!-- Header con diseño mejorado y botón de cierre -->
+                <div class="bg-gradient-to-r from-blue-600 to-indigo-700 text-white px-6 py-5 flex items-center">
+                    <h2 class="text-2xl font-bold flex-1 text-center">
+                        <span class="inline-flex items-center">
+                            <svg xmlns="http://www.w3.org/2000/svg" class="h-7 w-7 mr-2" fill="none" viewBox="0 0 24 24"
+                                stroke="currentColor">
+                                <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2"
+                                    d="M9 5H7a2 2 0 00-2 2v12a2 2 0 002 2h10a2 2 0 002-2V7a2 2 0 00-2-2h-2M9 5a2 2 0 002 2h2a2 2 0 002-2M9 5a2 2 0 012-2h2a2 2 0 012 2" />
+                            </svg>
+                            Resumen de servicios
+                        </span>
+                    </h2>
+                    <button @click="closeModal"
+                        class="text-white hover:text-gray-200 transition-colors focus:outline-none focus:ring-2 focus:ring-white/30 p-1 rounded-full"
+                        aria-label="Close">
+                        <svg xmlns="http://www.w3.org/2000/svg" class="h-7 w-7" fill="none" viewBox="0 0 24 24"
+                            stroke="currentColor">
+                            <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2"
+                                d="M6 18L18 6M6 6l12 12" />
+                        </svg>
+                    </button>
+                </div>
 
-            <!-- Body con lista mejorada con scroll interno si es necesario -->
-            <div class="p-6 max-h-[60vh] overflow-y-auto">
-                <ul class="divide-y divide-gray-200">
-                    <!-- Filtramos los profesionales para mostrar solo el tipo seleccionado en NavBar -->
-                    <li v-for="professionCategory in filteredProfessionals" :key="professionCategory.type">
-                        <div class="mb-3 mt-3">
-                            <h3 class="text-lg font-medium text-gray-800">{{ professionCategory.type }}</h3>
+                <!-- Información del servicio -->
+                <div class="px-8 py-6 text-gray-700 dark:text-gray-200 space-y-4">
+                    <div class="flex items-start">
+                        <div class="bg-blue-100 dark:bg-blue-900/30 p-2 rounded-full mr-4">
+                            <svg xmlns="http://www.w3.org/2000/svg" class="h-6 w-6 text-blue-600 dark:text-blue-400"
+                                fill="none" viewBox="0 0 24 24" stroke="currentColor">
+                                <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2"
+                                    d="M21 13.255A23.931 23.931 0 0112 15c-3.183 0-6.22-.62-9-1.745M16 6V4a2 2 0 00-2-2h-4a2 2 0 00-2 2v2m4 6h.01M5 20h14a2 2 0 002-2V8a2 2 0 00-2-2H5a2 2 0 00-2 2v10a2 2 0 002 2z" />
+                            </svg>
                         </div>
-                        <ul class="space-y-2">
-                            <li v-for="professional in professionCategory.professionals" :key="professional.name"
-                                class="py-4 px-2 flex justify-between items-center rounded-lg transition-colors cursor-pointer"
-                                :class="{ 'bg-indigo-50': isSelected(professional), 'hover:bg-gray-50': !isSelected(professional) }"
-                                @click="selectProfessional(professional)">
-                                <div class="flex items-center space-x-4 justify-between w-full">
-                                    <div class="flex items-center space-x-4">
-                                        <div
-                                            class="h-12 w-12 bg-indigo-100 rounded-full flex items-center justify-center">
-                                            <span class="text-indigo-600 text-lg font-bold">{{
-                                                professional.name.charAt(0)
-                                                }}</span>
-                                        </div>
-                                        <div>
-                                            <p class="font-medium text-gray-800">{{ professional.name }}</p>
-                                            <div class="flex items-center text-sm text-gray-500">
-                                                <span>Profesional verificado</span>
-                                                <span class="mx-2">•</span>
-                                                <span class="flex items-center">
-                                                    <svg xmlns="http://www.w3.org/2000/svg"
-                                                        class="h-4 w-4 text-yellow-400" viewBox="0 0 20 20"
-                                                        fill="currentColor">
-                                                        <path
-                                                            d="M9.049 2.927c.3-.921 1.603-.921 1.902 0l1.07 3.292a1 1 0 00.95.69h3.462c.969 0 1.371 1.24.588 1.81l-2.8 2.034a1 1 0 00-.364 1.118l1.07 3.292c.3.921-.755 1.688-1.54 1.118l-2.8-2.034a1 1 0 00-1.175 0l-2.8 2.034c-.784.57-1.838-.197-1.539-1.118l1.07-3.292a1 1 0 00-.364-1.118l-2.8-2.034c-.783-.57-.38-1.81.588-1.81h3.461a1 1 0 00.951-.69l1.07-3.292z" />
-                                                    </svg>
-                                                    {{ professional.rating || '4.9' }}
-                                                </span>
-                                            </div>
-                                        </div>
-                                    </div>
-                                    <span class="text-lg font-semibold text-indigo-600">{{ professional.price }}€</span>
-                                </div>
-                            </li>
-                        </ul>
-                    </li>
-                </ul>
-            </div>
+                        <div>
+                            <h3 class="text-xl font-semibold text-gray-800 dark:text-white">{{ serviceCategory }}</h3>
+                            <p class="text-gray-500 dark:text-gray-400">Tipo de servicio</p>
+                        </div>
+                    </div>
 
-            <!-- Footer mejorado -->
-            <div class="bg-gray-50 px-6 py-4 flex justify-end space-x-3 border-t border-gray-200">
-                <button @click="closeModal"
-                    class="px-4 py-2 border border-gray-300 rounded-lg text-gray-700 hover:bg-gray-100 transition-colors">
-                    Cancelar
-                </button>
-                <button @click="continuar"
-                    class="px-6 py-2 bg-indigo-600 text-white font-medium rounded-lg transition-colors shadow-md"
-                    :disabled="!selectedProf"
-                    :class="{ 'opacity-50 cursor-not-allowed': !selectedProf, 'hover:bg-indigo-700': selectedProf }">
-                    Continuar
-                </button>
+                    <div class="flex items-start">
+                        <div class="bg-indigo-100 dark:bg-indigo-900/30 p-2 rounded-full mr-4">
+                            <svg xmlns="http://www.w3.org/2000/svg" class="h-6 w-6 text-indigo-600 dark:text-indigo-400"
+                                fill="none" viewBox="0 0 24 24" stroke="currentColor">
+                                <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2"
+                                    d="M16 7a4 4 0 11-8 0 4 4 0 018 0zM12 14a7 7 0 00-7 7h14a7 7 0 00-7-7z" />
+                            </svg>
+                        </div>
+                        <div>
+                            <p class="text-lg font-medium text-gray-800 dark:text-white">{{ selectedProfessional.name }}
+                                ({{ selectedProfessional.rating }})</p>
+                            <p class="text-gray-500 dark:text-gray-400">Profesional seleccionado</p>
+                        </div>
+                    </div>
+
+                    <div class="flex items-start">
+                        <div class="bg-green-100 dark:bg-green-900/30 p-2 rounded-full mr-4">
+                            <svg xmlns="http://www.w3.org/2000/svg" class="h-6 w-6 text-green-600 dark:text-green-400"
+                                fill="none" viewBox="0 0 24 24" stroke="currentColor">
+                                <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2"
+                                    d="M8 7V3m8 4V3m-9 8h10M5 21h14a2 2 0 002-2V7a2 2 0 00-2-2H5a2 2 0 00-2 2v12a2 2 0 002 2z" />
+                            </svg>
+                        </div>
+                        <div>
+                            <p class="text-lg font-medium text-gray-800 dark:text-white">{{ date }}</p>
+                            <p class="text-gray-500 dark:text-gray-400">Fecha seleccionada</p>
+                        </div>
+                    </div>
+
+                    <div class="flex items-start" v-if="mainStore.profecionalType">
+                        <div class="bg-purple-100 dark:bg-purple-900/30 p-2 rounded-full mr-4">
+                            <svg xmlns="http://www.w3.org/2000/svg" class="h-6 w-6 text-purple-600 dark:text-purple-400"
+                                fill="none" viewBox="0 0 24 24" stroke="currentColor">
+                                <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2"
+                                    d="M9 12l2 2 4-4m5.618-4.016A11.955 11.955 0 0112 2.944a11.955 11.955 0 01-8.618 3.04A12.02 12.02 0 003 9c0 5.591 3.824 10.29 9 11.622 5.176-1.332 9-6.03 9-11.622 0-1.042-.133-2.052-.382-3.016z" />
+                            </svg>
+                        </div>
+                        <div>
+                            <p class="text-lg font-medium text-gray-800 dark:text-white">{{ mainStore.profecionalType }}
+                            </p>
+                            <p class="text-gray-500 dark:text-gray-400">Tipo de profesional</p>
+                        </div>
+                    </div>
+                    <div>
+                        <p class="text-lg font-medium text-gray-800 dark:text-white">Precio: {{
+                            selectedProfessional.price }}€/hora</p>
+                        <p class="text-gray-500 dark:text-gray-400">Precio estimado</p>
+                    </div>
+                </div>
+
+                <!-- Footer -->
+                <div
+                    class="bg-gray-50 dark:bg-gray-900 px-8 py-5 flex justify-end space-x-4 border-t border-gray-200 dark:border-gray-700">
+                    <button @click="closeModal"
+                        class="px-5 py-2.5 border border-gray-300 dark:border-gray-600 rounded-lg text-gray-700 dark:text-gray-300 
+                        hover:bg-gray-100 dark:hover:bg-gray-800 transition-colors focus:outline-none focus:ring-2 focus:ring-indigo-200 dark:focus:ring-indigo-800">
+                        Cancelar
+                    </button>
+                    <button @click="continuar" class="px-6 py-2.5 bg-indigo-600 text-white font-medium rounded-lg transition-colors shadow-md
+                        hover:bg-indigo-700 focus:outline-none focus:ring-2 focus:ring-offset-2 focus:ring-indigo-500"
+                        :disabled="!isFormValid" :class="{ 'opacity-50 cursor-not-allowed': !isFormValid }">
+                        <span class="flex items-center">
+                            Confirmar
+                            <svg xmlns="http://www.w3.org/2000/svg" class="h-5 w-5 ml-1" fill="none" viewBox="0 0 24 24"
+                                stroke="currentColor">
+                                <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2"
+                                    d="M14 5l7 7m0 0l-7 7m7-7H3" />
+                            </svg>
+                        </span>
+                    </button>
+                </div>
             </div>
         </div>
-    </div>
+    </Teleport>
 </template>
 
 <script setup>
@@ -87,55 +128,37 @@
     import { useMainStore } from "@/stores/main";
 
     const mainStore = useMainStore();
-    const title = computed(() => mainStore.selectedService);
-    const selectedProf = ref(null);
+
+    // Computed properties para acceder a datos del store
+    const serviceCategory = computed(() => mainStore.selectedService);
+    const selectedProfessional = computed(() => mainStore.selectedProfessional);
+    const date = computed(() => mainStore.selectedDate);
+    const modalVisible = computed(() => mainStore.modals.modalTrabajos);
+
+    // Validación para habilitar el botón continuar
+    const isFormValid = computed(() =>
+        !!selectedProfessional.value // Verificamos que haya un profesional seleccionado
+    );
 
     // Estado para controlar la animación
     const animationComplete = ref(false);
 
-    // Utilizamos el estado del store para controlar la visibilidad
-    const modalVisible = computed(() => mainStore.modals.modalTrabajos);
-
-    // Filtramos los profesionales para mostrar solo el tipo seleccionado en NavBar
-    const filteredProfessionals = computed(() => {
-        if (!mainStore.selectedService || !mainStore.selectedProfessional) {
-            return [];
-        }
-
-        return mainStore.professionals[mainStore.selectedService]
-            .filter(category => category.type === mainStore.selectedProfessional);
-    });
-
-    // Escuchar cambios en la visibilidad del modal desde el store
-    watch(modalVisible, updateAnimationState, { immediate: true });
-
-    async function updateAnimationState(newVal) {
+    // Escuchar cambios en la visibilidad del modal
+    watch(modalVisible, async (newVal) => {
         if (newVal) {
-            // Esperamos al siguiente ciclo de renderizado para aplicar la transición
             await nextTick();
             animationComplete.value = true;
+
+            // Añadir estado al historial del navegador cuando se abre el modal
+            window.history.pushState(null, document.title, window.location.href);
         } else {
             animationComplete.value = false;
         }
-    }
+    }, { immediate: true });
 
-    const selectProfessional = (professional) => {
-        selectedProf.value = professional;
-    };
-
-    const isSelected = (professional) => {
-        return selectedProf.value && selectedProf.value.name === professional.name;
-    };
-
+    // Métodos
     const continuar = () => {
-        if (selectedProf.value) {
-            // Guardar el profesional seleccionado en el store
-            mainStore.selectedProfessional = selectedProf.value;
-            // Cerrar este modal
-            closeModal();
-            // Abrir el siguiente modal (modalContratar)
-            mainStore.openModal('modalContratar');
-        }
+        alert('Procedemos a la contratación del profesional seleccionado.');
     };
 
     const closeModal = () => {
@@ -145,31 +168,26 @@
         }, 300);
     };
 
+    // Event handlers
     const handleEscKey = (event) => {
         if (event.key === 'Escape' && modalVisible.value) {
             closeModal();
         }
     };
 
-    // Manejar el botón atrás del navegador
     const handlePopState = () => {
         if (modalVisible.value) {
             const navigatedBack = mainStore.goToPreviousModal();
             if (navigatedBack) {
-                // Prevenimos la navegación predeterminada
                 window.history.pushState(null, document.title, window.location.href);
             }
         }
     };
 
+    // Lifecycle hooks
     onMounted(() => {
         document.addEventListener('keydown', handleEscKey);
         window.addEventListener('popstate', handlePopState);
-
-        // Si el modal está abierto al montar, añadimos un estado al historial
-        if (modalVisible.value) {
-            window.history.pushState(null, document.title, window.location.href);
-        }
     });
 
     onBeforeUnmount(() => {
@@ -182,11 +200,12 @@
 
     .fade-enter-active,
     .fade-leave-active {
-        transition: opacity 0.3s ease;
+        transition: opacity 0.3s ease, transform 0.3s ease;
     }
 
     .fade-enter-from,
     .fade-leave-to {
         opacity: 0;
+        transform: translateY(10px);
     }
 </style>

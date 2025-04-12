@@ -51,12 +51,10 @@
   import { onMounted, onBeforeUnmount, ref, computed, nextTick, watch } from 'vue';
   import { useMainStore } from "@/stores/main";
 
-  const router = useRouter();
   const mainStore = useMainStore();
   const serviceCategory = computed(() => mainStore.selectedService);
   const professionalType = computed(() => mainStore.selectedProfessional);
 
-  // Estado para controlar la animación
   const animationComplete = ref(false);
 
   // Utilizamos el estado del store para controlar la visibilidad
@@ -95,8 +93,7 @@
 
   const handleContinue = () => {
     // Aquí podrías navegar a otra página o abrir otro modal
-    router.push('/checkout');
-    closeModal();
+    mainStore.openModal('modalTrabajador')
   };
 
   const handleEscKey = (event) => {

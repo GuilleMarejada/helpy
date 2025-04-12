@@ -21,48 +21,47 @@
 
             <!-- Body con lista mejorada -->
             <div class="p-6 max-h-[60vh] overflow-y-auto">
-                <ul class="divide-y divide-gray-200">
-                    <li v-for="professionCategory in mainStore.professionals[mainStore.selectedService]"
-                        :key="professionCategory.type">
-                        <div class="mb-3 mt-3">
-                            <h3 class="text-lg font-medium text-gray-800">{{ professionCategory.type }}</h3>
-                        </div>
-                        <ul class="space-y-2">
-                            <li v-for="professional in professionCategory.professionals" :key="professional.name"
-                                class="py-4 px-2 flex justify-between items-center hover:bg-gray-50 rounded-lg transition-colors cursor-pointer"
-                                :class="{ 'bg-indigo-50': isSelected(professional) }"
-                                @click="() => { selectProfessional(professional) }">
-                                <div class="flex items-center space-x-4 justify-between w-full">
-                                    <div class="flex items-center space-x-4">
-                                        <div
-                                            class="h-12 w-12 bg-indigo-100 rounded-full flex items-center justify-center">
-                                            <span class="text-indigo-600 text-lg font-bold">{{
-                                                professional.name.charAt(0)
-                                                }}</span>
-                                        </div>
-                                        <div>
-                                            <p class="font-medium text-gray-800">{{ professional.name }}</p>
-                                            <div class="flex items-center text-sm text-gray-500">
-                                                <span>Profesional verificado</span>
-                                                <span class="mx-2">•</span>
-                                                <span class="flex items-center">
-                                                    <svg xmlns="http://www.w3.org/2000/svg"
-                                                        class="h-4 w-4 text-yellow-400" viewBox="0 0 20 20"
-                                                        fill="currentColor">
-                                                        <path
-                                                            d="M9.049 2.927c.3-.921 1.603-.921 1.902 0l1.07 3.292a1 1 0 00.95.69h3.462c.969 0 1.371 1.24.588 1.81l-2.8 2.034a1 1 0 00-.364 1.118l1.07 3.292c.3.921-.755 1.688-1.54 1.118l-2.8-2.034a1 1 0 00-1.175 0l-2.8 2.034c-.784.57-1.838-.197-1.539-1.118l1.07-3.292a1 1 0 00-.364-1.118l-2.8-2.034c-.783-.57-.38-1.81.588-1.81h3.461a1 1 0 00.951-.69l1.07-3.292z" />
-                                                    </svg>
-                                                    {{ professional.rating || '4.8' }}
-                                                </span>
+                <div v-if="category && category.professionals && category.professionals.length > 0">
+                    <div class="grid gap-4">
+                        <div v-for="(professional, index) in category.professionals" :key="index"
+                            @click="selectProfessional(professional)"
+                            class="border rounded-lg p-4 cursor-pointer transition-all duration-200"
+                            :class="isSelected(professional) ? 'border-blue-500 bg-blue-50 shadow-md' : 'border-gray-200 hover:border-blue-300 hover:bg-gray-50'">
+                            <div class="flex items-center justify-between">
+                                <div class="flex items-center space-x-4">
+                                    <div class="h-12 w-12 bg-blue-100 rounded-full flex items-center justify-center">
+                                        <span class="text-blue-600 font-bold text-xl">{{ professional.name.charAt(0)
+                                        }}</span>
+                                    </div>
+                                    <div>
+                                        <h3 class="font-medium text-lg">{{ professional.name }}</h3>
+                                        <div class="flex items-center mt-1">
+                                            <div class="flex items-center text-yellow-400 mr-2">
+                                                <svg xmlns="http://www.w3.org/2000/svg" class="h-4 w-4"
+                                                    viewBox="0 0 20 20" fill="currentColor">
+                                                    <path
+                                                        d="M9.049 2.927c.3-.921 1.603-.921 1.902 0l1.07 3.292a1 1 0 00.95.69h3.462c.969 0 1.371 1.24.588 1.81l-2.8 2.034a1 1 0 00-.364 1.118l1.07 3.292c.3.921-.755 1.688-1.54 1.118l-2.8-2.034a1 1 0 00-1.175 0l-2.8 2.034c-.784.57-1.838-.197-1.539-1.118l1.07-3.292a1 1 0 00-.364-1.118L2.98 8.72c-.783-.57-.38-1.81.588-1.81h3.461a1 1 0 00.951-.69l1.07-3.292z" />
+                                                </svg>
+                                                <span class="ml-1 text-sm">{{ professional.rating }}</span>
                                             </div>
+                                            <span class="text-sm text-gray-500">• {{ professional.price }}€/hora</span>
                                         </div>
                                     </div>
-                                    <span class="text-lg font-semibold text-indigo-600">{{ professional.price }}€</span>
                                 </div>
-                            </li>
-                        </ul>
-                    </li>
-                </ul>
+                                <div v-if="isSelected(professional)" class="text-blue-600">
+                                    <svg xmlns="http://www.w3.org/2000/svg" class="h-6 w-6" fill="none"
+                                        viewBox="0 0 24 24" stroke="currentColor">
+                                        <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2"
+                                            d="M5 13l4 4L19 7" />
+                                    </svg>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+                <div v-else class="text-center p-8 text-gray-500">
+                    No hay profesionales disponibles en esta categoría.
+                </div>
             </div>
 
             <!-- Footer mejorado -->
@@ -87,8 +86,7 @@
     import { useMainStore } from "@/stores/main";
 
     const mainStore = useMainStore();
-    const title = computed(() => mainStore.selectedService);
-
+    const title = computed(() => mainStore.selectedProfessional);
     // Estado para controlar la animación y profesional seleccionado
     const animationComplete = ref(false);
     const selectedProf = ref(null);
@@ -108,7 +106,11 @@
             animationComplete.value = false;
         }
     }
-
+    const category = computed(() => {
+        return mainStore.professionals[mainStore.selectedService].find(
+            (category) => category.type === mainStore.selectedProfessional
+        );
+    });
     const selectProfessional = (professional) => {
         selectedProf.value = professional;
     };
@@ -120,7 +122,7 @@
     const continuar = () => {
         if (selectedProf.value) {
             // Guardar el profesional seleccionado en el store
-            mainStore.selectedProfessional = selectedProf.value.type;
+            mainStore.selectedProfessional = selectedProf.value;
             // Cerrar este modal
             closeModal();
             // Abrir el siguiente modal
