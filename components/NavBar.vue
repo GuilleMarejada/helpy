@@ -34,27 +34,42 @@
         <div class="bg-gray-50 py-4 border-t border-gray-200">
             <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
                 <ul class="flex flex-wrap justify-center gap-4">
-                    <li v-for="service in services" :key="service.text">
+                    <li v-for="service in services" :key="service.text" class="relative group">
                         <button
                             class="px-5 py-2 rounded-lg font-medium transition-all duration-300 ease-in-out border border-gray-300 hover:border-indigo-500 hover:bg-indigo-50 hover:text-indigo-600 focus:outline-none focus:ring-2 focus:ring-indigo-500 focus:ring-offset-2"
-                            @click="() => { selectService(service.text); openModal(); }">
+                            @click="toggleDropdown(service.text)">
                             {{ service.text }}
                         </button>
+
+                        <!-- Menú desplegable para los tipos profesionales -->
+                        <div v-if="activeDropdown === service.text"
+                            class="absolute z-10 mt-2 w-56 bg-white border border-gray-200 rounded-md shadow-lg py-1 left-0">
+                            <div class="max-h-60 overflow-y-auto">
+                                <button v-for="type in getProfessionalTypes(service.text)" :key="type.type"
+                                    @click="() => { selectProfessionalType(service.text, type.type); startModalFlow(); }"
+                                    class="block w-full text-left px-4 py-2 text-sm text-gray-700 hover:bg-indigo-100 hover:text-indigo-600">
+                                    {{ type.type }}
+                                </button>
+                            </div>
+                        </div>
                     </li>
                 </ul>
             </div>
         </div>
 
-        <!-- Modales -->
-        <ModalContratar v-if="isVisible" @close="closeModal" />
-        <ModalTrabajador v-if="isVisibleTrabajador && !isVisible" @close="closeModalTrabajador" />
+        <!-- Incluimos todos los modales y los controlamos mediante el store -->
+        <ModalTrabajador />
+        <ModalTrabajos />
+        <ModalContratar />
     </nav>
 </template>
 
 <script setup>
     import { useMainStore } from '@/stores/main'
-    import { ref } from 'vue'
+    import { ref, onMounted, onBeforeUnmount } from 'vue'
     import ModalContratar from '@/components/ModalContratar.vue'
+    import ModalTrabajador from '@/components/ModalTrabajador.vue'
+    import ModalTrabajos from '@/components/ModalTrabajos.vue'
 
     const mainStore = useMainStore()
 
@@ -62,25 +77,62 @@
         { text: "Cuenta", href: "/" },
         { text: "Trabaja con nosotros", href: "/helper" },
     ]);
-    const isVisible = ref(false);
-    const isVisibleTrabajador = ref(false);
     const services = ref(mainStore.services);
+    const activeDropdown = ref(null);
 
-    const selectService = (serviceText) => {
+    // Función para iniciar el flujo de modales
+    const startModalFlow = () => {
+        // Comenzamos siempre con el modal del trabajador
+        mainStore.openModal('modalTrabajador');
+    };
+
+    const selectProfessionalType = (serviceText, typeText) => {
         mainStore.selectedService = serviceText;
-    };
-    const openModal = () => {
-        console.log("Modal triggered");
-        isVisible.value = !isVisible.value;
-    };
-    const closeModal = () => {
-        console.log("Modal closed");
-        isVisible.value = false;
-        isVisibleTrabajador.value = true;
-    };
-    const closeModalTrabajador = () => {
-        console.log("Modal closed");
-        isVisibleTrabajador.value = false;
+        mainStore.selectedProfessional = typeText;
+        activeDropdown.value = null; // Cerrar el dropdown después de seleccionar
     };
 
+    const getProfessionalTypes = (serviceText) => {
+        return mainStore.professionals[serviceText] || [];
+    };
+
+    const toggleDropdown = (serviceText) => {
+        if (activeDropdown.value === serviceText) {
+            activeDropdown.value = null;
+        } else {
+            activeDropdown.value = serviceText;
+        }
+    };
+
+    // Cerrar dropdown al hacer click fuera
+    const handleClickOutside = (event) => {
+        if (activeDropdown.value && !event.target.closest('.relative.group')) {
+            activeDropdown.value = null;
+        }
+    };
+
+    // Manejar escape para cerrar el dropdown activo
+    const handleEscKey = (event) => {
+        if (event.key === 'Escape' && activeDropdown.value) {
+            activeDropdown.value = null;
+        }
+    };
+
+    onMounted(() => {
+        document.addEventListener('click', handleClickOutside);
+        document.addEventListener('keydown', handleEscKey);
+    });
+
+    onBeforeUnmount(() => {
+        document.removeEventListener('click', handleClickOutside);
+        document.removeEventListener('keydown', handleEscKey);
+    });
 </script>
+
+<style scoped>
+
+    /* Asegurarse que los dropdowns aparezcan por encima de otros elementos */
+    .z-10 {
+        z-index: 10;
+    }
+</style>

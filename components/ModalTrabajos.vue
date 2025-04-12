@@ -19,19 +19,19 @@
                 </button>
             </div>
 
-            <!-- Body con lista mejorada -->
+            <!-- Body con lista mejorada con scroll interno si es necesario -->
             <div class="p-6 max-h-[60vh] overflow-y-auto">
                 <ul class="divide-y divide-gray-200">
-                    <li v-for="professionCategory in mainStore.professionals[mainStore.selectedService]"
-                        :key="professionCategory.type">
+                    <!-- Filtramos los profesionales para mostrar solo el tipo seleccionado en NavBar -->
+                    <li v-for="professionCategory in filteredProfessionals" :key="professionCategory.type">
                         <div class="mb-3 mt-3">
                             <h3 class="text-lg font-medium text-gray-800">{{ professionCategory.type }}</h3>
                         </div>
                         <ul class="space-y-2">
                             <li v-for="professional in professionCategory.professionals" :key="professional.name"
-                                class="py-4 px-2 flex justify-between items-center hover:bg-gray-50 rounded-lg transition-colors cursor-pointer"
-                                :class="{ 'bg-indigo-50': isSelected(professional) }"
-                                @click="() => { selectProfessional(professional) }">
+                                class="py-4 px-2 flex justify-between items-center rounded-lg transition-colors cursor-pointer"
+                                :class="{ 'bg-indigo-50': isSelected(professional), 'hover:bg-gray-50': !isSelected(professional) }"
+                                @click="selectProfessional(professional)">
                                 <div class="flex items-center space-x-4 justify-between w-full">
                                     <div class="flex items-center space-x-4">
                                         <div
@@ -52,7 +52,7 @@
                                                         <path
                                                             d="M9.049 2.927c.3-.921 1.603-.921 1.902 0l1.07 3.292a1 1 0 00.95.69h3.462c.969 0 1.371 1.24.588 1.81l-2.8 2.034a1 1 0 00-.364 1.118l1.07 3.292c.3.921-.755 1.688-1.54 1.118l-2.8-2.034a1 1 0 00-1.175 0l-2.8 2.034c-.784.57-1.838-.197-1.539-1.118l1.07-3.292a1 1 0 00-.364-1.118l-2.8-2.034c-.783-.57-.38-1.81.588-1.81h3.461a1 1 0 00.951-.69l1.07-3.292z" />
                                                     </svg>
-                                                    {{ professional.rating || '4.8' }}
+                                                    {{ professional.rating || '4.9' }}
                                                 </span>
                                             </div>
                                         </div>
@@ -72,7 +72,7 @@
                     Cancelar
                 </button>
                 <button @click="continuar"
-                    class="px-6 py-2 bg-indigo-600 text-white font-medium rounded-lg hover:bg-indigo-700 transition-colors shadow-md"
+                    class="px-6 py-2 bg-indigo-600 text-white font-medium rounded-lg transition-colors shadow-md"
                     :disabled="!selectedProf"
                     :class="{ 'opacity-50 cursor-not-allowed': !selectedProf, 'hover:bg-indigo-700': selectedProf }">
                     Continuar
@@ -88,13 +88,23 @@
 
     const mainStore = useMainStore();
     const title = computed(() => mainStore.selectedService);
-
-    // Estado para controlar la animación y profesional seleccionado
-    const animationComplete = ref(false);
     const selectedProf = ref(null);
 
+    // Estado para controlar la animación
+    const animationComplete = ref(false);
+
     // Utilizamos el estado del store para controlar la visibilidad
-    const modalVisible = computed(() => mainStore.modals.modalTrabajador);
+    const modalVisible = computed(() => mainStore.modals.modalTrabajos);
+
+    // Filtramos los profesionales para mostrar solo el tipo seleccionado en NavBar
+    const filteredProfessionals = computed(() => {
+        if (!mainStore.selectedService || !mainStore.selectedProfessional) {
+            return [];
+        }
+
+        return mainStore.professionals[mainStore.selectedService]
+            .filter(category => category.type === mainStore.selectedProfessional);
+    });
 
     // Escuchar cambios en la visibilidad del modal desde el store
     watch(modalVisible, updateAnimationState, { immediate: true });
@@ -120,18 +130,18 @@
     const continuar = () => {
         if (selectedProf.value) {
             // Guardar el profesional seleccionado en el store
-            mainStore.selectedProfessional = selectedProf.value.type;
+            mainStore.selectedProfessional = selectedProf.value;
             // Cerrar este modal
             closeModal();
-            // Abrir el siguiente modal
-            mainStore.openModal('modalTrabajos');
+            // Abrir el siguiente modal (modalContratar)
+            mainStore.openModal('modalContratar');
         }
     };
 
     const closeModal = () => {
         animationComplete.value = false;
         setTimeout(() => {
-            mainStore.closeModal('modalTrabajador');
+            mainStore.closeModal('modalTrabajos');
         }, 300);
     };
 

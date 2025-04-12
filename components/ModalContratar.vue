@@ -1,10 +1,15 @@
 <template>
-  <!-- Overlay con fondo semitransparente -->
-  <div class="fixed inset-0 bg-black bg-opacity-50 flex items-center justify-center z-50 p-4">
-    <div class="bg-white rounded-xl shadow-2xl w-full max-w-6xl overflow-hidden transform transition-all">
+  <!-- Overlay con fondo semitransparente mejorado con backdrop blur y animación -->
+  <div class="fixed inset-0 z-50 flex items-center justify-center p-4" @click.self="closeModal" v-if="modalVisible">
+    <div class="absolute inset-0 bg-black/40 backdrop-blur-sm"
+      :class="{ 'opacity-0': !animationComplete, 'opacity-100': animationComplete }" @click.self="closeModal"
+      v-show="modalVisible" transition="fade"></div>
+    <div
+      class="bg-white rounded-xl shadow-2xl w-full max-w-6xl overflow-hidden transform transition duration-300 ease-out"
+      :class="{ 'opacity-0 translate-y-8': !animationComplete, 'opacity-100 translate-y-0': animationComplete }">
       <!-- Header moderno -->
       <div class="bg-gradient-to-r from-blue-500 to-indigo-600 text-white px-6 py-4 flex items-center">
-        <h2 class="text-2xl font-bold flex-1 text-center">Selecciona la fecha y hora - {{ title }}</h2>
+        <h2 class="text-2xl font-bold flex-1 text-center">Selecciona la fecha y hora - {{ professionalType }}</h2>
         <button @click="closeModal" class="text-white hover:text-gray-200 transition-colors focus:outline-none"
           aria-label="Close">
           <svg xmlns="http://www.w3.org/2000/svg" class="h-7 w-7" fill="none" viewBox="0 0 24 24" stroke="currentColor">
@@ -18,8 +23,12 @@
         <div class="md:w-1/2 bg-gray-50 p-4 rounded-lg shadow-inner">
           <Calendario class="max-w-full" />
         </div>
-        <div class="md:w-1/2 flex justify-center items-center">
-          <img :src="`/images/${title}.png`" :alt="title" class="max-h-80 object-contain rounded-lg shadow-md" />
+        <div class="md:w-1/2 flex flex-col justify-center items-center space-y-4">
+          <img :src="getImagePath()" :alt="professionalType" class="max-h-80 object-contain rounded-lg shadow-md" />
+          <div class="text-center">
+            <h3 class="text-xl font-semibold text-gray-800">{{ serviceCategory }}</h3>
+            <p class="text-gray-600">{{ professionalType }}</p>
+          </div>
         </div>
       </div>
 
@@ -29,7 +38,7 @@
           class="px-4 py-2 border border-gray-300 rounded-lg text-gray-700 hover:bg-gray-100 transition-colors">
           Cancelar
         </button>
-        <button @click="closeModal"
+        <button @click="handleContinue"
           class="px-6 py-2 bg-indigo-600 text-white font-medium rounded-lg hover:bg-indigo-700 transition-colors shadow-md">
           Continuar
         </button>
@@ -39,33 +48,99 @@
 </template>
 
 <script setup>
-  import { onMounted, onBeforeUnmount, ref } from 'vue';
+  import { onMounted, onBeforeUnmount, ref, computed, nextTick, watch } from 'vue';
   import { useMainStore } from "@/stores/main";
 
-  const props = defineProps({
-    // You can add props here if needed
-  });
-
-  const emit = defineEmits(["close"]);
-
+  const router = useRouter();
   const mainStore = useMainStore();
-  const title = mainStore.selectedService;
+  const serviceCategory = computed(() => mainStore.selectedService);
+  const professionalType = computed(() => mainStore.selectedProfessional);
+
+  // Estado para controlar la animación
+  const animationComplete = ref(false);
+
+  // Utilizamos el estado del store para controlar la visibilidad
+  const modalVisible = computed(() => mainStore.modals.modalContratar);
+
+  // Escuchar cambios en la visibilidad del modal desde el store
+  watch(modalVisible, updateAnimationState, { immediate: true });
+
+  async function updateAnimationState(newVal) {
+    if (newVal) {
+      // Esperamos al siguiente ciclo de renderizado para aplicar la transición
+      await nextTick();
+      animationComplete.value = true;
+    } else {
+      animationComplete.value = false;
+    }
+  }
+
+  const getImagePath = () => {
+    try {
+      // Intentamos utilizar una ruta de imagen basada en el tipo de profesional
+      return `/images/${professionalType.value}.jpg`;
+    } catch (error) {
+      // Si la imagen no existe, usamos una imagen de respaldo
+      console.error('Error al cargar la imagen:', error);
+      return '/images/limpiadora.webp'; // Imagen de respaldo
+    }
+  };
 
   const closeModal = () => {
-    emit("close");
+    animationComplete.value = false;
+    setTimeout(() => {
+      mainStore.closeModal('modalContratar');
+    }, 300);
+  };
+
+  const handleContinue = () => {
+    // Aquí podrías navegar a otra página o abrir otro modal
+    router.push('/checkout');
+    closeModal();
   };
 
   const handleEscKey = (event) => {
-    if (event.key === 'Escape') {
+    if (event.key === 'Escape' && modalVisible.value) {
       closeModal();
+    }
+  };
+
+  // Manejar el botón atrás del navegador
+  const handlePopState = () => {
+    if (modalVisible.value) {
+      const navigatedBack = mainStore.goToPreviousModal();
+      if (navigatedBack) {
+        // Prevenimos la navegación predeterminada
+        window.history.pushState(null, document.title, window.location.href);
+      }
     }
   };
 
   onMounted(() => {
     document.addEventListener('keydown', handleEscKey);
+    window.addEventListener('popstate', handlePopState);
+
+    // Si el modal está abierto al montar, añadimos un estado al historial
+    if (modalVisible.value) {
+      window.history.pushState(null, document.title, window.location.href);
+    }
   });
 
   onBeforeUnmount(() => {
     document.removeEventListener('keydown', handleEscKey);
+    window.removeEventListener('popstate', handlePopState);
   });
 </script>
+
+<style scoped>
+
+  .fade-enter-active,
+  .fade-leave-active {
+    transition: opacity 0.3s ease;
+  }
+
+  .fade-enter-from,
+  .fade-leave-to {
+    opacity: 0;
+  }
+</style>

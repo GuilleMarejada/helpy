@@ -52,7 +52,7 @@
           </div>
 
           <div class="bg-white rounded-xl shadow-lg p-6 transform transition-all hover:scale-105">
-            <img src="~/public/images/Fontaneria.png" alt="Fontanería"
+            <img src="~/public/images/Fontanero.jpg" alt="Fontanería"
               class="w-full h-48 object-cover rounded-lg mb-4" />
             <h3 class="text-xl font-bold mb-2">Fontanería</h3>
             <p class="text-gray-600 mb-4">Reparaciones de fontanería con profesionales experimentados.</p>
@@ -62,7 +62,7 @@
           </div>
 
           <div class="bg-white rounded-xl shadow-lg p-6 transform transition-all hover:scale-105">
-            <img src="~/public/images/Electricidad.png" alt="Electricidad"
+            <img src="~/public/images/Electricista.jpg" alt="Electricidad"
               class="w-full h-48 object-cover rounded-lg mb-4" />
             <h3 class="text-xl font-bold mb-2">Electricidad</h3>
             <p class="text-gray-600 mb-4">Soluciona tus problemas eléctricos con expertos certificados.</p>
