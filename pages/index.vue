@@ -41,7 +41,7 @@
     </div>
     <!-- Cómo Funciona section -->
     <div id="como-funciona" class="py-16 bg-gray-50">
-      <img src="/images/why.JPG" alt="">
+      <img src="/images/why.jpg" alt="">
     </div>
 
     <!-- Sección de servicios destacados -->
