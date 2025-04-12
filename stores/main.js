@@ -23,8 +23,8 @@ export const useMainStore = defineStore('main', {
                     {
                         type: "Cerrajero",
                         professionals: [
-                            { name: "Juan Pérez", rating: 4.5, price: 50 },
-                            { name: "María López", rating: 4.7, price: 60 },
+                            { name: "Juan Pérez Gómez", rating: 4.5, price: 50 },
+                            { name: "María López Sánchez", rating: 4.7, price: 60 },
                             { name: "Roberto Sanz", rating: 4.3, price: 55 },
                             { name: "Carmen Velasco", rating: 4.6, price: 65 },
                             { name: "Alejandro Rivas", rating: 4.8, price: 70 },
@@ -35,8 +35,8 @@ export const useMainStore = defineStore('main', {
                     {
                         type: "Albañil",
                         professionals: [
-                            { name: "Pedro González", rating: 4.6, price: 70 },
-                            { name: "Ana Martínez", rating: 4.8, price: 80 },
+                            { name: "Pedro González Ruiz", rating: 4.6, price: 70 },
+                            { name: "Ana Martínez Díaz", rating: 4.8, price: 80 },
                             { name: "Miguel Durán", rating: 4.5, price: 75 },
                             { name: "Elena Pardo", rating: 4.7, price: 85 },
                             { name: "Raúl Torres", rating: 4.4, price: 68 },
@@ -47,8 +47,8 @@ export const useMainStore = defineStore('main', {
                     {
                         type: "Fontanero",
                         professionals: [
-                            { name: "Luis Fernández", rating: 4.9, price: 75 },
-                            { name: "Sofía García", rating: 4.4, price: 100 },
+                            { name: "Luis Fernández Vega", rating: 4.9, price: 75 },
+                            { name: "Sofía García Torres", rating: 4.4, price: 100 },
                             { name: "Javier Molina", rating: 4.6, price: 80 },
                             { name: "Lucía Gómez", rating: 4.7, price: 95 },
                             { name: "Antonio Romero", rating: 4.5, price: 85 },
@@ -59,8 +59,8 @@ export const useMainStore = defineStore('main', {
                     {
                         type: "Electricista",
                         professionals: [
-                            { name: "Carlos Sánchez", rating: 4.3, price: 110 },
-                            { name: "Laura Torres", rating: 4.2, price: 120 },
+                            { name: "Carlos Sánchez Vidal", rating: 4.3, price: 110 },
+                            { name: "Laura Torres Gómez", rating: 4.2, price: 120 },
                             { name: "Fernando Vega", rating: 4.7, price: 100 },
                             { name: "Natalia Serrano", rating: 4.5, price: 115 },
                             { name: "Pablo Ortiz", rating: 4.6, price: 105 },
@@ -71,8 +71,8 @@ export const useMainStore = defineStore('main', {
                     {
                         type: "Montador",
                         professionals: [
-                            { name: "Javier Díaz", rating: 4.1, price: 130 },
-                            { name: "Clara Jiménez", rating: 4.0, price: 140 },
+                            { name: "Javier Díaz López", rating: 4.1, price: 130 },
+                            { name: "Clara Jiménez Ruiz", rating: 4.0, price: 140 },
                             { name: "Sergio Blanco", rating: 4.3, price: 120 },
                             { name: "Alicia Guerrero", rating: 4.5, price: 135 },
                             { name: "Rubén Mendoza", rating: 4.2, price: 125 },
@@ -85,8 +85,8 @@ export const useMainStore = defineStore('main', {
                     {
                         type: "Belleza",
                         professionals: [
-                            { name: "María López", rating: 4.5, price: 50 },
-                            { name: "Ana Martínez", rating: 4.7, price: 60 },
+                            { name: "María López Pineda", rating: 4.5, price: 50 },
+                            { name: "Ana Martínez Gómez", rating: 4.7, price: 60 },
                             { name: "Claudia Navarro", rating: 4.6, price: 55 },
                             { name: "Ignacio Reyes", rating: 4.8, price: 65 },
                             { name: "Sonia Méndez", rating: 4.4, price: 52 },
@@ -109,8 +109,8 @@ export const useMainStore = defineStore('main', {
                     {
                         type: "Manicura",
                         professionals: [
-                            { name: "Luis Fernández", rating: 4.9, price: 90 },
-                            { name: "Carlos Sánchez", rating: 4.4, price: 100 },
+                            { name: "Luis Fernández Martín", rating: 4.9, price: 90 },
+                            { name: "Carlos Sánchez Ortega", rating: 4.4, price: 100 },
                             { name: "Teresa Campos", rating: 4.7, price: 85 },
                             { name: "Héctor Vidal", rating: 4.5, price: 95 },
                             { name: "Rosa Martín", rating: 4.8, price: 88 },
@@ -123,8 +123,8 @@ export const useMainStore = defineStore('main', {
                     {
                         type: "Profesor",
                         professionals: [
-                            { name: "Juan Pérez", rating: 4.5, price: 50 },
-                            { name: "María López", rating: 4.7, price: 60 },
+                            { name: "Juan Pérez Martínez", rating: 4.5, price: 50 },
+                            { name: "María López Torres", rating: 4.7, price: 60 },
                             { name: "Alberto Delgado", rating: 4.8, price: 55 },
                             { name: "Susana Ramírez", rating: 4.6, price: 65 },
                             { name: "Ricardo Benítez", rating: 4.9, price: 70 },
@@ -135,8 +135,8 @@ export const useMainStore = defineStore('main', {
                     {
                         type: "Profesor de musica",
                         professionals: [
-                            { name: "Pedro González", rating: 4.6, price: 70 },
-                            { name: "Ana Martínez", rating: 4.8, price: 80 },
+                            { name: "Pedro González Soto", rating: 4.6, price: 70 },
+                            { name: "Ana Martínez Luna", rating: 4.8, price: 80 },
                             { name: "Daniel Molinero", rating: 4.5, price: 75 },
                             { name: "Irene Pascual", rating: 4.7, price: 85 },
                             { name: "Gabriel Soler", rating: 4.9, price: 90 },
@@ -149,8 +149,8 @@ export const useMainStore = defineStore('main', {
                     {
                         type: "Cuidador",
                         professionals: [
-                            { name: "Luis Fernández", rating: 4.9, price: 90 },
-                            { name: "Sofía García", rating: 4.4, price: 100 },
+                            { name: "Luis Fernández Ruiz", rating: 4.9, price: 90 },
+                            { name: "Sofía García Méndez", rating: 4.4, price: 100 },
                             { name: "Carmen Domínguez", rating: 4.7, price: 95 },
                             { name: "Martín Alvarado", rating: 4.6, price: 85 },
                             { name: "Lucía Aranda", rating: 4.8, price: 105 },
@@ -163,8 +163,8 @@ export const useMainStore = defineStore('main', {
                     {
                         type: "Paseador",
                         professionals: [
-                            { name: "Carlos Sánchez", rating: 4.3, price: 110 },
-                            { name: "Laura Torres", rating: 4.2, price: 120 },
+                            { name: "Carlos Sánchez López", rating: 4.3, price: 110 },
+                            { name: "Laura Torres Blanco", rating: 4.2, price: 120 },
                             { name: "Diego Fuentes", rating: 4.5, price: 100 },
                             { name: "Sara Paredes", rating: 4.7, price: 115 },
                             { name: "Manuel Cortés", rating: 4.4, price: 105 },
@@ -177,8 +177,8 @@ export const useMainStore = defineStore('main', {
                     {
                         type: "Entrenador",
                         professionals: [
-                            { name: "Javier Díaz", rating: 4.1, price: 130 },
-                            { name: "Clara Jiménez", rating: 4.0, price: 140 },
+                            { name: "Javier Díaz Moreno", rating: 4.1, price: 130 },
+                            { name: "Clara Jiménez Santos", rating: 4.0, price: 140 },
                             { name: "Adrián Salazar", rating: 4.7, price: 125 },
                             { name: "Noelia Flores", rating: 4.6, price: 135 },
                             { name: "Hugo Cabrera", rating: 4.5, price: 120 },
