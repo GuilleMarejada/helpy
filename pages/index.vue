@@ -57,7 +57,7 @@
           <div
             class="bg-white rounded-xl shadow-lg overflow-hidden transform transition-all duration-300 hover:scale-105 hover:shadow-xl">
             <div class="h-80 overflow-hidden">
-              <img src="/images/limpiadora.jpg" alt="Limpieza"
+              <img src="/images/Limpiadora.jpg" alt="Limpieza"
                 class="w-full h-full object-cover transition-transform duration-500 hover:scale-110 object-top" />
             </div>
             <div class="p-6">
