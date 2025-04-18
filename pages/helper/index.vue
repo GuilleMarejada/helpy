@@ -1,6 +1,6 @@
 <template>
   <div class="px-4 sm:px-8 md:px-12 lg:px-20 xl:px-40">
-    <!-- <div>
+    <div>
       <div class="mx-auto pb-3 sm:pb-5">
         <div class="max-w-7xl mx-auto">
           <div class="flex justify-between items-center h-16">
@@ -167,8 +167,7 @@
           </div>
         </div>
       </div>
-    </div> -->
-    a
+    </div>
   </div>
 </template>
 
