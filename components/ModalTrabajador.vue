@@ -32,7 +32,7 @@
                                 <div class="flex items-center space-x-4">
                                     <div class="h-12 w-12 bg-blue-100 rounded-full flex items-center justify-center">
                                         <span class="text-blue-600 font-bold text-xl">{{ professional.name.charAt(0)
-                                            }}</span>
+                                        }}</span>
                                     </div>
                                     <div>
                                         <h3 class="font-medium text-lg">{{ professional.name }}</h3>
@@ -83,7 +83,6 @@
 </template>
 
 <script setup>
-    import { onMounted, onBeforeUnmount, ref, computed, nextTick, watch } from 'vue';
     import { useMainStore } from "@/stores/main";
 
     const mainStore = useMainStore();

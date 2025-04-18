@@ -121,7 +121,6 @@
 </template>
 
 <script setup>
-    import { onMounted, onBeforeUnmount, ref, computed, nextTick, watch } from 'vue';
     import { useMainStore } from "@/stores/main";
 
     const mainStore = useMainStore();

@@ -10,7 +10,6 @@
 </template>
 
 <script setup>
-  import { ref, computed } from 'vue';
   import VueDatePicker from '@vuepic/vue-datepicker';
   import '@vuepic/vue-datepicker/dist/main.css';
   import { useMainStore } from '@/stores/main';
@@ -19,7 +18,7 @@
   const props = defineProps({
     class: {
       type: String,
-      default: 'a'
+      default: ''
     }
   });
 

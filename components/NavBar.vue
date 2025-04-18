@@ -66,7 +66,6 @@
 
 <script setup>
     import { useMainStore } from '@/stores/main'
-    import { ref, onMounted, onBeforeUnmount } from 'vue'
     import ModalContratar from '@/components/ModalContratar.vue'
     import ModalTrabajador from '@/components/ModalTrabajador.vue'
     import ModalTrabajos from '@/components/ModalTrabajos.vue'
