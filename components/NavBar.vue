@@ -9,7 +9,6 @@
                         <a href="/"> <img class="w-28 px-2" src="/images/LogoNormal.jpg" alt="Hero Image">
                         </a>
                     </div>
-
                     <!-- Enlaces de navegación -->
                     <div class="flex">
                         <div class="hidden md:flex items-center space-x-8">
@@ -18,12 +17,11 @@
                                 {{ link.text }}
                             </a>
                         </div>
-
                         <!-- Botón de iniciar sesión -->
                         <div class="flex items-center">
                             <button
                                 class="ml-8 inline-flex items-center justify-center px-4 py-2 border border-transparent rounded-md shadow-sm text-sm font-medium text-white bg-[#6C63FF] hover:bg-indigo-700 focus:outline-none focus:ring-2 focus:ring-offset-2 focus:ring-indigo-500 transition-colors">
-                                Iniciar sesión
+                                Ale tonto
                             </button>
                         </div>
                     </div>
@@ -74,30 +72,23 @@
     import ModalTrabajos from '@/components/ModalTrabajos.vue'
 
     const mainStore = useMainStore()
-
     const mainLinks = ref([
         { text: "Trabaja con nosotros", href: "/helper" },
     ]);
     const services = ref(mainStore.services);
     const activeDropdown = ref(null);
-
-    // Función para iniciar el flujo de modales
     const startModalFlow = () => {
-        // Comenzamos siempre con el modal del trabajador
         mainStore.openModal('modalContratar');
     };
-
     const selectProfessionalType = (serviceText, typeText) => {
         mainStore.selectedService = serviceText;
         mainStore.selectedProfessional = typeText;
-        mainStore.profecionalType = typeText; // Reiniciar la fecha al seleccionar un nuevo profesional
-        activeDropdown.value = null; // Cerrar el dropdown después de seleccionar
+        mainStore.profecionalType = typeText;
+        activeDropdown.value = null;
     };
-
     const getProfessionalTypes = (serviceText) => {
         return mainStore.professionals[serviceText] || [];
     };
-
     const toggleDropdown = (serviceText) => {
         if (activeDropdown.value === serviceText) {
             activeDropdown.value = null;
@@ -105,15 +96,11 @@
             activeDropdown.value = serviceText;
         }
     };
-
-    // Cerrar dropdown al hacer click fuera
     const handleClickOutside = (event) => {
         if (activeDropdown.value && !event.target.closest('.relative.group')) {
             activeDropdown.value = null;
         }
     };
-
-    // Manejar escape para cerrar el dropdown activo
     const handleEscKey = (event) => {
         if (event.key === 'Escape' && activeDropdown.value) {
             activeDropdown.value = null;
@@ -133,7 +120,6 @@
 
 <style scoped>
 
-    /* Asegurarse que los dropdowns aparezcan por encima de otros elementos */
     .z-10 {
         z-index: 10;
     }
