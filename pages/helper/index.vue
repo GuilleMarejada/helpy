@@ -1,15 +1,13 @@
 <template>
   <div class="px-4 sm:px-8 md:px-12 lg:px-20 xl:px-40">
-    <div>
+    <!-- <div>
       <div class="mx-auto pb-3 sm:pb-5">
         <div class="max-w-7xl mx-auto">
           <div class="flex justify-between items-center h-16">
-            <!-- Logo -->
             <div class="flex-shrink-0 flex items-center">
               <a href="/"> <img class="w-20 sm:w-28 px-2" src="/images/LogoNormal.jpg" alt="Hero Image">
               </a>
             </div>
-            <!-- Enlaces de navegación -->
             <div class="flex">
               <div class="hidden md:flex items-center space-x-2">
                 <a v-for="link in mainLinks" :key="link.text" :href="link.href"
@@ -17,7 +15,6 @@
                   {{ link.text }}
                 </a>
               </div>
-              <!-- Botón de iniciar sesión -->
               <div class="flex items-center">
                 <button
                   class="ml-2 sm:ml-8 inline-flex items-center justify-center px-3 py-1.5 sm:px-4 sm:py-2 border border-transparent rounded-md shadow-sm text-sm font-medium text-white bg-[#6C63FF] hover:bg-indigo-700 focus:outline-none focus:ring-2 focus:ring-offset-2 focus:ring-indigo-500 transition-colors">
@@ -147,8 +144,6 @@
             <p class="text-gray-600 text-base">Trabaja cerca de ti</p>
           </div>
         </div>
-
-        <!-- Fila 2 -->
         <div class="bg-white rounded-lg shadow-md p-4 flex items-center transition-all hover:shadow-lg">
           <img src="/images/d.svg" alt="Imagen 4" class="w-fit h-16 mr-4 object-cover rounded-lg">
           <div class="text-left">
@@ -172,7 +167,8 @@
           </div>
         </div>
       </div>
-    </div>
+    </div> -->
+    a
   </div>
 </template>
 
@@ -183,6 +179,3 @@
     { text: 'Planetita', href: '#como-funciona' },
   ];
 </script>
-<style scoped>
-  /* Add your styles here */
-</style>
