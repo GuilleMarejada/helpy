@@ -126,11 +126,7 @@
     </div>
     <div class="py-5 sm:py-8 text-xl sm:text-2xl">
       <h3>¿Por qué unirte a <span class="font-extrabold">Helpy</span>?</h3>
-      <p>Este es un nuevo párrafo que he añadido para más información.</p>
-
-      <!-- Grid responsive de 3 columnas y 2 filas -->
       <div class="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-3 gap-4 mt-6">
-        <!-- Fila 1 -->
         <div class="bg-white rounded-lg shadow-md p-4 flex items-center transition-all hover:shadow-lg">
           <img src="/images/a.svg" alt="Imagen 1" class="w-fit h-16 mr-4 object-cover rounded-lg">
           <div class="text-left">
