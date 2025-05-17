@@ -1,33 +1,27 @@
 <template>
-  <div class="px-4 sm:px-8 md:px-12 lg:px-20 xl:px-40">
+  <div class="">
     <div>
-      <div class="mx-auto pb-3 sm:pb-5">
-        <div class="max-w-7xl mx-auto">
-          <div class="flex justify-between items-center h-16">
-            <div class="flex-shrink-0 flex items-center">
-              <a href="/"> <img class="w-20 sm:w-28 px-2" src="/images/LogoNormal1.webp" alt="Hero Image">
-              </a>
-            </div>
-            <div class="flex">
-              <div class="hidden md:flex items-center space-x-2">
-                <a v-for="link in mainLinks" :key="link.text" :href="link.href"
-                  class="text-gray-700 hover:text-[#6C63FF] px-3 py-2 rounded-md text-sm font-medium transition-colors">
-                  {{ link.text }}
-                </a>
-                <img class="w-20 px-2" src="/images/Idioma12.webp" alt="Idioma">
-              </div>
-              <div class="flex items-center">
-                <button
-                  class="ml-2 sm:ml-8 inline-flex items-center justify-center px-3 py-1.5 sm:px-4 sm:py-2 border border-transparent rounded-md shadow-sm text-sm font-medium text-white bg-[#6C63FF] hover:bg-indigo-700 focus:outline-none focus:ring-2 focus:ring-offset-2 focus:ring-indigo-500 transition-colors">
-                  Iniciar sesión
-                </button>
-              </div>
-            </div>
-          </div>
+      <div class="flex bg-white p-2 px-8 w-screen justify-between items-center sticky top-0 z-50 shadow-md">
+        <div class="flex-shrink-0 flex items-center">
+          <a href="/"> <img class="w-28 px-2" src="/images/LogoNormal1.webp" alt="Hero Image">
+          </a>
         </div>
+        <div class="flex items-center">
+          <a class="text-gray-700 hover:text-[#6C63FF] px-3 py-2 rounded-md text-md font-medium transition-colors">
+            FAQ/Preguntas</a>
+          <a href="/helper"
+            class="text-gray-700 hover:text-[#6C63FF] px-3 py-2 rounded-md text-md font-medium transition-colors">Beneficios</a>
+          <img class="w-20 px-2 cursor-pointer" src="/images/Idioma12.webp" alt="">
+          <button @click="showLoginModal = true"
+            class="h-fit inline-flex items-center justify-center px-4 py-2 border border-transparent rounded-md shadow-sm text-sm font-medium text-white bg-[#6C63FF] hover:bg-indigo-700 focus:outline-none focus:ring-2 focus:ring-offset-2 focus:ring-indigo-500 transition-colors cursor-pointer">
+            Iniciar sesión
+          </button>
+        </div>
+
       </div>
+      <ModalLogin :show="showLoginModal" @close="showLoginModal = false" />
     </div>
-    <div class="flex flex-col gap-3 sm:gap-5 max-w-full sm:max-w-[800px]">
+    <div class="flex flex-col gap-3 sm:gap-5 max-w-full sm:max-w-[800px] px-4 sm:px-8 py-10 mx-auto">
       <h2 class="font-bold text-2xl sm:text-3xl md:text-4xl">Sé tu propio jefe. Gana dinero ayudando. Súmate a Helpy y
         empieza a trabajar por
         horas como
@@ -46,7 +40,7 @@
         </a>
       </div>
     </div>
-    <div>
+    <div class="px-4 sm:px-8 py-10 mx-auto">
       <h2 class="py-5 sm:py-8 text-xl sm:text-2xl">¿Qué es <span class="font-extrabold">Helpy</span> y
         cómo funciona para tí?
       </h2>
@@ -122,7 +116,7 @@
         </ul>
       </div>
     </div>
-    <div class="py-5 sm:py-8 text-xl sm:text-2xl">
+    <div class="p-5 sm:py-8 text-xl sm:text-2xl">
       <h3>¿Por qué unirte a <span class="font-extrabold">Helpy</span>?</h3>
       <div class="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-3 gap-4 mt-6">
         <div class="bg-white rounded-lg shadow-md p-4 flex items-center transition-all hover:shadow-lg">
@@ -230,8 +224,10 @@
 </template>
 
 <script setup>
-  const mainLinks = [
-    { text: 'FAQ/Preguntas', href: '/' },
-    { text: 'Beneficios', href: '#servicios' },
-  ];
+  import { ref } from 'vue';
+  import ModalLogin from '~/components/ModalLogin.vue';
+
+  defineOptions({ name: 'IndexPage' });
+
+  const showLoginModal = ref(false);
 </script>
