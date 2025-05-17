@@ -185,17 +185,17 @@
     <div class="w-2/3 mx-auto pt-8">
       <!-- Top Section: Title, Subtitle, App Buttons -->
       <div class="flex flex-col md:flex-row items-center mb-16">
-        <img src="/images/mujerapp.svg" alt="App Mockup" class="w-1/2 h-64 rounded-lg shadow-lg mx-auto" />
+        <img src="/images/mujerapp1.svg" alt="App Mockup" class="w-1/2 h-74 rounded-lg mx-auto" />
         <div class="md:pl-12 text-center md:text-left">
-          <h2 class="text-4xl font-bold text-gray-900 mb-4">Todo lo que necesitas para tu hogar, en tu bolsillo.</h2>
-          <p class="text-gray-600 text-xl mb-6">Contratar un manitas, una canguro o un fontanero... nunca fue tan fácil.
+          <h2 class="text-4xl font-bold text-gray-900">Todo lo que necesitas para tu hogar, en tu bolsillo.</h2>
+          <p class="text-gray-600 text-xl ">Contratar un manitas, una canguro o un fontanero... nunca fue tan fácil.
           </p>
           <div class="flex justify-center md:justify-start space-x-4">
             <a href="#" class="hover:opacity-75 transition-opacity">
-              <img src="/images/appstore.svg" alt="Download on the App Store" class="h-48 md:h-38" />
+              <img src="/images/appstore.svg" alt="Download on the App Store" class="w-48" />
             </a>
             <a href="#" class="hover:opacity-75 transition-opacity">
-              <img src="/images/google.svg" alt="Get it on Google Play" class="h-48 md:h-38" />
+              <img src="/images/google.svg" alt="Get it on Google Play" class="w-48" />
             </a>
           </div>
         </div>
