@@ -1,8 +1,8 @@
 <template>
     <div v-if="show"
-        class="fixed inset-0 bg-transparent bg-opacity-50 overflow-y-auto h-full w-full flex justify-center items-center"
+        class="fixed inset-0 bg-transparent bg-opacity-50 overflow-y-auto h-full w-full flex justify-end items-start pt-22 pr-4"
         @click.self="closeModal">
-        <div class="relative mx-auto p-5 border w-full max-w-md shadow-lg rounded-md bg-white  mt-100">
+        <div class="relative p-5 border w-full max-w-md shadow-lg rounded-md bg-white">
             <div class="text-right">
                 <button @click="closeModal" class="text-gray-400 hover:text-gray-600">
                     <svg class="w-6 h-6" fill="none" stroke="currentColor" viewBox="0 0 24 24"
