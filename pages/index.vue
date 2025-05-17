@@ -1,44 +1,48 @@
 <template>
   <div class="min-h-screen font-sans">
     <!-- Hero Section con degradado y mejor estructura -->
-    <div class="bg-white p-5">
-      <div class="flex justify-between items-center">
-        <div class="flex-shrink-0 flex items-center">
-          <a href="/"> <img class="w-28 px-2" src="/images/LogoNormal.jpg" alt="Hero Image">
-          </a>
-        </div>
+    <div class="flex bg-white p-2 px-8 w-screen justify-between items-center sticky top-0 z-50 shadow-md">
+      <div class="flex-shrink-0 flex items-center">
+        <a href="/"> <img class="w-28 px-2" src="/images/LogoNormal.jpg" alt="Hero Image">
+        </a>
+      </div>
+      <div class="flex items-center space-x-2">
+        <p>FAQ/Preguntas</p>
+        <p>Ofrece tus servicios</p>
+        <img class="w-20 px-2" src="/images/Idioma.webp" alt="">
         <button
           class="h-fit inline-flex items-center justify-center px-4 py-2 border border-transparent rounded-md shadow-sm text-sm font-medium text-white bg-[#6C63FF] hover:bg-indigo-700 focus:outline-none focus:ring-2 focus:ring-offset-2 focus:ring-indigo-500 transition-colors">
           Iniciar sesión
         </button>
       </div>
 
-      <div class="container mx-auto px-4 py-4">
-        <div class="flex flex-col lg:flex-row items-center justify-between gap-12">
-          <div class="lg:w-1/2">
-            <h1 class="text-5xl md:text-6xl font-extrabold leading-tight mb-6 text-gray-900">
-              Encuentra, reserva y <span class="text-[#6C63FF]">soluciona</span> cualquier tarea en tu hogar.
-            </h1>
-            <p class="text-xl text-gray-600 mb-8 leading-relaxed">
-              Limpieza, reparaciones, cuidados y más.
-              Profesionales verificados disponibles cuando los necesitas.
-            </p>
-            <div class="flex flex-col sm:flex-row gap-4">
-              <a href="/client"
-                class="px-8 py-4 bg-[#6C63FF] text-white font-medium rounded-lg hover:bg-indigo-700 transition-colors shadow-md text-center">
-                Reserva un servicio
-              </a>
-              <a href="#como-funciona"
-                class="px-8 py-4 border border-gray-300 text-gray-700 font-medium rounded-lg hover:bg-gray-50 transition-colors text-center">
-                Cómo funciona
-              </a>
-            </div>
-          </div>
+    </div>
 
-          <div class="lg:w-1/2">
-            <div class="relative">
-              <img src="/images/FrontPage.JPG" alt="Imagen Portada" class="w-full relative z-10 rounded-xl shadow-xl" />
-            </div>
+    <div class="container mx-auto px-4 py-4">
+      <div class="flex flex-col lg:flex-row items-center justify-between gap-12">
+        <div class="lg:w-1/2">
+          <h1 class="text-5xl md:text-6xl font-extrabold leading-tight mb-6 text-gray-900">
+            Encuentra, reserva y <span class="text-[#6C63FF]">soluciona</span> cualquier tarea en tu hogar.
+          </h1>
+          <p class="text-xl text-gray-600 mb-8 leading-relaxed">
+            Limpieza, reparaciones, cuidados y más.
+            Profesionales verificados disponibles cuando los necesitas.
+          </p>
+          <div class="flex flex-col sm:flex-row gap-4">
+            <a href="/client"
+              class="px-8 py-4 bg-[#6C63FF] text-white font-medium rounded-lg hover:bg-indigo-700 transition-colors shadow-md text-center">
+              Reserva un servicio
+            </a>
+            <a href="#como-funciona"
+              class="px-8 py-4 border border-gray-300 text-gray-700 font-medium rounded-lg hover:bg-gray-50 transition-colors text-center">
+              Cómo funciona
+            </a>
+          </div>
+        </div>
+
+        <div class="lg:w-1/2">
+          <div class="relative">
+            <img src="/images/FrontPage.JPG" alt="Imagen Portada" class="w-full relative z-10 rounded-xl shadow-xl" />
           </div>
         </div>
       </div>
