@@ -185,7 +185,7 @@
     <div class="w-2/3 mx-auto py-20">
       <!-- Top Section: Title, Subtitle, App Buttons -->
       <div class="flex flex-col md:flex-row items-center mb-16">
-        <img src="/images/mujerapp.svg" alt="App Mockup" class="w-1/2 rounded-lg shadow-lg mx-auto" />
+        <img src="/images/mujerapp.svg" alt="App Mockup" class="w-1/2 h-64 rounded-lg shadow-lg mx-auto" />
         <div class="md:pl-12 text-center md:text-left">
           <h2 class="text-4xl font-bold text-gray-900 mb-4">Todo lo que necesitas para tu hogar, en tu bolsillo.</h2>
           <p class="text-gray-600 text-xl mb-6">Contratar un manitas, una canguro o un fontanero... nunca fue tan fácil.
