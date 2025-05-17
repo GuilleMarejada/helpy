@@ -51,12 +51,13 @@
       </div>
     </div>
     <!-- Cómo Funciona section -->
-    <div class="mt-16">
+    <div class="mt-16 px-4">
+      <h2 class="text-2xl text-gray-800 mb-6">¿Por qué elegir <span class="font-bold">Helpy?</span></h2>
       <ul class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-10">
         <li class="bg-white rounded-xl shadow-lg p-6 transform transition-all hover:scale-105">
           <div class="flex flex-col items-center">
             <img src="/images/1a.svg" alt="">
-            <h3 class="text-xl text-gray-800 mb-2"><span class="font-bold">Precio claro</span>
+            <h3 class="text-xl text-gray-800 mb-2 text-center"><span class="font-bold">Precio claro</span>
               , desde el principio</h3>
             <p class="text-gray-600 text-center">Verás el precio final por hora antes de reservar y el precio medio del
               mercado como referencia.
@@ -82,7 +83,8 @@
         <li class="bg-white rounded-xl shadow-lg p-6 transform transition-all hover:scale-105">
           <div class="flex flex-col items-center">
             <img src="/images/3a.svg" alt="">
-            <h3 class="text-xl text-gray-800 mb-2">Todo desde la app, <span class="font-bold">sin complicaciones</span>
+            <h3 class="text-xl text-gray-800 mb-2 text-center">Todo desde la app, <span class="font-bold">sin
+                complicaciones</span>
             </h3>
             <p class="text-gray-600 text-center">Reserva y paga desde tu móvil en segundos.
               Tras confirmar, puedes chatear con tu Helper si tienes dudas. Todo queda registrado y controlado.</p>
@@ -92,7 +94,8 @@
         <li class="bg-white rounded-xl shadow-lg p-6 transform transition-all hover:scale-105">
           <div class="flex flex-col items-center">
             <img src="/images/4a.svg" alt="">
-            <h3 class="text-xl text-gray-800 mb-2">Todo claro, <span class="font-bold">todo en regla</span></h3>
+            <h3 class="text-xl text-gray-800 mb-2 text-center">Todo claro, <span class="font-bold">todo en regla</span>
+            </h3>
             <p class="text-gray-600 text-center">Nos encargamos de que todo esté en orden:
               Helpers dados de alta y cotizando.
               Tú no gestionas nada.
