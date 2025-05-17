@@ -22,8 +22,8 @@
     </div>
     <ModalLogin :show="showLoginModal" @close="showLoginModal = false" />
 
-    <div class="container mx-auto px-4 py-4">
-      <div class="flex flex-col lg:flex-row items-center justify-between gap-12">
+    <div class="container mx-auto px-24 py-4">
+      <div class="flex flex-col lg:flex-row items-center justify-between gap-4 px-8">
         <div class="lg:w-1/2">
           <h1 class="text-5xl md:text-6xl font-extrabold leading-tight mb-6 text-gray-900">
             Encuentra, reserva y <span class="text-[#6C63FF]">soluciona</span> cualquier tarea en tu hogar.
