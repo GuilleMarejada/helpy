@@ -183,8 +183,80 @@
 
     <!-- Sección APP -->
     <div class="w-2/3 mx-auto py-20">
-      <div class="container mx-auto px-4">
-        <img class="w-full h-full object-cover" src="/images/APP.jpg" alt="Aplicación">
+      <!-- Top Section: Title, Subtitle, App Buttons -->
+      <div class="flex flex-col md:flex-row items-center mb-16">
+        <div class="md:w-1/3 mb-8 md:mb-0">
+          <img src="/images/mujerapp.svg" alt="App Mockup" class="rounded-lg shadow-lg mx-auto" />
+        </div>
+        <div class="md:w-2/3 md:pl-12 text-center md:text-left">
+          <h2 class="text-4xl font-bold text-gray-900 mb-4">Todo lo que necesitas para tu hogar, en tu bolsillo.</h2>
+          <p class="text-gray-600 text-xl mb-6">Contratar un manitas, una canguro o un fontanero... nunca fue tan fácil.
+          </p>
+          <div class="flex justify-center md:justify-start space-x-4">
+            <a href="#" class="hover:opacity-75 transition-opacity">
+              <img src="/images/appstore.svg" alt="Download on the App Store" class="h-26 md:h-18" />
+            </a>
+            <a href="#" class="hover:opacity-75 transition-opacity">
+              <img src="/images/google.svg" alt="Get it on Google Play" class="h-26 md:h-18" />
+            </a>
+          </div>
+        </div>
+      </div>
+
+      <!-- Middle Section: Opciones -->
+      <div class="flex flex-col lg:flex-row justify-around items-center mb-16 gap-8">
+        <!-- Opción Estándar -->
+        <div class="bg-white p-8 rounded-xl shadow-2xl w-full lg:w-2/5 border border-gray-200 text-center">
+          <h3 class="text-2xl font-semibold text-gray-800 mb-1">Opción Estándar</h3>
+          <p class="text-sm text-indigo-600 font-medium mb-4">(Recomendada)</p>
+          <img src="/images/helper1.svg" alt="Opción Estándar" class="mx-auto mb-6 rounded" />
+          <p class="text-gray-600">
+            Recomendado si estás comenzando como Helper y prefieres recibir orientación para fijar tus precios de forma
+            competitiva.
+          </p>
+        </div>
+
+        <div class="text-5xl text-indigo-500 font-mono hidden lg:block">
+          &lt; &gt;
+        </div>
+
+        <!-- Opción Experto -->
+        <div class="bg-white p-8 rounded-xl shadow-2xl w-full lg:w-2/5 border border-gray-200 text-center">
+          <h3 class="text-2xl font-semibold text-gray-800 mb-1">Opción Experto</h3>
+          <img src="/images/helper2.svg" alt="Opción Experto" class="mx-auto mb-6 rounded" />
+          <p class="text-gray-600">
+            Ideal si quieres fijar tu propio precio libremente y posicionarte como un Helper experto en tu especialidad.
+          </p>
+        </div>
+      </div>
+
+      <!-- Bottom Section: Información Adicional -->
+      <div class="bg-yellow-50 border-l-4 border-yellow-400 p-6 rounded-md shadow-md mb-8">
+        <div class="flex items-start">
+          <div class="flex-shrink-0">
+            <svg class="h-6 w-6 text-yellow-500" xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24"
+              stroke="currentColor" aria-hidden="true">
+              <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2"
+                d="M12 9v2m0 4h.01m-6.938 4h13.856c1.54 0 2.502-1.667 1.732-3L13.732 4c-.77-1.333-2.694-1.333-3.464 0L3.34 16c-.77 1.333.192 3 1.732 3z" />
+            </svg>
+          </div>
+          <div class="ml-3">
+            <h4 class="text-lg font-semibold text-yellow-800 mb-2">Importante sobre el cambio de modalidad</h4>
+            <ul class="list-disc list-inside text-yellow-700 space-y-1">
+              <li>Puedes cambiar de Sistema Estándar a Sistema Experto (o viceversa) una vez cada 30 días.</li>
+              <li>Esta limitación busca mantener la estabilidad de precios en la plataforma y proteger la experiencia
+                del cliente.</li>
+              <li>Piensa bien tu estrategia antes de cambiar: cada modalidad tiene ventajas según tu nivel de
+                experiencia y objetivos.</li>
+            </ul>
+          </div>
+        </div>
+      </div>
+
+      <div class="text-center">
+        <h4 class="text-xl font-semibold text-gray-800 mb-2">¿Dudas sobre qué modalidad elegir?</h4>
+        <p class="text-gray-600">Nuestro equipo de soporte puede asesorarte para que elijas la opción que mejor se
+          adapte a tu perfil.</p>
       </div>
     </div>
 
