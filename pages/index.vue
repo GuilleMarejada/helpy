@@ -1,5 +1,5 @@
 <template>
-  <div class="min-h-screen font-sans">
+  <div class="min-h-screen">
     <!-- Hero Section con degradado y mejor estructura -->
     <div class="flex bg-white p-2 px-8 w-screen justify-between items-center sticky top-0 z-50 shadow-md">
       <div class="flex-shrink-0 flex items-center">
@@ -182,7 +182,7 @@
     </div>
 
     <!-- Sección APP -->
-    <div class="w-2/3 mx-auto py-20">
+    <div class="w-2/3 mx-auto pt-8">
       <!-- Top Section: Title, Subtitle, App Buttons -->
       <div class="flex flex-col md:flex-row items-center mb-16">
         <img src="/images/mujerapp.svg" alt="App Mockup" class="w-1/2 h-64 rounded-lg shadow-lg mx-auto" />
@@ -200,168 +200,233 @@
           </div>
         </div>
       </div>
-
-
     </div>
-
-    <!-- Testimonios -->
-    <div class="py-16 bg-white">
-      <div class="container mx-auto px-4">
-        <h2 class="text-3xl font-bold mb-12 text-gray-900">Lo que dicen nuestros clientes</h2>
-
-        <div class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8">
-          <div class="bg-gray-50 p-6 rounded-xl shadow-md">
-            <div class="flex items-center mb-4">
-              <div
-                class="h-12 w-12 bg-indigo-200 rounded-full flex items-center justify-center text-[#6C63FF] font-bold text-xl">
-                M
-              </div>
-              <div class="ml-4">
-                <h4 class="font-semibold">María G.</h4>
-                <div class="flex text-yellow-400">
-                  <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" fill="currentColor" class="w-5 h-5">
-                    <path fill-rule="evenodd"
-                      d="M10.788 3.21c.448-1.077 1.976-1.077 2.424 0l2.082 5.007 5.404.433c1.164.093 1.636 1.545.749 2.305l-4.117 3.527 1.257 5.273c.271 1.136-.964 2.033-1.96 1.425L12 18.354 7.373 21.18c-.996.608-2.231-.29-1.96-1.425l1.257-5.273-4.117-3.527c-.887-.76-.415-2.212.749-2.305l5.404-.433 2.082-5.006z"
-                      clip-rule="evenodd" />
-                  </svg>
-                  <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" fill="currentColor" class="w-5 h-5">
-                    <path fill-rule="evenodd"
-                      d="M10.788 3.21c.448-1.077 1.976-1.077 2.424 0l2.082 5.007 5.404.433c1.164.093 1.636 1.545.749 2.305l-4.117 3.527 1.257 5.273c.271 1.136-.964 2.033-1.96 1.425L12 18.354 7.373 21.18c-.996.608-2.231-.29-1.96-1.425l1.257-5.273-4.117-3.527c-.887-.76-.415-2.212.749-2.305l5.404-.433 2.082-5.006z"
-                      clip-rule="evenodd" />
-                  </svg>
-                  <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" fill="currentColor" class="w-5 h-5">
-                    <path fill-rule="evenodd"
-                      d="M10.788 3.21c.448-1.077 1.976-1.077 2.424 0l2.082 5.007 5.404.433c1.164.093 1.636 1.545.749 2.305l-4.117 3.527 1.257 5.273c.271 1.136-.964 2.033-1.96 1.425L12 18.354 7.373 21.18c-.996.608-2.231-.29-1.96-1.425l1.257-5.273-4.117-3.527c-.887-.76-.415-2.212.749-2.305l5.404-.433 2.082-5.006z"
-                      clip-rule="evenodd" />
-                  </svg>
-                  <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" fill="currentColor" class="w-5 h-5">
-                    <path fill-rule="evenodd"
-                      d="M10.788 3.21c.448-1.077 1.976-1.077 2.424 0l2.082 5.007 5.404.433c1.164.093 1.636 1.545.749 2.305l-4.117 3.527 1.257 5.273c.271 1.136-.964 2.033-1.96 1.425L12 18.354 7.373 21.18c-.996.608-2.231-.29-1.96-1.425l1.257-5.273-4.117-3.527c-.887-.76-.415-2.212.749-2.305l5.404-.433 2.082-5.006z"
-                      clip-rule="evenodd" />
-                  </svg>
-                  <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" fill="currentColor" class="w-5 h-5">
-                    <path fill-rule="evenodd"
-                      d="M10.788 3.21c.448-1.077 1.976-1.077 2.424 0l2.082 5.007 5.404.433c1.164.093 1.636 1.545.749 2.305l-4.117 3.527 1.257 5.273c.271 1.136-.964 2.033-1.96 1.425L12 18.354 7.373 21.18c-.996.608-2.231-.29-1.96-1.425l1.257-5.273-4.117-3.527c-.887-.76-.415-2.212.749-2.305l5.404-.433 2.082-5.006z"
-                      clip-rule="evenodd" />
-                  </svg>
-                </div>
-              </div>
-            </div>
-            <p class="text-gray-600">"El servicio de limpieza superó mis expectativas. La profesional fue puntual,
-              eficiente y dejó mi casa impecable. Sin duda repetiré."</p>
+    <!-- FAQ Section -->
+    <div class="container mx-auto p-4">
+      <h2 class="text-3xl font-bold text-gray-900 border-b-2 border-gray-200 pb-6 mb-8">
+        Preguntas frecuentes de nuevos clientes
+      </h2>
+      <div>
+        <div>
+          <div class="py-1">
+            <h3 class="text-lg font-semibold text-gray-800 flex  items-center justify-between">
+              ¿Cómo funciona?
+              <span class="text-gray-800 transform transition-transform duration-300">&#9654;</span>
+            </h3>
           </div>
-
-          <div class="bg-gray-50 p-6 rounded-xl shadow-md">
-            <div class="flex items-center mb-4">
-              <div
-                class="h-12 w-12 bg-indigo-200 rounded-full flex items-center justify-center text-[#6C63FF] font-bold text-xl">
-                J
-              </div>
-              <div class="ml-4">
-                <h4 class="font-semibold">Javier P.</h4>
-                <div class="flex text-yellow-400">
-                  <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" fill="currentColor" class="w-5 h-5">
-                    <path fill-rule="evenodd"
-                      d="M10.788 3.21c.448-1.077 1.976-1.077 2.424 0l2.082 5.007 5.404.433c1.164.093 1.636 1.545.749 2.305l-4.117 3.527 1.257 5.273c.271 1.136-.964 2.033-1.96 1.425L12 18.354 7.373 21.18c-.996.608-2.231-.29-1.96-1.425l1.257-5.273-4.117-3.527c-.887-.76-.415-2.212.749-2.305l5.404-.433 2.082-5.006z"
-                      clip-rule="evenodd" />
-                  </svg>
-                  <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" fill="currentColor" class="w-5 h-5">
-                    <path fill-rule="evenodd"
-                      d="M10.788 3.21c.448-1.077 1.976-1.077 2.424 0l2.082 5.007 5.404.433c1.164.093 1.636 1.545.749 2.305l-4.117 3.527 1.257 5.273c.271 1.136-.964 2.033-1.96 1.425L12 18.354 7.373 21.18c-.996.608-2.231-.29-1.96-1.425l1.257-5.273-4.117-3.527c-.887-.76-.415-2.212.749-2.305l5.404-.433 2.082-5.006z"
-                      clip-rule="evenodd" />
-                  </svg>
-                  <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" fill="currentColor" class="w-5 h-5">
-                    <path fill-rule="evenodd"
-                      d="M10.788 3.21c.448-1.077 1.976-1.077 2.424 0l2.082 5.007 5.404.433c1.164.093 1.636 1.545.749 2.305l-4.117 3.527 1.257 5.273c.271 1.136-.964 2.033-1.96 1.425L12 18.354 7.373 21.18c-.996.608-2.231-.29-1.96-1.425l1.257-5.273-4.117-3.527c-.887-.76-.415-2.212.749-2.305l5.404-.433 2.082-5.006z"
-                      clip-rule="evenodd" />
-                  </svg>
-                  <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" fill="currentColor" class="w-5 h-5">
-                    <path fill-rule="evenodd"
-                      d="M10.788 3.21c.448-1.077 1.976-1.077 2.424 0l2.082 5.007 5.404.433c1.164.093 1.636 1.545.749 2.305l-4.117 3.527 1.257 5.273c.271 1.136-.964 2.033-1.96 1.425L12 18.354 7.373 21.18c-.996.608-2.231-.29-1.96-1.425l1.257-5.273-4.117-3.527c-.887-.76-.415-2.212.749-2.305l5.404-.433 2.082-5.006z"
-                      clip-rule="evenodd" />
-                  </svg>
-                  <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" fill="currentColor" class="w-5 h-5">
-                    <path fill-rule="evenodd"
-                      d="M10.788 3.21c.448-1.077 1.976-1.077 2.424 0l2.082 5.007 5.404.433c1.164.093 1.636 1.545.749 2.305l-4.117 3.527 1.257 5.273c.271 1.136-.964 2.033-1.96 1.425L12 18.354 7.373 21.18c-.996.608-2.231-.29-1.96-1.425l1.257-5.273-4.117-3.527c-.887-.76-.415-2.212.749-2.305l5.404-.433 2.082-5.006z"
-                      clip-rule="evenodd" />
-                  </svg>
-                </div>
-              </div>
-            </div>
-            <p class="text-gray-600">"Contraté un fontanero para una urgencia y en menos de 2 horas ya estaba en mi
-              casa. Solucionó el problema rápidamente y a un precio muy razonable."</p>
+          <div class="py-1">
+            <h3 class="text-lg font-semibold text-gray-800 flex  items-center justify-between">
+              ¿Cuánto tiempo debo contratar?
+              <span class="text-gray-800 transform transition-transform duration-300">&#9654;</span>
+            </h3>
           </div>
-
-          <div class="bg-gray-50 p-6 rounded-xl shadow-md">
-            <div class="flex items-center mb-4">
-              <div
-                class="h-12 w-12 bg-indigo-200 rounded-full flex items-center justify-center text-[#6C63FF] font-bold text-xl">
-                L
-              </div>
-              <div class="ml-4">
-                <h4 class="font-semibold">Laura M.</h4>
-                <div class="flex text-yellow-400">
-                  <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" fill="currentColor" class="w-5 h-5">
-                    <path fill-rule="evenodd"
-                      d="M10.788 3.21c.448-1.077 1.976-1.077 2.424 0l2.082 5.007 5.404.433c1.164.093 1.636 1.545.749 2.305l-4.117 3.527 1.257 5.273c.271 1.136-.964 2.033-1.96 1.425L12 18.354 7.373 21.18c-.996.608-2.231-.29-1.96-1.425l1.257-5.273-4.117-3.527c-.887-.76-.415-2.212.749-2.305l5.404-.433 2.082-5.006z"
-                      clip-rule="evenodd" />
-                  </svg>
-                  <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" fill="currentColor" class="w-5 h-5">
-                    <path fill-rule="evenodd"
-                      d="M10.788 3.21c.448-1.077 1.976-1.077 2.424 0l2.082 5.007 5.404.433c1.164.093 1.636 1.545.749 2.305l-4.117 3.527 1.257 5.273c.271 1.136-.964 2.033-1.96 1.425L12 18.354 7.373 21.18c-.996.608-2.231-.29-1.96-1.425l1.257-5.273-4.117-3.527c-.887-.76-.415-2.212.749-2.305l5.404-.433 2.082-5.006z"
-                      clip-rule="evenodd" />
-                  </svg>
-                  <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" fill="currentColor" class="w-5 h-5">
-                    <path fill-rule="evenodd"
-                      d="M10.788 3.21c.448-1.077 1.976-1.077 2.424 0l2.082 5.007 5.404.433c1.164.093 1.636 1.545.749 2.305l-4.117 3.527 1.257 5.273c.271 1.136-.964 2.033-1.96 1.425L12 18.354 7.373 21.18c-.996.608-2.231-.29-1.96-1.425l1.257-5.273-4.117-3.527c-.887-.76-.415-2.212.749-2.305l5.404-.433 2.082-5.006z"
-                      clip-rule="evenodd" />
-                  </svg>
-                  <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" fill="currentColor" class="w-5 h-5">
-                    <path fill-rule="evenodd"
-                      d="M10.788 3.21c.448-1.077 1.976-1.077 2.424 0l2.082 5.007 5.404.433c1.164.093 1.636 1.545.749 2.305l-4.117 3.527 1.257 5.273c.271 1.136-.964 2.033-1.96 1.425L12 18.354 7.373 21.18c-.996.608-2.231-.29-1.96-1.425l1.257-5.273-4.117-3.527c-.887-.76-.415-2.212.749-2.305l5.404-.433 2.082-5.006z"
-                      clip-rule="evenodd" />
-                  </svg>
-                </div>
-              </div>
-            </div>
-            <p class="text-gray-600">"La aplicación es muy intuitiva y el proceso de reserva es sencillo. El
-              electricista que vino conocía su trabajo y resolvió mi problema en minutos."</p>
+          <div class="py-1">
+            <h3 class="text-lg font-semibold text-gray-800 flex  items-center justify-between">
+              ¿Qué pasa si sobra o falta tiempo?
+              <span class="text-gray-800 transform transition-transform duration-300">&#9654;</span>
+            </h3>
+          </div>
+          <div class="py-1">
+            <h3 class="text-lg font-semibold text-gray-800 flex  items-center justify-between">
+              No estaré en casa durante el servicio
+              <span class="text-gray-800 transform transition-transform duration-300">&#9654;</span>
+            </h3>
+          </div>
+          <div class="py-1">
+            <h3 class="text-lg font-semibold text-gray-800 flex  items-center justify-between">
+              Alta en la Seguridad Social
+              <span class="text-gray-800 transform transition-transform duration-300">&#9654;</span>
+            </h3>
+          </div>
+          <div class="py-1">
+            <h3 class="text-lg font-semibold text-gray-800 flex  items-center justify-between">
+              ¿Qué pasa si el Helper no se presenta o llega tarde?
+              <span class="text-gray-800 transform transition-transform duration-300">&#9654;</span>
+            </h3>
+          </div>
+          <div class="py-1">
+            <h3 class="text-lg font-semibold text-gray-800 flex  items-center justify-between">
+              ¿Puedo cancelar o cambiar la cita una vez reservada?
+              <span class="text-gray-800 transform transition-transform duration-300">&#9654;</span>
+            </h3>
+          </div>
+          <div class="py-1">
+            <h3 class="text-lg font-semibold text-gray-800 flex  items-center justify-between">
+              ¿Cómo se realiza el pago? ¿Es seguro?
+              <span class="text-gray-800 transform transition-transform duration-300">&#9654;</span>
+            </h3>
+          </div>
+          <div class="py-1">
+            <h3 class="text-lg font-semibold text-gray-800 flex  items-center justify-between">
+              ¿Qué hago si no estoy satisfecho con el servicio?
+              <span class="text-gray-800 transform transition-transform duration-300">&#9654;</span>
+            </h3>
           </div>
         </div>
       </div>
     </div>
 
-    <!-- Footer simple -->
-    <footer class="bg-gray-900 text-white py-10">
-      <div class="container mx-auto px-4">
-        <div class="grid grid-cols-1 md:grid-cols-3 gap-8">
-          <div>
-            <h3 class="text-2xl font-bold mb-4">Helpy<span class="text-indigo-400">.</span></h3>
-            <p class="text-gray-400">Tu plataforma de confianza para servicios profesionales en el hogar.</p>
-          </div>
+    <div class="bg-white">
 
-          <div>
-            <h4 class="text-lg font-semibold mb-4">Enlaces</h4>
-            <ul class="space-y-2">
-              <li><a href="#" class="text-gray-400 hover:text-white transition-colors">Inicio</a></li>
-              <li><a href="#" class="text-gray-400 hover:text-white transition-colors">Servicios</a></li>
-              <li><a href="#" class="text-gray-400 hover:text-white transition-colors">Sobre nosotros</a></li>
-              <li><a href="#" class="text-gray-400 hover:text-white transition-colors">Contacto</a></li>
-            </ul>
-          </div>
+      <!-- Testimonios -->
+      <div class="py-16 bg-white">
+        <div class="container mx-auto px-4">
+          <h2 class="text-3xl font-bold mb-12 text-gray-900">Lo que dicen nuestros clientes</h2>
 
-          <div>
-            <h4 class="text-lg font-semibold mb-4">Contacto</h4>
-            <p class="text-gray-400 mb-2">XXX@XXX.com</p>
-            <p class="text-gray-400">+34 XXX XXX XXX</p>
-          </div>
-        </div>
+          <div class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8">
+            <div class="bg-gray-50 p-6 rounded-xl shadow-md">
+              <div class="flex items-center mb-4">
+                <div
+                  class="h-12 w-12 bg-indigo-200 rounded-full flex items-center justify-center text-[#6C63FF] font-bold text-xl">
+                  M
+                </div>
+                <div class="ml-4">
+                  <h4 class="font-semibold">María G.</h4>
+                  <div class="flex text-yellow-400">
+                    <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" fill="currentColor" class="w-5 h-5">
+                      <path fill-rule="evenodd"
+                        d="M10.788 3.21c.448-1.077 1.976-1.077 2.424 0l2.082 5.007 5.404.433c1.164.093 1.636 1.545.749 2.305l-4.117 3.527 1.257 5.273c.271 1.136-.964 2.033-1.96 1.425L12 18.354 7.373 21.18c-.996.608-2.231-.29-1.96-1.425l1.257-5.273-4.117-3.527c-.887-.76-.415-2.212.749-2.305l5.404-.433 2.082-5.006z"
+                        clip-rule="evenodd" />
+                    </svg>
+                    <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" fill="currentColor" class="w-5 h-5">
+                      <path fill-rule="evenodd"
+                        d="M10.788 3.21c.448-1.077 1.976-1.077 2.424 0l2.082 5.007 5.404.433c1.164.093 1.636 1.545.749 2.305l-4.117 3.527 1.257 5.273c.271 1.136-.964 2.033-1.96 1.425L12 18.354 7.373 21.18c-.996.608-2.231-.29-1.96-1.425l1.257-5.273-4.117-3.527c-.887-.76-.415-2.212.749-2.305l5.404-.433 2.082-5.006z"
+                        clip-rule="evenodd" />
+                    </svg>
+                    <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" fill="currentColor" class="w-5 h-5">
+                      <path fill-rule="evenodd"
+                        d="M10.788 3.21c.448-1.077 1.976-1.077 2.424 0l2.082 5.007 5.404.433c1.164.093 1.636 1.545.749 2.305l-4.117 3.527 1.257 5.273c.271 1.136-.964 2.033-1.96 1.425L12 18.354 7.373 21.18c-.996.608-2.231-.29-1.96-1.425l1.257-5.273-4.117-3.527c-.887-.76-.415-2.212.749-2.305l5.404-.433 2.082-5.006z"
+                        clip-rule="evenodd" />
+                    </svg>
+                    <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" fill="currentColor" class="w-5 h-5">
+                      <path fill-rule="evenodd"
+                        d="M10.788 3.21c.448-1.077 1.976-1.077 2.424 0l2.082 5.007 5.404.433c1.164.093 1.636 1.545.749 2.305l-4.117 3.527 1.257 5.273c.271 1.136-.964 2.033-1.96 1.425L12 18.354 7.373 21.18c-.996.608-2.231-.29-1.96-1.425l1.257-5.273-4.117-3.527c-.887-.76-.415-2.212.749-2.305l5.404-.433 2.082-5.006z"
+                        clip-rule="evenodd" />
+                    </svg>
+                    <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" fill="currentColor" class="w-5 h-5">
+                      <path fill-rule="evenodd"
+                        d="M10.788 3.21c.448-1.077 1.976-1.077 2.424 0l2.082 5.007 5.404.433c1.164.093 1.636 1.545.749 2.305l-4.117 3.527 1.257 5.273c.271 1.136-.964 2.033-1.96 1.425L12 18.354 7.373 21.18c-.996.608-2.231-.29-1.96-1.425l1.257-5.273-4.117-3.527c-.887-.76-.415-2.212.749-2.305l5.404-.433 2.082-5.006z"
+                        clip-rule="evenodd" />
+                    </svg>
+                  </div>
+                </div>
+              </div>
+              <p class="text-gray-600">"El servicio de limpieza superó mis expectativas. La profesional fue puntual,
+                eficiente y dejó mi casa impecable. Sin duda repetiré."</p>
+            </div>
 
-        <div class="border-t border-gray-800 mt-8 pt-8 text-center text-gray-500">
-          <p>&copy; {{ new Date().getFullYear() }} Helpy. Todos los derechos reservados.</p>
+            <div class="bg-gray-50 p-6 rounded-xl shadow-md">
+              <div class="flex items-center mb-4">
+                <div
+                  class="h-12 w-12 bg-indigo-200 rounded-full flex items-center justify-center text-[#6C63FF] font-bold text-xl">
+                  J
+                </div>
+                <div class="ml-4">
+                  <h4 class="font-semibold">Javier P.</h4>
+                  <div class="flex text-yellow-400">
+                    <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" fill="currentColor" class="w-5 h-5">
+                      <path fill-rule="evenodd"
+                        d="M10.788 3.21c.448-1.077 1.976-1.077 2.424 0l2.082 5.007 5.404.433c1.164.093 1.636 1.545.749 2.305l-4.117 3.527 1.257 5.273c.271 1.136-.964 2.033-1.96 1.425L12 18.354 7.373 21.18c-.996.608-2.231-.29-1.96-1.425l1.257-5.273-4.117-3.527c-.887-.76-.415-2.212.749-2.305l5.404-.433 2.082-5.006z"
+                        clip-rule="evenodd" />
+                    </svg>
+                    <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" fill="currentColor" class="w-5 h-5">
+                      <path fill-rule="evenodd"
+                        d="M10.788 3.21c.448-1.077 1.976-1.077 2.424 0l2.082 5.007 5.404.433c1.164.093 1.636 1.545.749 2.305l-4.117 3.527 1.257 5.273c.271 1.136-.964 2.033-1.96 1.425L12 18.354 7.373 21.18c-.996.608-2.231-.29-1.96-1.425l1.257-5.273-4.117-3.527c-.887-.76-.415-2.212.749-2.305l5.404-.433 2.082-5.006z"
+                        clip-rule="evenodd" />
+                    </svg>
+                    <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" fill="currentColor" class="w-5 h-5">
+                      <path fill-rule="evenodd"
+                        d="M10.788 3.21c.448-1.077 1.976-1.077 2.424 0l2.082 5.007 5.404.433c1.164.093 1.636 1.545.749 2.305l-4.117 3.527 1.257 5.273c.271 1.136-.964 2.033-1.96 1.425L12 18.354 7.373 21.18c-.996.608-2.231-.29-1.96-1.425l1.257-5.273-4.117-3.527c-.887-.76-.415-2.212.749-2.305l5.404-.433 2.082-5.006z"
+                        clip-rule="evenodd" />
+                    </svg>
+                    <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" fill="currentColor" class="w-5 h-5">
+                      <path fill-rule="evenodd"
+                        d="M10.788 3.21c.448-1.077 1.976-1.077 2.424 0l2.082 5.007 5.404.433c1.164.093 1.636 1.545.749 2.305l-4.117 3.527 1.257 5.273c.271 1.136-.964 2.033-1.96 1.425L12 18.354 7.373 21.18c-.996.608-2.231-.29-1.96-1.425l1.257-5.273-4.117-3.527c-.887-.76-.415-2.212.749-2.305l5.404-.433 2.082-5.006z"
+                        clip-rule="evenodd" />
+                    </svg>
+                    <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" fill="currentColor" class="w-5 h-5">
+                      <path fill-rule="evenodd"
+                        d="M10.788 3.21c.448-1.077 1.976-1.077 2.424 0l2.082 5.007 5.404.433c1.164.093 1.636 1.545.749 2.305l-4.117 3.527 1.257 5.273c.271 1.136-.964 2.033-1.96 1.425L12 18.354 7.373 21.18c-.996.608-2.231-.29-1.96-1.425l1.257-5.273-4.117-3.527c-.887-.76-.415-2.212.749-2.305l5.404-.433 2.082-5.006z"
+                        clip-rule="evenodd" />
+                    </svg>
+                  </div>
+                </div>
+              </div>
+              <p class="text-gray-600">"Contraté un fontanero para una urgencia y en menos de 2 horas ya estaba en mi
+                casa. Solucionó el problema rápidamente y a un precio muy razonable."</p>
+            </div>
+
+            <div class="bg-gray-50 p-6 rounded-xl shadow-md">
+              <div class="flex items-center mb-4">
+                <div
+                  class="h-12 w-12 bg-indigo-200 rounded-full flex items-center justify-center text-[#6C63FF] font-bold text-xl">
+                  L
+                </div>
+                <div class="ml-4">
+                  <h4 class="font-semibold">Laura M.</h4>
+                  <div class="flex text-yellow-400">
+                    <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" fill="currentColor" class="w-5 h-5">
+                      <path fill-rule="evenodd"
+                        d="M10.788 3.21c.448-1.077 1.976-1.077 2.424 0l2.082 5.007 5.404.433c1.164.093 1.636 1.545.749 2.305l-4.117 3.527 1.257 5.273c.271 1.136-.964 2.033-1.96 1.425L12 18.354 7.373 21.18c-.996.608-2.231-.29-1.96-1.425l1.257-5.273-4.117-3.527c-.887-.76-.415-2.212.749-2.305l5.404-.433 2.082-5.006z"
+                        clip-rule="evenodd" />
+                    </svg>
+                    <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" fill="currentColor" class="w-5 h-5">
+                      <path fill-rule="evenodd"
+                        d="M10.788 3.21c.448-1.077 1.976-1.077 2.424 0l2.082 5.007 5.404.433c1.164.093 1.636 1.545.749 2.305l-4.117 3.527 1.257 5.273c.271 1.136-.964 2.033-1.96 1.425L12 18.354 7.373 21.18c-.996.608-2.231-.29-1.96-1.425l1.257-5.273-4.117-3.527c-.887-.76-.415-2.212.749-2.305l5.404-.433 2.082-5.006z"
+                        clip-rule="evenodd" />
+                    </svg>
+                    <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" fill="currentColor" class="w-5 h-5">
+                      <path fill-rule="evenodd"
+                        d="M10.788 3.21c.448-1.077 1.976-1.077 2.424 0l2.082 5.007 5.404.433c1.164.093 1.636 1.545.749 2.305l-4.117 3.527 1.257 5.273c.271 1.136-.964 2.033-1.96 1.425L12 18.354 7.373 21.18c-.996.608-2.231-.29-1.96-1.425l1.257-5.273-4.117-3.527c-.887-.76-.415-2.212.749-2.305l5.404-.433 2.082-5.006z"
+                        clip-rule="evenodd" />
+                    </svg>
+                    <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" fill="currentColor" class="w-5 h-5">
+                      <path fill-rule="evenodd"
+                        d="M10.788 3.21c.448-1.077 1.976-1.077 2.424 0l2.082 5.007 5.404.433c1.164.093 1.636 1.545.749 2.305l-4.117 3.527 1.257 5.273c.271 1.136-.964 2.033-1.96 1.425L12 18.354 7.373 21.18c-.996.608-2.231-.29-1.96-1.425l1.257-5.273-4.117-3.527c-.887-.76-.415-2.212.749-2.305l5.404-.433 2.082-5.006z"
+                        clip-rule="evenodd" />
+                    </svg>
+                  </div>
+                </div>
+              </div>
+              <p class="text-gray-600">"La aplicación es muy intuitiva y el proceso de reserva es sencillo. El
+                electricista que vino conocía su trabajo y resolvió mi problema en minutos."</p>
+            </div>
+          </div>
         </div>
       </div>
-    </footer>
+
+      <!-- Footer simple -->
+      <footer class="bg-gray-900 text-white py-10">
+        <div class="container mx-auto px-4">
+          <div class="grid grid-cols-1 md:grid-cols-3 gap-8">
+            <div>
+              <h3 class="text-2xl font-bold mb-4">Helpy<span class="text-indigo-400">.</span></h3>
+              <p class="text-gray-400">Tu plataforma de confianza para servicios profesionales en el hogar.</p>
+            </div>
+
+            <div>
+              <h4 class="text-lg font-semibold mb-4">Enlaces</h4>
+              <ul class="space-y-2">
+                <li><a href="#" class="text-gray-400 hover:text-white transition-colors">Inicio</a></li>
+                <li><a href="#" class="text-gray-400 hover:text-white transition-colors">Servicios</a></li>
+                <li><a href="#" class="text-gray-400 hover:text-white transition-colors">Sobre nosotros</a></li>
+                <li><a href="#" class="text-gray-400 hover:text-white transition-colors">Contacto</a></li>
+              </ul>
+            </div>
+
+            <div>
+              <h4 class="text-lg font-semibold mb-4">Contacto</h4>
+              <p class="text-gray-400 mb-2">XXX@XXX.com</p>
+              <p class="text-gray-400">+34 XXX XXX XXX</p>
+            </div>
+          </div>
+
+          <div class="border-t border-gray-800 mt-8 pt-8 text-center text-gray-500">
+            <p>&copy; {{ new Date().getFullYear() }} Helpy. Todos los derechos reservados.</p>
+          </div>
+        </div>
+      </footer>
+    </div>
   </div>
 </template>
 

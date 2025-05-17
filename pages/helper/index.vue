@@ -169,6 +169,63 @@
         </div>
       </div>
     </div>
+    <div class="container mx-auto p-4">
+      <h2 class="text-3xl font-bold text-gray-900 border-b-2 border-gray-200 pb-6 mb-8">
+        Preguntas frecuentes de nuevos Helpers </h2>
+      <div>
+        <div>
+          <div class="py-1">
+            <h3 class="text-lg font-semibold text-gray-800 flex  items-center justify-between">
+              ¿Cuánto cuesta registrarse en Helpy? <span
+                class="text-gray-800 transform transition-transform duration-300">&#9654;</span>
+            </h3>
+          </div>
+          <div class="py-1">
+            <h3 class="text-lg font-semibold text-gray-800 flex  items-center justify-between">
+              ¿Tengo que ser autónomo para trabajar en Helpy? <span
+                class="text-gray-800 transform transition-transform duration-300">&#9654;</span>
+            </h3>
+          </div>
+          <div class="py-1">
+            <h3 class="text-lg font-semibold text-gray-800 flex  items-center justify-between">
+              ¿Cuándo y cómo se cobra? <span
+                class="text-gray-800 transform transition-transform duration-300">&#9654;</span>
+            </h3>
+          </div>
+          <div class="py-1">
+            <h3 class="text-lg font-semibold text-gray-800 flex  items-center justify-between">
+              ¿Puedo rechazar trabajos si no me interesan? <span
+                class="text-gray-800 transform transition-transform duration-300">&#9654;</span>
+            </h3>
+          </div>
+          <div class="py-1">
+            <h3 class="text-lg font-semibold text-gray-800 flex  items-center justify-between">
+              ¿Qué pasa si un cliente cancela o hay un problema? <span
+                class="text-gray-800 transform transition-transform duration-300">&#9654;</span>
+            </h3>
+          </div>
+          <div class="py-1">
+            <h3 class="text-lg font-semibold text-gray-800 flex  items-center justify-between">
+              ¿Puedo tener trabajos fijos o clientes recurrentes? <span
+                class="text-gray-800 transform transition-transform duration-300">&#9654;</span>
+            </h3>
+          </div>
+          <div class="py-1">
+            <h3 class="text-lg font-semibold text-gray-800 flex  items-center justify-between">
+              ¿Puedo cancelar o cambiar la cita una vez reservada?
+              <span class="text-gray-800 transform transition-transform duration-300">&#9654;</span>
+            </h3>
+          </div>
+          <div class="py-1">
+            <h3 class="text-lg font-semibold text-gray-800 flex  items-center justify-between">
+              ¿Tienes más dudas? Escríbenos y te respondemos en menos de 24h. <span
+                class="text-gray-800 transform transition-transform duration-300">&#9654;</span>
+            </h3>
+          </div>
+
+        </div>
+      </div>
+    </div>
   </div>
 </template>
 
