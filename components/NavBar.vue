@@ -6,7 +6,7 @@
                 <div class="flex justify-between items-center h-16">
                     <!-- Logo -->
                     <div class="flex-shrink-0 flex items-center">
-                        <a href="/"> <img class="w-28 px-2" src="/images/LogoNormal.jpg" alt="Hero Image">
+                        <a href="/"> <img class="w-28 px-2" src="/images/LogoNormal1.webp" alt="Hero Image">
                         </a>
                     </div>
                     <!-- Enlaces de navegación -->
@@ -21,7 +21,7 @@
                         <div class="flex items-center">
                             <button
                                 class="ml-8 inline-flex items-center justify-center px-4 py-2 border border-transparent rounded-md shadow-sm text-sm font-medium text-white bg-[#6C63FF] hover:bg-indigo-700 focus:outline-none focus:ring-2 focus:ring-offset-2 focus:ring-indigo-500 transition-colors">
-                                Ale tonto
+                                Iniciar sesión
                             </button>
                         </div>
                     </div>

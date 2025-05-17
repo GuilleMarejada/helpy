@@ -5,7 +5,7 @@
         <div class="max-w-7xl mx-auto">
           <div class="flex justify-between items-center h-16">
             <div class="flex-shrink-0 flex items-center">
-              <a href="/"> <img class="w-20 sm:w-28 px-2" src="/images/LogoNormal.jpg" alt="Hero Image">
+              <a href="/"> <img class="w-20 sm:w-28 px-2" src="/images/LogoNormal1.webp" alt="Hero Image">
               </a>
             </div>
             <div class="flex">
@@ -14,6 +14,7 @@
                   class="text-gray-700 hover:text-[#6C63FF] px-3 py-2 rounded-md text-sm font-medium transition-colors">
                   {{ link.text }}
                 </a>
+                <img class="w-20 px-2" src="/images/Idioma12.webp" alt="Idioma">
               </div>
               <div class="flex items-center">
                 <button
@@ -36,11 +37,11 @@
       <p class="text-sm sm:text-base">Alta gratuita. Tú eliges cuánto cobras. Horarios flexibles.</p>
       <div class="flex flex-col sm:flex-row gap-3 sm:gap-4">
         <a href="/client"
-          class="px-5 sm:px-8 py-3 sm:py-4 bg-[#6C63FF] text-white font-bold sm:font-extrabold rounded-tl-3xl hover:bg-indigo-700 hover:rounded-br-3xl hover:rounded-tl-none transition-colors shadow-md text-center text-sm sm:text-base">
+          class="px-5 sm:px-8 py-2 bg-[#6C63FF] text-white font-bold sm:font-extrabold rounded-tl-3xl hover:bg-indigo-700 hover:rounded-br-3xl hover:rounded-tl-none transition-colors shadow-md text-center text-sm sm:text-base">
           Quiero ser Helper
         </a>
         <a href="#como-funciona"
-          class="px-4 sm:px-5 py-3 sm:py-4 border border-gray-700 text-gray-700 font-medium rounded-br-3xl hover:rounded-tl-3xl hover:rounded-br-none hover:bg-gray-50 transition-colors text-center text-sm sm:text-base">
+          class="px-4 sm:px-5 py-2 border border-gray-700 text-gray-700 font-medium rounded-br-3xl hover:rounded-tl-3xl hover:rounded-br-none hover:bg-gray-50 transition-colors text-center text-sm sm:text-base">
           Preguntas frecuentes
         </a>
       </div>
@@ -175,6 +176,5 @@
   const mainLinks = [
     { text: 'FAQ/Preguntas', href: '/' },
     { text: 'Beneficios', href: '#servicios' },
-    { text: 'Planetita', href: '#como-funciona' },
   ];
 </script>

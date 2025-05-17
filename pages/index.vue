@@ -3,13 +3,15 @@
     <!-- Hero Section con degradado y mejor estructura -->
     <div class="flex bg-white p-2 px-8 w-screen justify-between items-center sticky top-0 z-50 shadow-md">
       <div class="flex-shrink-0 flex items-center">
-        <a href="/"> <img class="w-28 px-2" src="/images/LogoNormal.jpg" alt="Hero Image">
+        <a href="/"> <img class="w-28 px-2" src="/images/LogoNormal1.webp" alt="Hero Image">
         </a>
       </div>
-      <div class="flex items-center space-x-2">
-        <p>FAQ/Preguntas</p>
-        <p>Ofrece tus servicios</p>
-        <img class="w-20 px-2" src="/images/Idioma.webp" alt="">
+      <div class="flex items-center">
+        <a class="text-gray-700 hover:text-[#6C63FF] px-3 py-2 rounded-md text-sm font-medium transition-colors">
+          FAQ/Preguntas</a>
+        <a class="text-gray-700 hover:text-[#6C63FF] px-3 py-2 rounded-md text-sm font-medium transition-colors">Ofrece
+          tus servicios</a>
+        <img class="w-20 px-2" src="/images/Idioma12.webp" alt="">
         <button
           class="h-fit inline-flex items-center justify-center px-4 py-2 border border-transparent rounded-md shadow-sm text-sm font-medium text-white bg-[#6C63FF] hover:bg-indigo-700 focus:outline-none focus:ring-2 focus:ring-offset-2 focus:ring-indigo-500 transition-colors">
           Iniciar sesión
@@ -30,12 +32,12 @@
           </p>
           <div class="flex flex-col sm:flex-row gap-4">
             <a href="/client"
-              class="px-8 py-4 bg-[#6C63FF] text-white font-medium rounded-lg hover:bg-indigo-700 transition-colors shadow-md text-center">
+              class="px-5 sm:px-8 py-2 bg-[#6C63FF] text-white font-bold sm:font-extrabold rounded-tl-3xl hover:bg-indigo-700 hover:rounded-br-3xl hover:rounded-tl-none transition-colors shadow-md text-center text-sm sm:text-base">
               Reserva un servicio
             </a>
             <a href="#como-funciona"
-              class="px-8 py-4 border border-gray-300 text-gray-700 font-medium rounded-lg hover:bg-gray-50 transition-colors text-center">
-              Cómo funciona
+              class="px-4 sm:px-5 py-2 border border-gray-700 text-gray-700 font-medium rounded-br-3xl hover:rounded-tl-3xl hover:rounded-br-none hover:bg-gray-50 transition-colors text-center text-sm sm:text-base">
+              Preguntas frecuentes
             </a>
           </div>
         </div>
