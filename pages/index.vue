@@ -13,13 +13,14 @@
           class="text-gray-700 hover:text-[#6C63FF] px-3 py-2 rounded-md text-md font-medium transition-colors">Ofrece
           tus servicios</a>
         <img class="w-20 px-2 cursor-pointer" src="/images/Idioma12.webp" alt="">
-        <button
+        <button @click="showLoginModal = true"
           class="h-fit inline-flex items-center justify-center px-4 py-2 border border-transparent rounded-md shadow-sm text-sm font-medium text-white bg-[#6C63FF] hover:bg-indigo-700 focus:outline-none focus:ring-2 focus:ring-offset-2 focus:ring-indigo-500 transition-colors cursor-pointer">
           Iniciar sesión
         </button>
       </div>
 
     </div>
+    <ModalLogin :show="showLoginModal" @close="showLoginModal = false" />
 
     <div class="container mx-auto px-4 py-4">
       <div class="flex flex-col lg:flex-row items-center justify-between gap-12">
@@ -44,9 +45,7 @@
         </div>
 
         <div class="lg:w-1/2">
-          <div class="relative">
-            <img src="/images/Grupo1.webp" alt="Imagen Portada" class="w-full relative z-10" />
-          </div>
+          <img src="/images/Grupo1.webp" alt="Imagen Portada" class="w-full  z-10" />
         </div>
       </div>
     </div>
@@ -56,7 +55,7 @@
       <ul class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-10">
         <li class="bg-white rounded-xl shadow-lg p-6 transform transition-all hover:scale-105">
           <div class="flex flex-col items-center">
-            <img src="/images/1a.svg" alt="">
+            <img class="h-[162px]" src="/images/1a.svg" alt="">
             <h3 class="text-xl text-gray-800 mb-2 text-center"><span class="font-bold">Precio claro</span>
               , desde el principio</h3>
             <p class="text-gray-600 text-center">Verás el precio final por hora antes de reservar y el precio medio del
@@ -67,22 +66,21 @@
         </li>
 
         <li class="bg-white rounded-xl shadow-lg p-6 transform transition-all hover:scale-105">
-          <div class="grid grid-cols items-center h-full">
-            <img src="/images/2a.svg" alt="">
-            <div class="flex flex-col items-center place-self-end">
-              <h3 class="text-xl text-gray-800 mb-2">Helpers <span class="font-bold">verificados</span>
-              </h3>
-              <p class="text-gray-600 text-center">Solo mostramos profesionales aprobados manualmente por nuestro
-                equipo.
-                Valoramos compromiso, calidad y respuesta.
-                Tú eliges según valoraciones y precio.</p>
-            </div>
+          <div class="flex flex-col items-center">
+            <img class="w-48" src="/images/2a.svg" alt="">
+
+            <h3 class="text-xl text-gray-800 mb-2">Helpers <span class="font-bold">verificados</span>
+            </h3>
+            <p class="text-gray-600 text-center">Solo mostramos profesionales aprobados manualmente por nuestro
+              equipo.
+              Valoramos compromiso, calidad y respuesta.
+              Tú eliges según valoraciones y precio.</p>
           </div>
         </li>
 
         <li class="bg-white rounded-xl shadow-lg p-6 transform transition-all hover:scale-105">
           <div class="flex flex-col items-center">
-            <img src="/images/3a.svg" alt="">
+            <img class="w-48" src="/images/3a.svg" alt="">
             <h3 class="text-xl text-gray-800 mb-2 text-center">Todo desde la app, <span class="font-bold">sin
                 complicaciones</span>
             </h3>
@@ -93,7 +91,7 @@
 
         <li class="bg-white rounded-xl shadow-lg p-6 transform transition-all hover:scale-105">
           <div class="flex flex-col items-center">
-            <img src="/images/4a.svg" alt="">
+            <img class="w-48" src="/images/4a.svg" alt="">
             <h3 class="text-xl text-gray-800 mb-2 text-center">Todo claro, <span class="font-bold">todo en regla</span>
             </h3>
             <p class="text-gray-600 text-center">Nos encargamos de que todo esté en orden:
@@ -352,5 +350,10 @@
 </template>
 
 <script setup>
-  defineOptions({ name: 'IndexPage' })
+  import { ref } from 'vue';
+  import ModalLogin from '~/components/ModalLogin.vue';
+
+  defineOptions({ name: 'IndexPage' });
+
+  const showLoginModal = ref(false);
 </script>
