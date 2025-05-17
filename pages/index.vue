@@ -7,13 +7,14 @@
         </a>
       </div>
       <div class="flex items-center">
-        <a class="text-gray-700 hover:text-[#6C63FF] px-3 py-2 rounded-md text-sm font-medium transition-colors">
+        <a class="text-gray-700 hover:text-[#6C63FF] px-3 py-2 rounded-md text-md font-medium transition-colors">
           FAQ/Preguntas</a>
-        <a class="text-gray-700 hover:text-[#6C63FF] px-3 py-2 rounded-md text-sm font-medium transition-colors">Ofrece
+        <a href="/helper"
+          class="text-gray-700 hover:text-[#6C63FF] px-3 py-2 rounded-md text-md font-medium transition-colors">Ofrece
           tus servicios</a>
-        <img class="w-20 px-2" src="/images/Idioma12.webp" alt="">
+        <img class="w-20 px-2 cursor-pointer" src="/images/Idioma12.webp" alt="">
         <button
-          class="h-fit inline-flex items-center justify-center px-4 py-2 border border-transparent rounded-md shadow-sm text-sm font-medium text-white bg-[#6C63FF] hover:bg-indigo-700 focus:outline-none focus:ring-2 focus:ring-offset-2 focus:ring-indigo-500 transition-colors">
+          class="h-fit inline-flex items-center justify-center px-4 py-2 border border-transparent rounded-md shadow-sm text-sm font-medium text-white bg-[#6C63FF] hover:bg-indigo-700 focus:outline-none focus:ring-2 focus:ring-offset-2 focus:ring-indigo-500 transition-colors cursor-pointer">
           Iniciar sesión
         </button>
       </div>
@@ -44,14 +45,61 @@
 
         <div class="lg:w-1/2">
           <div class="relative">
-            <img src="/images/FrontPage.JPG" alt="Imagen Portada" class="w-full relative z-10 rounded-xl shadow-xl" />
+            <img src="/images/Grupo1.webp" alt="Imagen Portada" class="w-full relative z-10" />
           </div>
         </div>
       </div>
     </div>
     <!-- Cómo Funciona section -->
-    <div id="como-funciona" class="py-16 bg-gray-50">
-      <img src="/images/Why.webp" alt="">
+    <div class="mt-16">
+      <ul class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-10">
+        <li class="bg-white rounded-xl shadow-lg p-6 transform transition-all hover:scale-105">
+          <div class="flex flex-col items-center">
+            <img src="/images/1a.svg" alt="">
+            <h3 class="text-xl text-gray-800 mb-2"><span class="font-bold">Precio claro</span>
+              , desde el principio</h3>
+            <p class="text-gray-600 text-center">Verás el precio final por hora antes de reservar y el precio medio del
+              mercado como referencia.
+              Pagas solo por el tiempo que necesitas.
+              Sin sorpresas.</p>
+          </div>
+        </li>
+
+        <li class="bg-white rounded-xl shadow-lg p-6 transform transition-all hover:scale-105">
+          <div class="grid grid-cols items-center h-full">
+            <img src="/images/2a.svg" alt="">
+            <div class="flex flex-col items-center place-self-end">
+              <h3 class="text-xl text-gray-800 mb-2">Helpers <span class="font-bold">verificados</span>
+              </h3>
+              <p class="text-gray-600 text-center">Solo mostramos profesionales aprobados manualmente por nuestro
+                equipo.
+                Valoramos compromiso, calidad y respuesta.
+                Tú eliges según valoraciones y precio.</p>
+            </div>
+          </div>
+        </li>
+
+        <li class="bg-white rounded-xl shadow-lg p-6 transform transition-all hover:scale-105">
+          <div class="flex flex-col items-center">
+            <img src="/images/3a.svg" alt="">
+            <h3 class="text-xl text-gray-800 mb-2">Todo desde la app, <span class="font-bold">sin complicaciones</span>
+            </h3>
+            <p class="text-gray-600 text-center">Reserva y paga desde tu móvil en segundos.
+              Tras confirmar, puedes chatear con tu Helper si tienes dudas. Todo queda registrado y controlado.</p>
+          </div>
+        </li>
+
+        <li class="bg-white rounded-xl shadow-lg p-6 transform transition-all hover:scale-105">
+          <div class="flex flex-col items-center">
+            <img src="/images/4a.svg" alt="">
+            <h3 class="text-xl text-gray-800 mb-2">Todo claro, <span class="font-bold">todo en regla</span></h3>
+            <p class="text-gray-600 text-center">Nos encargamos de que todo esté en orden:
+              Helpers dados de alta y cotizando.
+              Tú no gestionas nada.
+              Fácil para ti, justo para ellos.</p>
+          </div>
+        </li>
+      </ul>
     </div>
 
     <!-- Sección de servicios destacados -->
