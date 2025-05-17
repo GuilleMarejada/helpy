@@ -182,7 +182,7 @@
     </div>
 
     <!-- Sección APP -->
-    <div class="w-full mx-auto pt-8">
+    <div class="w-full mx-auto pt-8 px-8">
       <!-- Top Section: Title, Subtitle, App Buttons -->
       <div class="flex flex-col md:flex-row items-center mb-16">
         <img src="/images/mujerapp1.svg" alt="App Mockup" class="w-1/2 h-74 rounded-lg mx-auto" />
