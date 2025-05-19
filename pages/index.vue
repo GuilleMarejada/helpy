@@ -18,7 +18,6 @@
           Iniciar sesión
         </button>
       </div>
-
     </div>
     <ModalLogin :show="showLoginModal" @close="showLoginModal = false" />
 
@@ -45,7 +44,7 @@
         </div>
 
         <div class="lg:w-1/2">
-          <img src="/images/Grupo1.webp" alt="Imagen Portada" class="w-full  z-10" />
+          <img src="/images/Grupo1a.svg" alt="Imagen Portada" class="w-full  z-10" />
         </div>
       </div>
     </div>
@@ -55,7 +54,7 @@
       <ul class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-10">
         <li class="bg-white rounded-xl shadow-lg p-6 transform transition-all hover:scale-105">
           <div class="flex flex-col items-center">
-            <img class="h-[162px]" src="/images/1a.svg" alt="">
+            <img class="h-[185px]" src="/images/1a.svg" alt="">
             <h3 class="text-xl text-gray-800 mb-2 text-center"><span class="font-bold">Precio claro</span>
               , desde el principio</h3>
             <p class="text-gray-600 text-center">Verás el precio final por hora antes de reservar y el precio medio del
@@ -105,12 +104,13 @@
 
     <!-- Sección de servicios destacados -->
     <div class="py-20 bg-gradient-to-b from-white to-gray-50">
+      <div class="mb-12 px-4">
+        <h2 class="text-2xl text-gray-900 mb-3">Servicios <span class="font-bold">más solicitados</span></h2>
+        <p class="text-gray-600 text-xl">Profesionales cualificados listos para ayudarte con
+          cualquier necesidad en tu hogar</p>
+      </div>
       <div class="container mx-auto px-4">
-        <div class="text-center mb-12">
-          <h2 class="text-4xl font-bold text-gray-900 mb-3">Servicios más solicitados</h2>
-          <p class="text-gray-600 text-xl max-w-3xl mx-auto">Profesionales cualificados listos para ayudarte con
-            cualquier necesidad en tu hogar</p>
-        </div>
+
 
         <div class="grid grid-cols-1 md:grid-cols-3 gap-10 h-fit">
           <div
@@ -182,20 +182,20 @@
     </div>
 
     <!-- Sección APP -->
-    <div class="w-full mx-auto pt-8 px-8">
+    <div class="w-full mx-auto px-96">
       <!-- Top Section: Title, Subtitle, App Buttons -->
       <div class="flex flex-col md:flex-row items-center mb-16">
         <img src="/images/mujerapp1.svg" alt="App Mockup" class="w-1/2 h-74 rounded-lg mx-auto" />
-        <div class="md:pl-12 text-center md:text-left">
+        <div class="pt-16 md:pl-12 text-center md:text-left">
           <h2 class="text-4xl font-bold text-gray-900 pb-4">Todo lo que necesitas para tu hogar, en tu bolsillo.</h2>
           <p class="text-gray-600 text-xl ">Contratar un manitas, una canguro o un fontanero... nunca fue tan fácil.
           </p>
           <div class="flex justify-center md:justify-start space-x-4">
             <a href="#" class="hover:opacity-75 transition-opacity">
-              <img src="/images/appstore.svg" alt="Download on the App Store" class="w-48" />
+              <img src="/images/appstore.svg" alt="Download on the App Store" class="w-48  h-fit" />
             </a>
             <a href="#" class="hover:opacity-75 transition-opacity">
-              <img src="/images/google.svg" alt="Get it on Google Play" class="w-48" />
+              <img src="/images/google.svg" alt="Get it on Google Play" class="w-48 h-fit" />
             </a>
           </div>
         </div>
@@ -203,61 +203,70 @@
     </div>
     <!-- FAQ Section -->
     <div class="container mx-auto p-4">
-      <h2 class="text-3xl font-bold text-gray-900 border-b-2 border-gray-200 pb-6 mb-8">
-        Preguntas frecuentes de nuevos clientes
+      <h2 class="text-3xl  text-gray-900 border-b-2 border-gray-200 pb-6 mb-8">
+        <span class="font-bold">Preguntas frecuentes</span> de nuevos clientes
       </h2>
       <div>
         <div>
           <div class="py-1">
-            <h3 class="text-lg font-semibold text-gray-800 flex  items-center justify-between">
+            <h3
+              class="text-lg font-semibold text-gray-800 flex items-center justify-between cursor-pointer hover:text-[#6C63FF] hover:underline">
               ¿Cómo funciona?
               <span class="text-gray-800 transform transition-transform duration-300">&#9654;</span>
             </h3>
           </div>
           <div class="py-1">
-            <h3 class="text-lg font-semibold text-gray-800 flex  items-center justify-between">
+            <h3
+              class="text-lg font-semibold text-gray-800 flex items-center justify-between cursor-pointer hover:text-[#6C63FF] hover:underline">
               ¿Cuánto tiempo debo contratar?
               <span class="text-gray-800 transform transition-transform duration-300">&#9654;</span>
             </h3>
           </div>
           <div class="py-1">
-            <h3 class="text-lg font-semibold text-gray-800 flex  items-center justify-between">
+            <h3
+              class="text-lg font-semibold text-gray-800 flex items-center justify-between cursor-pointer hover:text-[#6C63FF] hover:underline">
               ¿Qué pasa si sobra o falta tiempo?
               <span class="text-gray-800 transform transition-transform duration-300">&#9654;</span>
             </h3>
           </div>
           <div class="py-1">
-            <h3 class="text-lg font-semibold text-gray-800 flex  items-center justify-between">
+            <h3
+              class="text-lg font-semibold text-gray-800 flex items-center justify-between cursor-pointer hover:text-[#6C63FF] hover:underline">
               No estaré en casa durante el servicio
               <span class="text-gray-800 transform transition-transform duration-300">&#9654;</span>
             </h3>
           </div>
           <div class="py-1">
-            <h3 class="text-lg font-semibold text-gray-800 flex  items-center justify-between">
+            <h3
+              class="text-lg font-semibold text-gray-800 flex items-center justify-between cursor-pointer hover:text-[#6C63FF] hover:underline">
               Alta en la Seguridad Social
               <span class="text-gray-800 transform transition-transform duration-300">&#9654;</span>
             </h3>
           </div>
           <div class="py-1">
-            <h3 class="text-lg font-semibold text-gray-800 flex  items-center justify-between">
+            <h3
+              class="text-lg font-semibold text-gray-800 flex items-center justify-between cursor-pointer hover:text-[#6C63FF] hover:underline">
               ¿Qué pasa si el Helper no se presenta o llega tarde?
               <span class="text-gray-800 transform transition-transform duration-300">&#9654;</span>
             </h3>
           </div>
           <div class="py-1">
-            <h3 class="text-lg font-semibold text-gray-800 flex  items-center justify-between">
+            <h3
+              class="text-lg font-semibold text-gray-800 flex items-center justify-between cursor-pointer hover:text-[#6C63FF] hover:underline">
               ¿Puedo cancelar o cambiar la cita una vez reservada?
               <span class="text-gray-800 transform transition-transform duration-300">&#9654;</span>
             </h3>
           </div>
           <div class="py-1">
-            <h3 class="text-lg font-semibold text-gray-800 flex  items-center justify-between">
+            <h3
+              class="text-lg font-semibold text-gray-800 flex items-center justify-between cursor-pointer hover:text-[#6C63FF] hover:underline">
               ¿Cómo se realiza el pago? ¿Es seguro?
               <span class="text-gray-800 transform transition-transform duration-300">&#9654;</span>
             </h3>
           </div>
           <div class="py-1">
-            <h3 class="text-lg font-semibold text-gray-800 flex  items-center justify-between">
+            <h3
+              class="text-lg font-semibold text-gray-800 flex items-center justify-between cursor-pointer hover:text-[#6C63FF] hover:underline">
               ¿Qué hago si no estoy satisfecho con el servicio?
               <span class="text-gray-800 transform transition-transform duration-300">&#9654;</span>
             </h3>
@@ -427,6 +436,7 @@
         </div>
       </footer>
     </div>
+
   </div>
 </template>
 

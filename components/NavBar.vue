@@ -1,32 +1,21 @@
 <template>
     <nav class="bg-white shadow-md">
         <!-- Barra de navegación principal -->
-        <div class="mx-auto">
-            <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
-                <div class="flex justify-between items-center h-16">
-                    <!-- Logo -->
-                    <div class="flex-shrink-0 flex items-center">
-                        <a href="/"> <img class="w-28 px-2" src="/images/LogoNormal1.webp" alt="Hero Image">
-                        </a>
-                    </div>
-                    <!-- Enlaces de navegación -->
-                    <div class="flex">
-                        <div class="hidden md:flex items-center space-x-8">
-                            <a v-for="link in mainLinks" :key="link.text" :href="link.href"
-                                class="text-gray-700 hover:text-[#6C63FF] px-3 py-2 rounded-md text-sm font-medium transition-colors">
-                                {{ link.text }}
-                            </a>
-                        </div>
-                        <!-- Botón de iniciar sesión -->
-                        <div class="flex items-center">
-                            <button
-                                class="ml-8 inline-flex items-center justify-center px-4 py-2 border border-transparent rounded-md shadow-sm text-sm font-medium text-white bg-[#6C63FF] hover:bg-indigo-700 focus:outline-none focus:ring-2 focus:ring-offset-2 focus:ring-indigo-500 transition-colors">
-                                Iniciar sesión
-                            </button>
-                        </div>
-                    </div>
+        <div class="flex bg-white p-2 px-8 w-screen justify-between items-center shadow-md">
+            <div class="flex-shrink-0 flex items-center">
+                <a href="/"> <img class="w-28 px-2" src="/images/LogoNormal1.webp" alt="Hero Image">
+                </a>
+            </div>
+            <div class="flex items-center">
 
-                </div>
+                <a href="/helper"
+                    class="text-gray-700 hover:text-[#6C63FF] px-3 py-2 rounded-md text-md font-medium transition-colors">Ofrece
+                    tus servicios</a>
+                <img class="w-20 px-2 cursor-pointer" src="/images/Idioma12.webp" alt="">
+                <button @click="showLoginModal = true"
+                    class="h-fit inline-flex items-center justify-center px-4 py-2 border border-transparent rounded-md shadow-sm text-sm font-medium text-white bg-[#6C63FF] hover:bg-indigo-700 focus:outline-none focus:ring-2 focus:ring-offset-2 focus:ring-indigo-500 transition-colors cursor-pointer">
+                    Iniciar sesión
+                </button>
             </div>
         </div>
 
@@ -62,6 +51,7 @@
         <ModalTrabajos />
         <ModalContratar />
     </nav>
+
 </template>
 
 <script setup>

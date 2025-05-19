@@ -21,25 +21,30 @@
       </div>
       <ModalLogin :show="showLoginModal" @close="showLoginModal = false" />
     </div>
-    <div class="flex flex-col gap-3 sm:gap-5 max-w-full sm:max-w-[800px] px-4 sm:px-8 py-10 mx-auto">
-      <h2 class="font-bold text-2xl sm:text-3xl md:text-4xl">Sé tu propio jefe. Gana dinero ayudando. Súmate a Helpy y
-        empieza a trabajar por
-        horas como
-        profesional
-        verificado.
-      </h2>
-      <p class="text-sm sm:text-base">Alta gratuita. Tú eliges cuánto cobras. Horarios flexibles.</p>
-      <div class="flex flex-col sm:flex-row gap-3 sm:gap-4">
-        <a href="/client"
-          class="px-5 sm:px-8 py-2 bg-[#6C63FF] text-white font-bold sm:font-extrabold rounded-tl-3xl hover:bg-indigo-700 hover:rounded-br-3xl hover:rounded-tl-none transition-colors shadow-md text-center text-sm sm:text-base">
-          Quiero ser Helper
-        </a>
-        <a href="#como-funciona"
-          class="px-4 sm:px-5 py-2 border border-gray-700 text-gray-700 font-medium rounded-br-3xl hover:rounded-tl-3xl hover:rounded-br-none hover:bg-gray-50 transition-colors text-center text-sm sm:text-base">
-          Preguntas frecuentes
-        </a>
+    <div class="flex justify-center px-4 sm:px-8 py-10 bg-[#F5F5F5]">
+      <div class="flex flex-col gap-3 sm:gap-5 max-w-full sm:max-w-[800px]">
+        <h2 class="font-bold text-2xl sm:text-3xl md:text-4xl"><span class="text-[#6C63FF]">Sé tu propio jefe.</span>
+          Gana dinero ayudando. Súmate a Helpy y
+          empieza a trabajar por
+          horas como
+          profesional
+          verificado.
+        </h2>
+        <p class="text-sm sm:text-base">Alta gratuita. Tú eliges cuánto cobras. Horarios flexibles.</p>
+        <div class="flex flex-col sm:flex-row gap-3 sm:gap-4">
+          <a href="/client"
+            class="px-5 sm:px-8 py-2 bg-[#6C63FF] text-white font-bold sm:font-extrabold rounded-tl-3xl hover:bg-indigo-700 hover:rounded-br-3xl hover:rounded-tl-none transition-colors shadow-md text-center text-sm sm:text-base">
+            Quiero ser Helper
+          </a>
+          <a href="#como-funciona"
+            class="px-4 sm:px-5 py-2 border border-gray-700 text-gray-700 font-medium rounded-br-3xl hover:rounded-tl-3xl hover:rounded-br-none hover:bg-gray-50 transition-colors text-center text-sm sm:text-base">
+            Preguntas frecuentes
+          </a>
+        </div>
       </div>
+      <img src="/images/GruepoHelper.svg" alt="" class="hidden sm:block w-full max-w-[250px] h-auto object-cover">
     </div>
+
     <div class="px-4 sm:px-8 py-10 mx-auto">
       <h2 class="py-5 sm:py-8 text-xl sm:text-2xl">¿Qué es <span class="font-extrabold">Helpy</span> y
         cómo funciona para tí?
@@ -163,55 +168,63 @@
         </div>
       </div>
     </div>
-    <div class="container mx-auto p-4">
+    <div class="container mx-auto p-4 pb-24">
       <h2 class="text-3xl font-bold text-gray-900 border-b-2 border-gray-200 pb-6 mb-8">
         Preguntas frecuentes de nuevos Helpers </h2>
       <div>
         <div>
           <div class="py-1">
-            <h3 class="text-lg font-semibold text-gray-800 flex  items-center justify-between">
+            <h3
+              class="text-lg font-semibold text-gray-800 flex items-center justify-between cursor-pointer hover:text-[#6C63FF] hover:underline">
               ¿Cuánto cuesta registrarse en Helpy? <span
                 class="text-gray-800 transform transition-transform duration-300">&#9654;</span>
             </h3>
           </div>
           <div class="py-1">
-            <h3 class="text-lg font-semibold text-gray-800 flex  items-center justify-between">
+            <h3
+              class="text-lg font-semibold text-gray-800 flex items-center justify-between cursor-pointer hover:text-[#6C63FF] hover:underline">
               ¿Tengo que ser autónomo para trabajar en Helpy? <span
                 class="text-gray-800 transform transition-transform duration-300">&#9654;</span>
             </h3>
           </div>
           <div class="py-1">
-            <h3 class="text-lg font-semibold text-gray-800 flex  items-center justify-between">
+            <h3
+              class="text-lg font-semibold text-gray-800 flex items-center justify-between cursor-pointer hover:text-[#6C63FF] hover:underline">
               ¿Cuándo y cómo se cobra? <span
                 class="text-gray-800 transform transition-transform duration-300">&#9654;</span>
             </h3>
           </div>
           <div class="py-1">
-            <h3 class="text-lg font-semibold text-gray-800 flex  items-center justify-between">
+            <h3
+              class="text-lg font-semibold text-gray-800 flex items-center justify-between cursor-pointer hover:text-[#6C63FF] hover:underline">
               ¿Puedo rechazar trabajos si no me interesan? <span
                 class="text-gray-800 transform transition-transform duration-300">&#9654;</span>
             </h3>
           </div>
           <div class="py-1">
-            <h3 class="text-lg font-semibold text-gray-800 flex  items-center justify-between">
+            <h3
+              class="text-lg font-semibold text-gray-800 flex items-center justify-between cursor-pointer hover:text-[#6C63FF] hover:underline">
               ¿Qué pasa si un cliente cancela o hay un problema? <span
                 class="text-gray-800 transform transition-transform duration-300">&#9654;</span>
             </h3>
           </div>
           <div class="py-1">
-            <h3 class="text-lg font-semibold text-gray-800 flex  items-center justify-between">
+            <h3
+              class="text-lg font-semibold text-gray-800 flex items-center justify-between cursor-pointer hover:text-[#6C63FF] hover:underline">
               ¿Puedo tener trabajos fijos o clientes recurrentes? <span
                 class="text-gray-800 transform transition-transform duration-300">&#9654;</span>
             </h3>
           </div>
           <div class="py-1">
-            <h3 class="text-lg font-semibold text-gray-800 flex  items-center justify-between">
+            <h3
+              class="text-lg font-semibold text-gray-800 flex items-center justify-between cursor-pointer hover:text-[#6C63FF] hover:underline">
               ¿Puedo cancelar o cambiar la cita una vez reservada?
               <span class="text-gray-800 transform transition-transform duration-300">&#9654;</span>
             </h3>
           </div>
           <div class="py-1">
-            <h3 class="text-lg font-semibold text-gray-800 flex  items-center justify-between">
+            <h3
+              class="text-lg font-semibold text-gray-800 flex items-center justify-between cursor-pointer hover:text-[#6C63FF] hover:underline">
               ¿Tienes más dudas? Escríbenos y te respondemos en menos de 24h. <span
                 class="text-gray-800 transform transition-transform duration-300">&#9654;</span>
             </h3>
@@ -220,6 +233,36 @@
         </div>
       </div>
     </div>
+    <footer class="bg-gray-900 text-white py-10">
+      <div class="container mx-auto px-4">
+        <div class="grid grid-cols-1 md:grid-cols-3 gap-8">
+          <div>
+            <h3 class="text-2xl font-bold mb-4">Helpy<span class="text-indigo-400">.</span></h3>
+            <p class="text-gray-400">Tu plataforma de confianza para servicios profesionales en el hogar.</p>
+          </div>
+
+          <div>
+            <h4 class="text-lg font-semibold mb-4">Enlaces</h4>
+            <ul class="space-y-2">
+              <li><a href="#" class="text-gray-400 hover:text-white transition-colors">Inicio</a></li>
+              <li><a href="#" class="text-gray-400 hover:text-white transition-colors">Servicios</a></li>
+              <li><a href="#" class="text-gray-400 hover:text-white transition-colors">Sobre nosotros</a></li>
+              <li><a href="#" class="text-gray-400 hover:text-white transition-colors">Contacto</a></li>
+            </ul>
+          </div>
+
+          <div>
+            <h4 class="text-lg font-semibold mb-4">Contacto</h4>
+            <p class="text-gray-400 mb-2">XXX@XXX.com</p>
+            <p class="text-gray-400">+34 XXX XXX XXX</p>
+          </div>
+        </div>
+
+        <div class="border-t border-gray-800 mt-8 pt-8 text-center text-gray-500">
+          <p>&copy; {{ new Date().getFullYear() }} Helpy. Todos los derechos reservados.</p>
+        </div>
+      </div>
+    </footer>
   </div>
 </template>
 
