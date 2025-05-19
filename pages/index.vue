@@ -280,7 +280,7 @@
     <!-- Testimonios -->
     <div class="py-16 bg-white">
       <div class="container mx-auto px-4">
-        <h2 class="text-3xl mb-12 text-gray-900 border-b-2 border-gray-200">Lo que dicen <span class="font-bold">
+        <h2 class="text-3xl mb-12 text-gray-900 pb-6 border-b-2 border-gray-200">Lo que dicen <span class="font-bold">
             nuestros
             clientes</span></h2>
 
