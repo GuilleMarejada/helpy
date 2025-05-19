@@ -103,7 +103,7 @@
     </div>
 
     <!-- Sección de servicios destacados -->
-    <div class="py-20 px-24 bg-gray-50">
+    <div class="py-20 bg-gray-50">
       <div class="mb-12 px-4">
         <h2 class="text-2xl text-gray-900 mb-3">Servicios <span class="font-bold">más solicitados</span></h2>
         <p class="text-gray-600 text-xl">Profesionales cualificados listos para ayudarte con
