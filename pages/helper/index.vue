@@ -21,106 +21,110 @@
       </div>
       <ModalLogin :show="showLoginModal" @close="showLoginModal = false" />
     </div>
-    <div class="flex justify-center px-4 sm:px-8 py-10 bg-[#F5F5F5]">
-      <div class="flex flex-col gap-3 sm:gap-5 max-w-full sm:max-w-[800px]">
-        <h2 class="font-bold text-2xl sm:text-3xl md:text-4xl"><span class="text-[#6C63FF]">Sé tu propio jefe.</span>
-          Gana dinero ayudando. Súmate a Helpy y
-          empieza a trabajar por
-          horas como
-          profesional
-          verificado.
+    <div class="bg-gradient-to-b from-gray-50 to-white">
+      <div class="flex justify-center px-4 sm:px-8 py-10">
+        <div class="flex flex-col gap-3 sm:gap-5 max-w-full sm:max-w-[800px]">
+          <h2 class="font-bold text-2xl sm:text-3xl md:text-4xl"><span class="text-[#6C63FF]">Sé tu propio jefe.</span>
+            Gana dinero ayudando. Súmate a Helpy y
+            empieza a trabajar por
+            horas como
+            profesional
+            verificado.
+          </h2>
+          <p class="text-sm sm:text-base">Alta gratuita. Tú eliges cuánto cobras. Horarios flexibles.</p>
+          <div class="flex flex-col sm:flex-row gap-3 sm:gap-4">
+            <a href="/client"
+              class="px-5 sm:px-8 py-2 bg-[#6C63FF] text-white font-bold sm:font-extrabold rounded-tl-3xl hover:bg-indigo-700 hover:rounded-br-3xl hover:rounded-tl-none transition-colors shadow-md text-center text-sm sm:text-base">
+              Quiero ser Helper
+            </a>
+            <a href="#como-funciona"
+              class="px-4 sm:px-5 py-2 border border-gray-700 text-gray-700 font-medium rounded-br-3xl hover:rounded-tl-3xl hover:rounded-br-none hover:bg-gray-50 transition-colors text-center text-sm sm:text-base">
+              Preguntas frecuentes
+            </a>
+          </div>
+        </div>
+        <img src="/images/GruepoHelper.svg" alt="" class="hidden sm:block w-full max-w-[250px] h-auto object-cover">
+      </div>
+
+      <div class="px-4 sm:px-8 py-10 mx-auto">
+        <h2 class="py-5 sm:py-8 text-xl sm:text-2xl">¿Qué es <span class="font-extrabold">Helpy</span> y
+          cómo funciona para tí?
         </h2>
-        <p class="text-sm sm:text-base">Alta gratuita. Tú eliges cuánto cobras. Horarios flexibles.</p>
-        <div class="flex flex-col sm:flex-row gap-3 sm:gap-4">
-          <a href="/client"
-            class="px-5 sm:px-8 py-2 bg-[#6C63FF] text-white font-bold sm:font-extrabold rounded-tl-3xl hover:bg-indigo-700 hover:rounded-br-3xl hover:rounded-tl-none transition-colors shadow-md text-center text-sm sm:text-base">
-            Quiero ser Helper
-          </a>
-          <a href="#como-funciona"
-            class="px-4 sm:px-5 py-2 border border-gray-700 text-gray-700 font-medium rounded-br-3xl hover:rounded-tl-3xl hover:rounded-br-none hover:bg-gray-50 transition-colors text-center text-sm sm:text-base">
-            Preguntas frecuentes
-          </a>
+        <div class="mt-4 sm:mt-6">
+          <ul class="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-4 gap-5 sm:gap-10">
+            <li class="bg-white rounded-xl shadow-lg p-4 sm:p-6 transform transition-all hover:scale-105">
+              <div class="flex flex-col items-center">
+                <div class="relative mb-3 sm:mb-4 w-full flex justify-center">
+                  <div
+                    class="absolute -top-3 -left-3 w-7 h-7 sm:w-8 sm:h-8 bg-[#6C63FF] rounded-full flex items-center justify-center text-white font-bold text-sm sm:text-base">
+                    1</div>
+                  <img src="/images/1.svg" alt="Crear perfil" class="rounded-lg sm:h-40 object-cover">
+                </div>
+                <h3 class="text-lg sm:text-xl text-gray-800 mb-1 sm:mb-2"><span class="font-bold">Crea</span> tu perfil
+                </h3>
+                <p class="text-gray-600 text-center text-sm sm:text-base">Súmate gratis. Cuéntanos qué sabes hacer y
+                  completa tu perfil en solo
+                  unos minutos.
+                </p>
+              </div>
+            </li>
+
+            <li class="bg-white rounded-xl shadow-lg p-4 sm:p-6 transform transition-all hover:scale-105">
+              <div class="flex flex-col items-center">
+                <div class="relative mb-3 sm:mb-4 w-full flex justify-center">
+                  <div
+                    class="absolute -top-3 -left-3 w-7 h-7 sm:w-8 sm:h-8 bg-[#6C63FF] rounded-full flex items-center justify-center text-white font-bold text-sm sm:text-base">
+                    2</div>
+                  <img src="/images/2.svg" alt="Establecer precio" class="rounded-lg sm:h-40 object-cover ">
+                </div>
+                <h3 class="text-lg sm:text-xl text-gray-800 mb-1 sm:mb-2"><span class="font-bold">Elige</span> cuánto
+                  cobras</h3>
+                <p class="text-gray-600 text-center text-sm sm:text-base">Tú decides tu tarifa por hora. Nosotros te
+                  ayudamos a poner un
+                  precio competitivo.
+                </p>
+              </div>
+            </li>
+
+            <li class="bg-white rounded-xl shadow-lg p-4 sm:p-6 transform transition-all hover:scale-105">
+              <div class="flex flex-col items-center">
+                <div class="relative mb-3 sm:mb-4 w-full flex justify-center">
+                  <div
+                    class="absolute -top-3 -left-3 w-7 h-7 sm:w-8 sm:h-8 bg-[#6C63FF] rounded-full flex items-center justify-center text-white font-bold text-sm sm:text-base">
+                    3</div>
+                  <img src="/images/3.svg" alt="Recibir solicitudes" class="rounded-lg sm:h-40 object-cover ">
+                </div>
+                <h3 class="text-lg sm:text-xl text-gray-800 mb-1 sm:mb-2">Recibe <span
+                    class="font-bold">solicitudes</span></h3>
+                <p class="text-gray-600 text-center text-sm sm:text-base">Los clientes te eligen. Acepta solo los
+                  trabajos
+                  que quieras hacer.
+                  Mantén actualizado tu calendario.
+                </p>
+              </div>
+            </li>
+
+            <li class="bg-white rounded-xl shadow-lg p-4 sm:p-6 transform transition-all hover:scale-105">
+              <div class="flex flex-col items-center">
+                <div class="relative mb-3 sm:mb-4 w-full flex justify-center">
+                  <div
+                    class="absolute -top-3 -left-3 w-7 h-7 sm:w-8 sm:h-8 bg-[#6C63FF] rounded-full flex items-center justify-center text-white font-bold text-sm sm:text-base">
+                    4</div>
+                  <img src="/images/4.svg" alt="Cobrar" class="rounded-lg sm:h-40 object-cover ">
+                </div>
+                <h3 class="text-lg sm:text-xl text-gray-800 mb-1 sm:mb-2">Trabaja y <span class="font-bold">cobra
+                    fácil</span></h3>
+                <p class="text-gray-600 text-center text-sm sm:text-base">Cada servicio queda registrado y cotizado.
+                  Nosotros nos encargamos
+                  del cobro, tú solo trabaja tranquilo.
+                </p>
+              </div>
+            </li>
+          </ul>
         </div>
       </div>
-      <img src="/images/GruepoHelper.svg" alt="" class="hidden sm:block w-full max-w-[250px] h-auto object-cover">
     </div>
 
-    <div class="px-4 sm:px-8 py-10 mx-auto">
-      <h2 class="py-5 sm:py-8 text-xl sm:text-2xl">¿Qué es <span class="font-extrabold">Helpy</span> y
-        cómo funciona para tí?
-      </h2>
-      <div class="mt-4 sm:mt-6">
-        <ul class="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-4 gap-5 sm:gap-10">
-          <li class="bg-white rounded-xl shadow-lg p-4 sm:p-6 transform transition-all hover:scale-105">
-            <div class="flex flex-col items-center">
-              <div class="relative mb-3 sm:mb-4 w-full flex justify-center">
-                <div
-                  class="absolute -top-3 -left-3 w-7 h-7 sm:w-8 sm:h-8 bg-[#6C63FF] rounded-full flex items-center justify-center text-white font-bold text-sm sm:text-base">
-                  1</div>
-                <img src="/images/1.svg" alt="Crear perfil" class="rounded-lg sm:h-40 object-cover">
-              </div>
-              <h3 class="text-lg sm:text-xl text-gray-800 mb-1 sm:mb-2"><span class="font-bold">Crea</span> tu perfil
-              </h3>
-              <p class="text-gray-600 text-center text-sm sm:text-base">Súmate gratis. Cuéntanos qué sabes hacer y
-                completa tu perfil en solo
-                unos minutos.
-              </p>
-            </div>
-          </li>
-
-          <li class="bg-white rounded-xl shadow-lg p-4 sm:p-6 transform transition-all hover:scale-105">
-            <div class="flex flex-col items-center">
-              <div class="relative mb-3 sm:mb-4 w-full flex justify-center">
-                <div
-                  class="absolute -top-3 -left-3 w-7 h-7 sm:w-8 sm:h-8 bg-[#6C63FF] rounded-full flex items-center justify-center text-white font-bold text-sm sm:text-base">
-                  2</div>
-                <img src="/images/2.svg" alt="Establecer precio" class="rounded-lg sm:h-40 object-cover ">
-              </div>
-              <h3 class="text-lg sm:text-xl text-gray-800 mb-1 sm:mb-2"><span class="font-bold">Elige</span> cuánto
-                cobras</h3>
-              <p class="text-gray-600 text-center text-sm sm:text-base">Tú decides tu tarifa por hora. Nosotros te
-                ayudamos a poner un
-                precio competitivo.
-              </p>
-            </div>
-          </li>
-
-          <li class="bg-white rounded-xl shadow-lg p-4 sm:p-6 transform transition-all hover:scale-105">
-            <div class="flex flex-col items-center">
-              <div class="relative mb-3 sm:mb-4 w-full flex justify-center">
-                <div
-                  class="absolute -top-3 -left-3 w-7 h-7 sm:w-8 sm:h-8 bg-[#6C63FF] rounded-full flex items-center justify-center text-white font-bold text-sm sm:text-base">
-                  3</div>
-                <img src="/images/3.svg" alt="Recibir solicitudes" class="rounded-lg sm:h-40 object-cover ">
-              </div>
-              <h3 class="text-lg sm:text-xl text-gray-800 mb-1 sm:mb-2">Recibe <span
-                  class="font-bold">solicitudes</span></h3>
-              <p class="text-gray-600 text-center text-sm sm:text-base">Los clientes te eligen. Acepta solo los trabajos
-                que quieras hacer.
-                Mantén actualizado tu calendario.
-              </p>
-            </div>
-          </li>
-
-          <li class="bg-white rounded-xl shadow-lg p-4 sm:p-6 transform transition-all hover:scale-105">
-            <div class="flex flex-col items-center">
-              <div class="relative mb-3 sm:mb-4 w-full flex justify-center">
-                <div
-                  class="absolute -top-3 -left-3 w-7 h-7 sm:w-8 sm:h-8 bg-[#6C63FF] rounded-full flex items-center justify-center text-white font-bold text-sm sm:text-base">
-                  4</div>
-                <img src="/images/4.svg" alt="Cobrar" class="rounded-lg sm:h-40 object-cover ">
-              </div>
-              <h3 class="text-lg sm:text-xl text-gray-800 mb-1 sm:mb-2">Trabaja y <span class="font-bold">cobra
-                  fácil</span></h3>
-              <p class="text-gray-600 text-center text-sm sm:text-base">Cada servicio queda registrado y cotizado.
-                Nosotros nos encargamos
-                del cobro, tú solo trabaja tranquilo.
-              </p>
-            </div>
-          </li>
-        </ul>
-      </div>
-    </div>
     <div class="p-5 sm:py-8 text-xl sm:text-2xl">
       <h3>¿Por qué unirte a <span class="font-extrabold">Helpy</span>?</h3>
       <div class="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-3 gap-4 mt-6">

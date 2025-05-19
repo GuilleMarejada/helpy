@@ -1,7 +1,7 @@
 <template>
   <div class="min-h-screen">
     <!-- Hero Section con degradado y mejor estructura -->
-    <div class="flex bg-gray-50 p-2 px-8 w-screen justify-between items-center sticky top-0 z-50 shadow-md">
+    <div class="flex bg-white p-2 px-8 w-screen justify-between items-center sticky top-0 z-50 shadow-md">
       <div class="flex-shrink-0 flex items-center">
         <a href="/"> <img class="w-28 px-2" src="/images/LogoNormal1.webp" alt="Hero Image">
         </a>
@@ -54,7 +54,7 @@
       <ul class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-10">
         <li class="bg-white rounded-xl shadow-lg p-6 transform transition-all hover:scale-105">
           <div class="flex flex-col items-center">
-            <img class="h-[185px]" src="/images/1a.svg" alt="">
+            <img class="h-48" src="/images/1a.svg" alt="">
             <h3 class="text-xl text-gray-800 mb-2 text-center"><span class="font-bold">Precio claro</span>
               , desde el principio</h3>
             <p class="text-gray-600 text-center">Verás el precio final por hora antes de reservar y el precio medio del
@@ -66,7 +66,7 @@
 
         <li class="bg-white rounded-xl shadow-lg p-6 transform transition-all hover:scale-105">
           <div class="flex flex-col items-center">
-            <img class="w-48" src="/images/2a.svg" alt="">
+            <img class="h-48" src="/images/2a.svg" alt="">
 
             <h3 class="text-xl text-gray-800 mb-2">Helpers <span class="font-bold">verificados</span>
             </h3>
@@ -79,7 +79,7 @@
 
         <li class="bg-white rounded-xl shadow-lg p-6 transform transition-all hover:scale-105">
           <div class="flex flex-col items-center">
-            <img class="w-48" src="/images/3a.svg" alt="">
+            <img class="h-48" src="/images/3a.svg" alt="">
             <h3 class="text-xl text-gray-800 mb-2 text-center">Todo desde la app, <span class="font-bold">sin
                 complicaciones</span>
             </h3>
@@ -90,7 +90,7 @@
 
         <li class="bg-white rounded-xl shadow-lg p-6 transform transition-all hover:scale-105">
           <div class="flex flex-col items-center">
-            <img class="w-48" src="/images/4a.svg" alt="">
+            <img class="h-48" src="/images/4a.svg" alt="">
             <h3 class="text-xl text-gray-800 mb-2 text-center">Todo claro, <span class="font-bold">todo en regla</span>
             </h3>
             <p class="text-gray-600 text-center">Nos encargamos de que todo esté en orden:
@@ -115,7 +115,7 @@
         <div class="grid grid-cols-1 md:grid-cols-3 gap-10 h-fit">
           <div
             class="bg-white rounded-xl shadow-lg overflow-hidden transform transition-all duration-300 hover:scale-105 hover:shadow-xl">
-            <div class="h-80 overflow-hidden">
+            <div class="max-h-[550px] h-full overflow-hidden">
               <img src="/images/Limpiadora.svg" alt="Limpieza"
                 class="w-full h-full object-cover transition-transform duration-500 hover:scale-110 object-top pt-8" />
             </div>
@@ -136,7 +136,7 @@
 
           <div
             class="bg-white rounded-xl shadow-lg overflow-hidden transform transition-all duration-300 hover:scale-105 hover:shadow-xl">
-            <div class="h-80 overflow-hidden">
+            <div class="max-h-[550px] overflow-hidden">
               <img src="/images/Fontanero.svg" alt="Fontanería"
                 class="w-full h-full object-cover transition-transform duration-500 hover:scale-110 object-top" />
             </div>
@@ -158,7 +158,7 @@
 
           <div
             class="bg-white rounded-xl shadow-lg overflow-hidden transform transition-all duration-300 hover:scale-105 hover:shadow-xl">
-            <div class="h-80 overflow-hidden">
+            <div class="max-h-[550px] overflow-hidden">
               <img src="/images/Electricista.svg" alt="Electricidad"
                 class="w-full h-full object-cover transition-transform duration-500 hover:scale-110 object-top" />
             </div>
@@ -280,7 +280,9 @@
     <!-- Testimonios -->
     <div class="py-16 bg-white">
       <div class="container mx-auto px-4">
-        <h2 class="text-3xl font-bold mb-12 text-gray-900">Lo que dicen nuestros clientes</h2>
+        <h2 class="text-3xl mb-12 text-gray-900 border-b-2 border-gray-200">Lo que dicen <span class="font-bold">
+            nuestros
+            clientes</span></h2>
 
         <div class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8">
           <div class="bg-gray-50 p-6 rounded-xl shadow-md">
