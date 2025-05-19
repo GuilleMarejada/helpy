@@ -116,8 +116,8 @@
           <div
             class="bg-white rounded-xl shadow-lg overflow-hidden transform transition-all duration-300 hover:scale-105 hover:shadow-xl">
             <div class="h-80 overflow-hidden">
-              <img src="/images/Limpiadora.jpg" alt="Limpieza"
-                class="w-full h-full object-cover transition-transform duration-500 hover:scale-110 object-top" />
+              <img src="/images/Limpiadora.svg" alt="Limpieza"
+                class="w-full h-full object-cover transition-transform duration-500 hover:scale-110 object-top pt-8" />
             </div>
             <div class="p-6">
               <h3 class="text-2xl font-bold mb-3 text-gray-800">Limpieza del hogar</h3>
@@ -137,7 +137,7 @@
           <div
             class="bg-white rounded-xl shadow-lg overflow-hidden transform transition-all duration-300 hover:scale-105 hover:shadow-xl">
             <div class="h-80 overflow-hidden">
-              <img src="/images/Fontanero.jpg" alt="Fontanería"
+              <img src="/images/Fontanero.svg" alt="Fontanería"
                 class="w-full h-full object-cover transition-transform duration-500 hover:scale-110 object-top" />
             </div>
             <div class="p-6">
@@ -159,7 +159,7 @@
           <div
             class="bg-white rounded-xl shadow-lg overflow-hidden transform transition-all duration-300 hover:scale-105 hover:shadow-xl">
             <div class="h-80 overflow-hidden">
-              <img src="/images/Electricista.jpg" alt="Electricidad"
+              <img src="/images/Electricista.svg" alt="Electricidad"
                 class="w-full h-full object-cover transition-transform duration-500 hover:scale-110 object-top" />
             </div>
             <div class="p-6">
