@@ -103,7 +103,7 @@
     </div>
 
     <!-- Sección de servicios destacados -->
-    <div class="py-20 bg-gray-50">
+    <div class="py-20 px-24 bg-gray-50">
       <div class="mb-12 px-4">
         <h2 class="text-2xl text-gray-900 mb-3">Servicios <span class="font-bold">más solicitados</span></h2>
         <p class="text-gray-600 text-xl">Profesionales cualificados listos para ayudarte con
@@ -115,9 +115,9 @@
         <div class="grid grid-cols-1 md:grid-cols-3 gap-10 h-fit">
           <div
             class="bg-white rounded-xl shadow-lg overflow-hidden transform transition-all duration-300 hover:scale-105 hover:shadow-xl">
-            <div class="max-h-[550px] h-full overflow-hidden">
+            <div class="max-h-[280px] h-full overflow-hidden grid place-items-center">
               <img src="/images/Limpiadora.svg" alt="Limpieza"
-                class="w-full h-full object-cover transition-transform duration-500 hover:scale-110 object-top pt-8" />
+                class="w-auto h-[350px] object-cover transition-transform duration-500 hover:scale-110 object-top pt-8" />
             </div>
             <div class="p-6">
               <h3 class="text-2xl font-bold mb-3 text-gray-800">Limpieza del hogar</h3>
@@ -136,9 +136,9 @@
 
           <div
             class="bg-white rounded-xl shadow-lg overflow-hidden transform transition-all duration-300 hover:scale-105 hover:shadow-xl">
-            <div class="max-h-[550px] overflow-hidden">
+            <div class="max-h-[280px] w-auto overflow-hidden grid place-items-center">
               <img src="/images/Fontanero.svg" alt="Fontanería"
-                class="w-full h-full object-cover transition-transform duration-500 hover:scale-110 object-top" />
+                class="w-auto h-[350px] object-cover transition-transform duration-500 hover:scale-110 object-top" />
             </div>
             <div class="p-6">
               <h3 class="text-2xl font-bold mb-3 text-gray-800">Fontanería</h3>
@@ -158,9 +158,9 @@
 
           <div
             class="bg-white rounded-xl shadow-lg overflow-hidden transform transition-all duration-300 hover:scale-105 hover:shadow-xl">
-            <div class="max-h-[550px] overflow-hidden">
+            <div class="max-h-[280px] overflow-hidden grid place-items-center">
               <img src="/images/Electricista.svg" alt="Electricidad"
-                class="w-full h-full object-cover transition-transform duration-500 hover:scale-110 object-top" />
+                class="w-auto h-[350px] object-cover transition-transform duration-500 hover:scale-110 object-top" />
             </div>
             <div class="p-6">
               <h3 class="text-2xl font-bold mb-3 text-gray-800">Electricidad</h3>

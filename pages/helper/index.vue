@@ -38,7 +38,7 @@
               Quiero ser Helper
             </a>
             <a href="#como-funciona"
-              class="px-4 sm:px-5 py-2 border border-gray-700 text-gray-700 font-medium rounded-br-3xl hover:rounded-tl-3xl hover:rounded-br-none hover:bg-gray-50 transition-colors text-center text-sm sm:text-base">
+              class="px-4 sm:px-5 py-2 bg-white border border-gray-700 text-gray-700 font-medium rounded-br-3xl hover:rounded-tl-3xl hover:rounded-br-none hover:bg-gray-50 transition-colors text-center text-sm sm:text-base">
               Preguntas frecuentes
             </a>
           </div>
